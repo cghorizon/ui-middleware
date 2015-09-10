@@ -1,0 +1,3459 @@
+FORMAT: 1A
+HOST: http://ohs-dev01:8080/
+
+# Horizon UI Middleware
+
+Horizon UI Middleware to support the Backbone.JS UI application through a RESTful interface
+
+# OSP APIs [/horizon/osp/]
+
+## Check status [GET]
+
++ Response 200 (application/json)
+
+        {
+            "success": true
+        }
+
+## Group OSP Dashlets
+
+## Dashlets [/horizon/osp/dashlet/{id}]
+
+Dashlets are components of the dashboard with custom data attributes
+
+### View Dashlets [GET]
+
++ Parameters
+    + id: `input_queue` (optional, String) - Dashlet ID
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "input_queue",
+                "cnt": 5,
+                "title": "Input Queue"
+            },
+            {
+                "id": "planning",
+                "cnt": 5,
+                "title": "Planning"
+            },
+            {
+                "id": "resources",
+                "cnt": 15,
+                "title": "Resources"
+            },
+            {
+                "id": "in_process",
+                "cnt": 10,
+                "title": "In Process"
+            },
+            {
+                "id": "output_queue",
+                "cnt": 5,
+                "title": "Output Queue"
+            }
+        ]    
+
+
+## Group OSP Input Queue        
+
+## Batch Wizard Options [/horizon/osp/iq/batchWizard]
+
+### Get Batch Wizard Options [GET]
+
++ Response 200 (application/json)
+
+        {
+            "kit": [{
+                "dropdownFields": ["Big Kit", "Small Kit"]
+            }],
+            "sequencingPlan": [{
+                "dropdownFields": ["WGS", "WGS1.0", "WGS2.0", "WGS1.3"]
+            }],
+            "layoutTemplate": [{
+                "dropdownFields": ["L1.0.1", "L2.0.1"]
+            }]
+        }
+        
+## Samples [/horizon/osp/iq/sampleTable{?page}]
+
+### View Samples [GET]
+
++ Parameters
+    + page: 1 (optional, number) - The page of samples to return
+    
++ Response 200 (application/json)
+
+        [
+              {
+                "sourcePlateId": "55db8ae0708112d6bf3f99f6",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_183",
+                "priority": 3,
+                "accessionDate": "2014-08-17T10:50:53 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_575"
+              },
+              {
+                "sourcePlateId": "55db8ae089ca9c3bc668e71b",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_512",
+                "priority": 6,
+                "accessionDate": "2014-08-23T07:49:26 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_807"
+              },
+              {
+                "sourcePlateId": "55db8ae0f881c96f5fa9cc05",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_463",
+                "priority": 7,
+                "accessionDate": "2014-12-16T05:09:25 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_212"
+              },
+              {
+                "sourcePlateId": "55db8ae0ef38881a39b5be78",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_169",
+                "priority": 5,
+                "accessionDate": "2014-05-09T10:22:57 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_716"
+              },
+              {
+                "sourcePlateId": "55db8ae0ea686275fbe74c5a",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_473",
+                "priority": 8,
+                "accessionDate": "2014-05-05T09:08:45 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_217"
+              },
+              {
+                "sourcePlateId": "55db8ae0a9c8ccb17514e3f2",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_541",
+                "priority": 4,
+                "accessionDate": "2014-08-01T07:48:18 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_574"
+              },
+              {
+                "sourcePlateId": "55db8ae0beca05d43a8bd68f",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_672",
+                "priority": 4,
+                "accessionDate": "2014-04-17T06:29:44 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_652"
+              },
+              {
+                "sourcePlateId": "55db8ae0ea35a27fed25ecd4",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_746",
+                "priority": 8,
+                "accessionDate": "2015-08-18T02:02:25 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_190"
+              },
+              {
+                "sourcePlateId": "55db8ae0d8f73bac55074614",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_722",
+                "priority": 6,
+                "accessionDate": "2014-03-09T04:58:34 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_608"
+              },
+              {
+                "sourcePlateId": "55db8ae04aecd253380709de",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_559",
+                "priority": 9,
+                "accessionDate": "2014-05-04T06:20:09 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_882"
+              },
+              {
+                "sourcePlateId": "55db8ae0d0b0c663fb79818b",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_127",
+                "priority": 8,
+                "accessionDate": "2014-09-08T04:38:31 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_407"
+              },
+              {
+                "sourcePlateId": "55db8ae0d2672440f47d5442",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_663",
+                "priority": 4,
+                "accessionDate": "2014-08-07T08:34:58 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_975"
+              },
+              {
+                "sourcePlateId": "55db8ae07aee49b9b4fdaef5",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_573",
+                "priority": 6,
+                "accessionDate": "2015-02-10T02:10:17 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_737"
+              },
+              {
+                "sourcePlateId": "55db8ae0e279b1122652bd86",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_460",
+                "priority": 9,
+                "accessionDate": "2015-02-21T02:08:45 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_876"
+              },
+              {
+                "sourcePlateId": "55db8ae07ea603b2db4de665",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_940",
+                "priority": 4,
+                "accessionDate": "2015-06-15T01:25:34 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_664"
+              },
+              {
+                "sourcePlateId": "55db8ae01e79855b453ed1ea",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_401",
+                "priority": 3,
+                "accessionDate": "2015-01-01T12:36:40 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_871"
+              },
+              {
+                "sourcePlateId": "55db8ae0f9c4695c37ab12b6",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_535",
+                "priority": 5,
+                "accessionDate": "2014-01-15T03:34:23 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_549"
+              },
+              {
+                "sourcePlateId": "55db8ae0fcafe747752dd01b",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_787",
+                "priority": 3,
+                "accessionDate": "2015-05-22T08:07:26 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_739"
+              },
+              {
+                "sourcePlateId": "55db8ae0009db0b8f0805760",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_481",
+                "priority": 6,
+                "accessionDate": "2014-07-14T06:49:41 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_141"
+              },
+              {
+                "sourcePlateId": "55db8ae061e8e7e7e0e5323a",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_617",
+                "priority": 7,
+                "accessionDate": "2015-03-26T03:32:44 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_233"
+              },
+              {
+                "sourcePlateId": "55db8ae069992fc6f87e2dfd",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_237",
+                "priority": 6,
+                "accessionDate": "2015-06-04T05:31:23 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_468"
+              },
+              {
+                "sourcePlateId": "55db8ae06608a0f4590fb204",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_326",
+                "priority": 5,
+                "accessionDate": "2014-06-27T03:25:18 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_277"
+              },
+              {
+                "sourcePlateId": "55db8ae0a4371203cf8d8140",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_341",
+                "priority": 7,
+                "accessionDate": "2014-12-03T04:31:39 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_902"
+              },
+              {
+                "sourcePlateId": "55db8ae0f324ec38070d0287",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_876",
+                "priority": 7,
+                "accessionDate": "2015-06-25T06:33:42 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_389"
+              },
+              {
+                "sourcePlateId": "55db8ae0a5680e82d178a398",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_298",
+                "priority": 6,
+                "accessionDate": "2014-02-03T08:09:58 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_759"
+              },
+              {
+                "sourcePlateId": "55db8ae0bd00e39d1b2316dd",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_721",
+                "priority": 8,
+                "accessionDate": "2014-12-18T08:51:47 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_896"
+              },
+              {
+                "sourcePlateId": "55db8ae0b46a13ff5fca036c",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_960",
+                "priority": 8,
+                "accessionDate": "2014-05-10T12:35:25 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_933"
+              },
+              {
+                "sourcePlateId": "55db8ae0c7228717b6098372",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_728",
+                "priority": 5,
+                "accessionDate": "2014-08-17T06:39:34 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_460"
+              },
+              {
+                "sourcePlateId": "55db8ae026ad3e19e9bb70f6",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_264",
+                "priority": 3,
+                "accessionDate": "2014-03-05T02:16:48 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_423"
+              },
+              {
+                "sourcePlateId": "55db8ae01e1e5d4fd2d63259",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_192",
+                "priority": 8,
+                "accessionDate": "2014-03-11T02:46:58 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_511"
+              },
+              {
+                "sourcePlateId": "55db8ae0ccbffea5cccc9554",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_510",
+                "priority": 9,
+                "accessionDate": "2014-08-08T10:16:22 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_820"
+              },
+              {
+                "sourcePlateId": "55db8ae0277654271fd2d37b",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_322",
+                "priority": 5,
+                "accessionDate": "2014-12-05T06:04:09 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_883"
+              },
+              {
+                "sourcePlateId": "55db8ae0381ff1dcfc2804ae",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_796",
+                "priority": 7,
+                "accessionDate": "2014-08-24T03:44:23 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_224"
+              },
+              {
+                "sourcePlateId": "55db8ae09253bbb6431492e5",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_213",
+                "priority": 5,
+                "accessionDate": "2014-11-24T10:43:49 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_772"
+              },
+              {
+                "sourcePlateId": "55db8ae0ce85a9ee2dc184ba",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_940",
+                "priority": 2,
+                "accessionDate": "2015-03-11T10:41:35 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_628"
+              },
+              {
+                "sourcePlateId": "55db8ae0c5e016ebed2946a2",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_966",
+                "priority": 5,
+                "accessionDate": "2015-07-09T02:17:48 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_133"
+              },
+              {
+                "sourcePlateId": "55db8ae0810a9f33e7bc623b",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_321",
+                "priority": 7,
+                "accessionDate": "2014-12-14T10:29:19 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_815"
+              },
+              {
+                "sourcePlateId": "55db8ae0982a47a91b4958be",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_412",
+                "priority": 8,
+                "accessionDate": "2014-05-27T08:03:58 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_566"
+              },
+              {
+                "sourcePlateId": "55db8ae0befad3663602c248",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_298",
+                "priority": 2,
+                "accessionDate": "2014-12-09T07:16:38 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_293"
+              },
+              {
+                "sourcePlateId": "55db8ae0ebe11b1b4bfde0b5",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_565",
+                "priority": 2,
+                "accessionDate": "2014-03-16T07:56:58 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_814"
+              },
+              {
+                "sourcePlateId": "55db8ae0db094109a01b4d21",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_339",
+                "priority": 6,
+                "accessionDate": "2015-01-30T06:31:59 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_978"
+              },
+              {
+                "sourcePlateId": "55db8ae0df5239681ce4dcf4",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_280",
+                "priority": 8,
+                "accessionDate": "2014-03-09T04:36:56 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_254"
+              },
+              {
+                "sourcePlateId": "55db8ae09ee96b96d1cced01",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_398",
+                "priority": 4,
+                "accessionDate": "2015-03-15T09:07:06 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_333"
+              },
+              {
+                "sourcePlateId": "55db8ae0fc2e280d2474bf1f",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_268",
+                "priority": 9,
+                "accessionDate": "2015-04-13T04:52:51 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_532"
+              },
+              {
+                "sourcePlateId": "55db8ae0f373893570a70a13",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_175",
+                "priority": 4,
+                "accessionDate": "2014-07-07T09:34:01 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_115"
+              },
+              {
+                "sourcePlateId": "55db8ae00d9920360304a0e5",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_672",
+                "priority": 3,
+                "accessionDate": "2014-09-12T05:26:12 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_806"
+              },
+              {
+                "sourcePlateId": "55db8ae0e4d76cf45032a951",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_606",
+                "priority": 8,
+                "accessionDate": "2014-09-26T06:30:28 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_416"
+              },
+              {
+                "sourcePlateId": "55db8ae02db36e081e1cd104",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_569",
+                "priority": 4,
+                "accessionDate": "2014-07-22T01:10:32 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_471"
+              },
+              {
+                "sourcePlateId": "55db8ae0517e8d7b0ffaa3ce",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_633",
+                "priority": 8,
+                "accessionDate": "2014-07-03T11:52:30 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_827"
+              },
+              {
+                "sourcePlateId": "55db8ae0b3659f9abc9fac86",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_158",
+                "priority": 1,
+                "accessionDate": "2014-06-16T06:38:41 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_428"
+              },
+              {
+                "sourcePlateId": "55db8ae0ae5ce188f64483b1",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_395",
+                "priority": 1,
+                "accessionDate": "2014-12-03T03:37:07 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_813"
+              },
+              {
+                "sourcePlateId": "55db8ae0b6bb99a1258e39ee",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_609",
+                "priority": 9,
+                "accessionDate": "2014-09-28T04:38:26 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_945"
+              },
+              {
+                "sourcePlateId": "55db8ae09dec0b2d94cd7d78",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_730",
+                "priority": 5,
+                "accessionDate": "2014-09-06T02:22:13 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_849"
+              },
+              {
+                "sourcePlateId": "55db8ae0481d2b0aa8132a7d",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_678",
+                "priority": 9,
+                "accessionDate": "2014-04-15T06:11:22 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_342"
+              },
+              {
+                "sourcePlateId": "55db8ae00c6c678afd4eaba3",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_191",
+                "priority": 2,
+                "accessionDate": "2015-08-12T12:28:02 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_659"
+              },
+              {
+                "sourcePlateId": "55db8ae072f8c67d3ad6b76b",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_476",
+                "priority": 3,
+                "accessionDate": "2014-07-10T09:21:31 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_451"
+              },
+              {
+                "sourcePlateId": "55db8ae09425c9e0bef62617",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_280",
+                "priority": 1,
+                "accessionDate": "2015-05-03T05:52:18 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_377"
+              },
+              {
+                "sourcePlateId": "55db8ae0aaa53ef2bf4e1c95",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_255",
+                "priority": 6,
+                "accessionDate": "2015-02-05T03:22:52 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_347"
+              },
+              {
+                "sourcePlateId": "55db8ae0df6031da69372cfe",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_450",
+                "priority": 8,
+                "accessionDate": "2014-04-04T05:04:12 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_704"
+              },
+              {
+                "sourcePlateId": "55db8ae0a381c1901ac77850",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_190",
+                "priority": 7,
+                "accessionDate": "2015-08-03T11:42:19 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_623"
+              },
+              {
+                "sourcePlateId": "55db8ae0a16cf9b6f120687f",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_999",
+                "priority": 5,
+                "accessionDate": "2014-02-06T04:34:04 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_932"
+              },
+              {
+                "sourcePlateId": "55db8ae0ec2a447f83a8712c",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_311",
+                "priority": 1,
+                "accessionDate": "2014-12-22T09:13:12 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_945"
+              },
+              {
+                "sourcePlateId": "55db8ae0fc806dd42ceea2b1",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_146",
+                "priority": 7,
+                "accessionDate": "2014-02-18T07:55:10 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_206"
+              },
+              {
+                "sourcePlateId": "55db8ae023039bc64dc0eabc",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_425",
+                "priority": 6,
+                "accessionDate": "2014-05-15T05:14:41 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_908"
+              },
+              {
+                "sourcePlateId": "55db8ae02ea944b532f780f9",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_811",
+                "priority": 7,
+                "accessionDate": "2015-05-02T02:59:03 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_341"
+              },
+              {
+                "sourcePlateId": "55db8ae082c01f92b297e3e2",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_489",
+                "priority": 3,
+                "accessionDate": "2014-11-25T03:38:07 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_394"
+              },
+              {
+                "sourcePlateId": "55db8ae0b428028571c0312f",
+                "project": "Project",
+                "sequencingPlan": "WGS",
+                "id": "G10000-DNA_327",
+                "priority": 7,
+                "accessionDate": "2014-05-23T11:19:38 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_622"
+              },
+              {
+                "sourcePlateId": "55db8ae004c3aa5a248856be",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_825",
+                "priority": 7,
+                "accessionDate": "2014-06-18T12:11:30 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_544"
+              },
+              {
+                "sourcePlateId": "55db8ae0cf262e266b499c6d",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_221",
+                "priority": 6,
+                "accessionDate": "2014-03-04T08:39:19 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_185"
+              },
+              {
+                "sourcePlateId": "55db8ae065baadc7a79567ca",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_889",
+                "priority": 5,
+                "accessionDate": "2015-02-07T02:03:17 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_769"
+              },
+              {
+                "sourcePlateId": "55db8ae04a6caf31958272dc",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_560",
+                "priority": 9,
+                "accessionDate": "2014-03-29T07:44:11 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_888"
+              },
+              {
+                "sourcePlateId": "55db8ae001f35a75ff862ef2",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_360",
+                "priority": 2,
+                "accessionDate": "2014-07-14T07:56:39 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_232"
+              },
+              {
+                "sourcePlateId": "55db8ae01034599e831509c9",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_621",
+                "priority": 9,
+                "accessionDate": "2014-08-24T12:14:07 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_166"
+              },
+              {
+                "sourcePlateId": "55db8ae09503d55bd21682dc",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_961",
+                "priority": 1,
+                "accessionDate": "2015-06-23T01:26:11 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_561"
+              },
+              {
+                "sourcePlateId": "55db8ae0a1da215ece76a1fd",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_117",
+                "priority": 7,
+                "accessionDate": "2015-06-24T04:23:43 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_870"
+              },
+              {
+                "sourcePlateId": "55db8ae00d412eff01de9ead",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_523",
+                "priority": 3,
+                "accessionDate": "2015-01-18T03:52:52 +08:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_736"
+              },
+              {
+                "sourcePlateId": "55db8ae08d9509eb18f33ee6",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_277",
+                "priority": 7,
+                "accessionDate": "2014-04-21T04:13:22 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_552"
+              },
+              {
+                "sourcePlateId": "55db8ae03f4115c470221aab",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_172",
+                "priority": 5,
+                "accessionDate": "2015-06-20T09:31:56 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_918"
+              },
+              {
+                "sourcePlateId": "55db8ae0eb5d7f8b0feb5083",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_738",
+                "priority": 1,
+                "accessionDate": "2014-05-16T11:45:34 +07:00",
+                "status": "Available",
+                "sampleId": "10000-DNA_561"
+              },
+              {
+                "sourcePlateId": "55db8ae09224d89ecdfb39bf",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_585",
+                "priority": 3,
+                "accessionDate": "2014-05-07T11:17:36 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_870"
+              },
+              {
+                "sourcePlateId": "55db8ae0969ee6681853ebe2",
+                "project": "Project",
+                "sequencingPlan": "WGS1.0",
+                "id": "G10000-DNA_738",
+                "priority": 5,
+                "accessionDate": "2015-07-27T03:27:18 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_899"
+              },
+              {
+                "sourcePlateId": "55db8ae099d45b4d2f1f2150",
+                "project": "Project",
+                "sequencingPlan": "WGS1.3",
+                "id": "G10000-DNA_311",
+                "priority": 5,
+                "accessionDate": "2014-10-26T03:20:01 +07:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_767"
+              }
+            ]
+
+## Sample [/horizon/osp/iq/sample/{id}]
+
+### View a Sample [GET]
+
++ Parameters
+    + id: `G10000-DNA_489` (optional, String) - Unique ID of the Sample
+    
++ Response 200 (application/json)
+
+        {
+                "sourcePlateId": "55db8ae082c01f92b297e3e2",
+                "project": "Project",
+                "sequencingPlan": "WGS2.0",
+                "id": "G10000-DNA_489",
+                "priority": 3,
+                "accessionDate": "2014-11-25T03:38:07 +08:00",
+                "status": "Not Available",
+                "sampleId": "10000-DNA_394"
+        }
+
+## Source Plates [/horizon/osp/iq/plates/{?sequencingPlan}{?kit}{?layoutTemplate}]
+
+### View Source Plates [GET]
+
++ Parameters
+
+    + sequencingPlan: `WGS2.0` (optional, String) - Unique ID of the Sample
+    + kit: `Small_Kit` (optional, String) - Unique ID of the Sample
+    + layoutTemplate: `L1.0.1` (optional, String) - Unique ID of the Sample
+
++ Response 200 (application/json)
+
+        [{
+            "plateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001",
+            "sampleId": "12345",
+            "sequencingPlan": "WGS",
+            "priority": "1",
+            "project": "",
+            "accessionDate": "",
+
+            "wells": [
+                {
+                    "sampleId": 0,
+                    "wellLocation": "A3",
+                    "status": ""
+                },
+                {
+                    "sampleId": 0,
+                    "wellLocation": "C4",
+                    "status": ""
+    
+                },  
+                {
+                    "sampleId": 0,
+                    "wellLocation": "F9",
+                    "status": ""
+                }
+            ]
+        },
+        {
+            "plateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002",
+            "sampleId": "678910",
+            "sequencingPlan": "WGS",
+            "priority": "2",
+            "project": "",
+            "accessionDate": "",
+            "wells": [
+                {
+                    "sampleId": 0,
+                    "wellLocation": "F3",
+                    "status": ""
+                },
+                {
+                    "sampleId": 0,
+                    "wellLocation": "H4",
+                    "status": ""
+                },  
+                {
+                    "sampleId": 0,
+                    "wellLocation": "C9",
+                    "status": "",
+                    "sourcePlateId": 0  
+                },
+                {
+                    "sampleId": 0,
+                    "wellLocation": "G9",
+                    "status": "",
+                    "sourcePlateId": 0  
+                }
+            ]
+        }]  
+        
+## Destination Plate [/horizon/osp/iq/plate/destination/{plate_id}{?sequencingPlan}{?kit}{?layoutTemplate}]
+
+### View Destination Plate [GET]
+
++ Parameters
+    + sequencingPlan: `WGS2.0` (optional, String) - Unique ID of the Sample
+    + kit: `Small_Kit` (optional, String) - Unique ID of the Sample
+    + layoutTemplate: `L1.0.1` (optional, String) - Unique ID of the Sample
+
++ Response 200 (application/json)
+
+        {
+              "plateId": "55dbb447d5c2400174c38657",
+              "wells": [
+                {
+                  "sampleId": "9610-DNA_888",
+                  "wellLocation": "E0",
+                  "status": "Available",
+                  "sourcePlateId": "27d6850c-7c43-4f2a-91e5-ede7110acac5"
+                },
+                {
+                  "sampleId": "1390-DNA_736",
+                  "wellLocation": "C3",
+                  "status": "Unavailable",
+                  "sourcePlateId": "e5edcec5-6402-4a24-9931-17cce00fdda5"
+                },
+                {
+                  "sampleId": "3483-DNA_361",
+                  "wellLocation": "B0",
+                  "status": "Available",
+                  "sourcePlateId": "226dc139-99f9-48fc-96a8-43ed94dd8368"
+                },
+                {
+                  "sampleId": "6022-DNA_879",
+                  "wellLocation": "B5",
+                  "status": "Available",
+                  "sourcePlateId": "f0438c2e-0546-43fc-a985-d64440d2699d"
+                },
+                {
+                  "sampleId": "9075-DNA_395",
+                  "wellLocation": "H1",
+                  "status": "Available",
+                  "sourcePlateId": "95f6cd05-2224-467a-b4b5-e513bceb5f3d"
+                },
+                {
+                  "sampleId": "2454-DNA_242",
+                  "wellLocation": "A8",
+                  "status": "Available",
+                  "sourcePlateId": "22b100ad-215c-48eb-8b66-559a4938baec"
+                },
+                {
+                  "sampleId": "8476-DNA_329",
+                  "wellLocation": "H1",
+                  "status": "Unavailable",
+                  "sourcePlateId": "ae88a93f-abf2-42a7-bcc0-c597cbb61371"
+                },
+                {
+                  "sampleId": "3541-DNA_788",
+                  "wellLocation": "D7",
+                  "status": "Available",
+                  "sourcePlateId": "257958ad-038c-43a0-b335-67a6a595a15d"
+                },
+                {
+                  "sampleId": "1022-DNA_660",
+                  "wellLocation": "G5",
+                  "status": "Available",
+                  "sourcePlateId": "aae5f164-3012-421e-b893-dbdeca9ddb30"
+                },
+                {
+                  "sampleId": "4959-DNA_896",
+                  "wellLocation": "B0",
+                  "status": "Unavailable",
+                  "sourcePlateId": "f78acfd8-a9bb-4784-be04-4118134de8e2"
+                },
+                {
+                  "sampleId": "4537-DNA_379",
+                  "wellLocation": "G6",
+                  "status": "Available",
+                  "sourcePlateId": "33ddd210-1452-49f1-9079-2fc4c0651aea"
+                },
+                {
+                  "sampleId": "1475-DNA_909",
+                  "wellLocation": "G9",
+                  "status": "Unavailable",
+                  "sourcePlateId": "9ec6386a-b0ee-4ce8-a35f-17a1bf2fdf00"
+                },
+                {
+                  "sampleId": "9550-DNA_844",
+                  "wellLocation": "B6",
+                  "status": "Available",
+                  "sourcePlateId": "00d8f5be-0876-4b33-b906-7689eb723c4d"
+                },
+                {
+                  "sampleId": "5072-DNA_813",
+                  "wellLocation": "A4",
+                  "status": "Unavailable",
+                  "sourcePlateId": "091167fe-e98f-4ceb-8d09-acb0e2d7b346"
+                },
+                {
+                  "sampleId": "3759-DNA_206",
+                  "wellLocation": "C8",
+                  "status": "Available",
+                  "sourcePlateId": "6abc6630-72b3-4c41-9648-6eb15eaf1924"
+                },
+                {
+                  "sampleId": "5197-DNA_261",
+                  "wellLocation": "D7",
+                  "status": "Available",
+                  "sourcePlateId": "c0ff15dc-8c66-4475-8c6f-998145e52bc2"
+                },
+                {
+                  "sampleId": "1196-DNA_766",
+                  "wellLocation": "G1",
+                  "status": "Unavailable",
+                  "sourcePlateId": "fe4cb1fc-6050-4747-a641-ee829e41c964"
+                },
+                {
+                  "sampleId": "2768-DNA_613",
+                  "wellLocation": "C6",
+                  "status": "Available",
+                  "sourcePlateId": "b64243d3-1f38-493a-8c01-8ab1b8007be3"
+                },
+                {
+                  "sampleId": "4846-DNA_556",
+                  "wellLocation": "C7",
+                  "status": "Available",
+                  "sourcePlateId": "a069e28f-dc72-4166-a1d8-aeb6a5e146d0"
+                },
+                {
+                  "sampleId": "6954-DNA_790",
+                  "wellLocation": "C6",
+                  "status": "Available",
+                  "sourcePlateId": "3774260d-680f-44db-904a-8a83a3cb6b7e"
+                },
+                {
+                  "sampleId": "3367-DNA_569",
+                  "wellLocation": "D4",
+                  "status": "Unavailable",
+                  "sourcePlateId": "70234e35-2c39-4ae6-9890-5e1a5f70073c"
+                },
+                {
+                  "sampleId": "8676-DNA_684",
+                  "wellLocation": "G3",
+                  "status": "Available",
+                  "sourcePlateId": "28196519-2bc9-4e22-bb2f-e768625c3876"
+                },
+                {
+                  "sampleId": "7941-DNA_700",
+                  "wellLocation": "B0",
+                  "status": "Available",
+                  "sourcePlateId": "6ff45709-868d-495c-8051-95c55b066a33"
+                },
+                {
+                  "sampleId": "4879-DNA_673",
+                  "wellLocation": "F4",
+                  "status": "Unavailable",
+                  "sourcePlateId": "ab6c8921-1a07-4ee4-9352-8c749e78709f"
+                },
+                {
+                  "sampleId": "1018-DNA_374",
+                  "wellLocation": "D8",
+                  "status": "Unavailable",
+                  "sourcePlateId": "4ae2260a-6f9f-4591-9837-7da161aac358"
+                },
+                {
+                  "sampleId": "8671-DNA_541",
+                  "wellLocation": "C9",
+                  "status": "Unavailable",
+                  "sourcePlateId": "bc6fa4bc-c212-4d93-a045-a4d40c8927f1"
+                },
+                {
+                  "sampleId": "6964-DNA_388",
+                  "wellLocation": "H3",
+                  "status": "Unavailable",
+                  "sourcePlateId": "c2085835-7f58-4184-81d0-6bf0f36ee547"
+                },
+                {
+                  "sampleId": "5274-DNA_443",
+                  "wellLocation": "B8",
+                  "status": "Available",
+                  "sourcePlateId": "db897c2f-c0d2-4080-b996-b8f435b573f8"
+                },
+                {
+                  "sampleId": "9903-DNA_603",
+                  "wellLocation": "D5",
+                  "status": "Unavailable",
+                  "sourcePlateId": "da0aed4c-8279-4052-ac14-6c08a7424cb8"
+                },
+                {
+                  "sampleId": "3087-DNA_758",
+                  "wellLocation": "G5",
+                  "status": "Available",
+                  "sourcePlateId": "84f0f428-481b-4253-a984-678e68633274"
+                },
+                {
+                  "sampleId": "5590-DNA_197",
+                  "wellLocation": "H8",
+                  "status": "Unavailable",
+                  "sourcePlateId": "7e63b4f2-27c5-4da1-a5fc-100c51c5d73d"
+                },
+                {
+                  "sampleId": "9016-DNA_369",
+                  "wellLocation": "F1",
+                  "status": "Unavailable",
+                  "sourcePlateId": "163fa03c-a8c3-46f3-8b33-ec02ff853305"
+                },
+                {
+                  "sampleId": "6970-DNA_130",
+                  "wellLocation": "F9",
+                  "status": "Available",
+                  "sourcePlateId": "66092032-cfbd-4704-b582-cd7ae40e6ee5"
+                },
+                {
+                  "sampleId": "9916-DNA_436",
+                  "wellLocation": "B6",
+                  "status": "Unavailable",
+                  "sourcePlateId": "dc182184-ffd7-4af8-9052-7958e7222d74"
+                },
+                {
+                  "sampleId": "8252-DNA_303",
+                  "wellLocation": "A8",
+                  "status": "Available",
+                  "sourcePlateId": "887a037a-d2b5-4746-b7b1-bfd007c8de31"
+                },
+                {
+                  "sampleId": "4434-DNA_217",
+                  "wellLocation": "B5",
+                  "status": "Unavailable",
+                  "sourcePlateId": "236dfb5a-dcd1-4a10-a0b6-ba260ed7bf18"
+                },
+                {
+                  "sampleId": "9824-DNA_196",
+                  "wellLocation": "F2",
+                  "status": "Available",
+                  "sourcePlateId": "c2d99702-4e04-44a5-8c6a-af2d70b87048"
+                },
+                {
+                  "sampleId": "3313-DNA_927",
+                  "wellLocation": "F3",
+                  "status": "Available",
+                  "sourcePlateId": "4e8f3d08-ae7b-4c9f-b5dc-31d51a6c14dd"
+                },
+                {
+                  "sampleId": "3703-DNA_647",
+                  "wellLocation": "C7",
+                  "status": "Unavailable",
+                  "sourcePlateId": "dfcae7d7-587b-4f9b-ba5b-dd517865d681"
+                },
+                {
+                  "sampleId": "5072-DNA_546",
+                  "wellLocation": "A6",
+                  "status": "Available",
+                  "sourcePlateId": "c29776dd-3099-4720-ab5a-ca8794d97f16"
+                },
+                {
+                  "sampleId": "9133-DNA_872",
+                  "wellLocation": "F2",
+                  "status": "Unavailable",
+                  "sourcePlateId": "9d89b351-c043-49bf-b2dd-e7205fa97efb"
+                },
+                {
+                  "sampleId": "7052-DNA_442",
+                  "wellLocation": "D1",
+                  "status": "Available",
+                  "sourcePlateId": "3084fe1e-0965-4bbf-a5a8-4abfaf979727"
+                },
+                {
+                  "sampleId": "6024-DNA_320",
+                  "wellLocation": "A3",
+                  "status": "Unavailable",
+                  "sourcePlateId": "a2372324-ed74-45b3-8f42-441a907fc238"
+                },
+                {
+                  "sampleId": "2351-DNA_855",
+                  "wellLocation": "C2",
+                  "status": "Available",
+                  "sourcePlateId": "81eb9395-373f-4ffa-bd0a-f6b6ef034ca4"
+                },
+                {
+                  "sampleId": "9489-DNA_772",
+                  "wellLocation": "H6",
+                  "status": "Unavailable",
+                  "sourcePlateId": "6ceae734-fe80-4da8-8b1d-49b444bc41db"
+                },
+                {
+                  "sampleId": "1734-DNA_563",
+                  "wellLocation": "F2",
+                  "status": "Available",
+                  "sourcePlateId": "c47a33f7-afa3-4a49-a393-0b225e7c4471"
+                },
+                {
+                  "sampleId": "4745-DNA_498",
+                  "wellLocation": "F5",
+                  "status": "Available",
+                  "sourcePlateId": "a5d676ec-2337-4325-ae80-a66a2a2c38d0"
+                },
+                {
+                  "sampleId": "9501-DNA_807",
+                  "wellLocation": "F4",
+                  "status": "Unavailable",
+                  "sourcePlateId": "9f8accad-5276-4684-9fa9-c40a60266de7"
+                },
+                {
+                  "sampleId": "7324-DNA_133",
+                  "wellLocation": "H0",
+                  "status": "Unavailable",
+                  "sourcePlateId": "e2aba62c-a21c-46ab-ae71-7c295e2793b0"
+                },
+                {
+                  "sampleId": "7247-DNA_778",
+                  "wellLocation": "B1",
+                  "status": "Unavailable",
+                  "sourcePlateId": "d18f4557-7aae-4289-8517-8324d10b01af"
+                },
+                {
+                  "sampleId": "6915-DNA_240",
+                  "wellLocation": "F7",
+                  "status": "Available",
+                  "sourcePlateId": "72cca2b1-46af-46ba-81ad-2d7f8ec75782"
+                },
+                {
+                  "sampleId": "2702-DNA_528",
+                  "wellLocation": "D9",
+                  "status": "Available",
+                  "sourcePlateId": "bfd0fa1f-99a4-448f-bc0b-5999758d94ae"
+                },
+                {
+                  "sampleId": "9909-DNA_451",
+                  "wellLocation": "G1",
+                  "status": "Unavailable",
+                  "sourcePlateId": "cddb46ab-aa1a-4a23-87d3-a707c391417c"
+                },
+                {
+                  "sampleId": "4238-DNA_752",
+                  "wellLocation": "G5",
+                  "status": "Unavailable",
+                  "sourcePlateId": "2a60e349-d157-4db1-b602-37363a6c40d4"
+                },
+                {
+                  "sampleId": "6684-DNA_455",
+                  "wellLocation": "E1",
+                  "status": "Available",
+                  "sourcePlateId": "2995ee3f-ca33-4ce2-96bc-c99e68c49951"
+                },
+                {
+                  "sampleId": "7157-DNA_219",
+                  "wellLocation": "G5",
+                  "status": "Unavailable",
+                  "sourcePlateId": "1578719d-fa4e-4e0b-94f4-0e551f4d2ca5"
+                },
+                {
+                  "sampleId": "9884-DNA_911",
+                  "wellLocation": "D7",
+                  "status": "Unavailable",
+                  "sourcePlateId": "f85ab17a-a990-42eb-a48e-058820acac1d"
+                },
+                {
+                  "sampleId": "2493-DNA_201",
+                  "wellLocation": "B7",
+                  "status": "Available",
+                  "sourcePlateId": "a40b2094-fb95-46bd-8155-2f304defd175"
+                },
+                {
+                  "sampleId": "8099-DNA_138",
+                  "wellLocation": "A6",
+                  "status": "Unavailable",
+                  "sourcePlateId": "88db654a-d2ad-42f6-be23-de76a35892a8"
+                },
+                {
+                  "sampleId": "3244-DNA_670",
+                  "wellLocation": "C8",
+                  "status": "Unavailable",
+                  "sourcePlateId": "245999ed-4c88-4b99-aac5-968e760b657d"
+                },
+                {
+                  "sampleId": "4647-DNA_216",
+                  "wellLocation": "B7",
+                  "status": "Unavailable",
+                  "sourcePlateId": "40644220-4b10-4ca1-bfc5-1eb97675bf70"
+                },
+                {
+                  "sampleId": "6371-DNA_244",
+                  "wellLocation": "C9",
+                  "status": "Unavailable",
+                  "sourcePlateId": "2e1996a4-f804-4744-8fa1-1d54b7af3ce4"
+                },
+                {
+                  "sampleId": "6701-DNA_570",
+                  "wellLocation": "H6",
+                  "status": "Unavailable",
+                  "sourcePlateId": "3d82bce4-c524-4cdf-8cc0-df878bd2d23b"
+                },
+                {
+                  "sampleId": "7625-DNA_738",
+                  "wellLocation": "D7",
+                  "status": "Unavailable",
+                  "sourcePlateId": "fa2610ee-ed4d-480b-942e-1746040a0cb9"
+                },
+                {
+                  "sampleId": "3727-DNA_157",
+                  "wellLocation": "H1",
+                  "status": "Unavailable",
+                  "sourcePlateId": "56af8df5-74d8-496d-b30f-d381bdec563a"
+                },
+                {
+                  "sampleId": "3978-DNA_658",
+                  "wellLocation": "B6",
+                  "status": "Unavailable",
+                  "sourcePlateId": "2cd26c6c-f6ce-4d14-9874-32cb0c87f3d8"
+                },
+                {
+                  "sampleId": "1720-DNA_309",
+                  "wellLocation": "D2",
+                  "status": "Unavailable",
+                  "sourcePlateId": "0fcdcfda-b519-4ec9-b84e-034c8fa78a71"
+                },
+                {
+                  "sampleId": "7595-DNA_277",
+                  "wellLocation": "C3",
+                  "status": "Unavailable",
+                  "sourcePlateId": "8927fce4-4a8f-47f4-ac43-323e45f8a796"
+                },
+                {
+                  "sampleId": "4459-DNA_597",
+                  "wellLocation": "F8",
+                  "status": "Available",
+                  "sourcePlateId": "d65769ac-8293-4b05-8c68-f3bcaa18d354"
+                },
+                {
+                  "sampleId": "1742-DNA_266",
+                  "wellLocation": "E5",
+                  "status": "Unavailable",
+                  "sourcePlateId": "4edc2f80-eb8c-4a6c-b709-36cb868d8943"
+                },
+                {
+                  "sampleId": "5809-DNA_162",
+                  "wellLocation": "E6",
+                  "status": "Available",
+                  "sourcePlateId": "2137d459-11d8-4903-85ef-188a6ad2df01"
+                },
+                {
+                  "sampleId": "9654-DNA_348",
+                  "wellLocation": "E7",
+                  "status": "Unavailable",
+                  "sourcePlateId": "5e01bc2c-bd73-48e5-afa1-d28b2fdd78b1"
+                },
+                {
+                  "sampleId": "1402-DNA_201",
+                  "wellLocation": "H0",
+                  "status": "Available",
+                  "sourcePlateId": "e489cb0a-0875-4719-a50f-f7c799e03451"
+                },
+                {
+                  "sampleId": "5292-DNA_235",
+                  "wellLocation": "D9",
+                  "status": "Available",
+                  "sourcePlateId": "e619a619-5866-46a0-a65c-2da2b1db56b2"
+                }
+              ]
+            }
+        
++ Response 200 (application/json)
+
+        {
+            "success": true
+        }
+        
+## Create Batch [POST /horizon/osp/iq/createSampleBatch]
+
++ Request (application/json)
+
+        {
+          "_id": "SampeBatch_APITest",
+          "partNumber": "xx-SampleBatch-xx",
+          "revision": "1.0",
+          "resourceIdType": "SN",
+          "expirationDate": "",
+          "vendorAssignedId": "",
+          "quantity": 1,
+          "UOM": "unit",
+          "description": "Omega Sample Batch",
+          "sequencingPlan": "WGS1.3",
+          "status": "Planned",
+          "samplesInBatch": 26,
+          "operator": "Mccormick",
+          "priority": 2,
+          "metadata": {
+            "batchStatus": "",
+            "destinationPlate": "xx-SamplePlate111",
+            "samples": [
+              {
+                "sampleId": "xx-SalivaSample-xx-MV-xxxxxx-1001",
+                "sourcePlateId": "xx-SamplePlate-xx-SB",
+                "positions": [
+                  "E0"
+                ]
+              },
+              {
+                "sampleId": "xx-SalivaSample-xx-MV-xxxxxx-1002",
+                "sourcePlateId": "xx-SamplePlate-xx-SB",
+                "positions": [
+                  "A06"
+                ]
+              }
+            ]
+          }
+
+        }
+
++ Response 200 (application/json)
+
+        {
+            "success": "true"
+        }
+            
+        
+                
+## Group OSP Planning 
+
+## Batches [/horizon/osp/planning/batchPlateTable{?page}]
+
++ Parameters
+    + page: 1 (optional, number) - The page of batches to return
+
+### View Batches [GET]
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "batchePlates": [
+                  {
+                    "id": "186974",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "In Process",
+                    "samplesInBatch": 63,
+                    "batchCreationDate": "2015-04-22T01:02:05 +07:00",
+                    "operator": "Rivas",
+                    "priority": 2
+                  },
+                  {
+                    "id": "174221",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "Planned",
+                    "samplesInBatch": 60,
+                    "batchCreationDate": "2015-03-27T11:02:37 +07:00",
+                    "operator": "Mullins",
+                    "priority": 2
+                  },
+                  {
+                    "id": "473000",
+                    "sequencingPlan": "WGS2.0",
+                    "status": "In Process",
+                    "samplesInBatch": 52,
+                    "batchCreationDate": "2015-04-22T10:34:45 +07:00",
+                    "operator": "Kirkland",
+                    "priority": 2
+                  },
+                  {
+                    "id": "848008",
+                    "sequencingPlan": "WGS",
+                    "status": "Planned",
+                    "samplesInBatch": 40,
+                    "batchCreationDate": "2015-08-18T05:53:36 +07:00",
+                    "operator": "Barron",
+                    "priority": 2
+                  },
+                  {
+                    "id": "297058",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "Planned",
+                    "samplesInBatch": 19,
+                    "batchCreationDate": "2015-01-05T07:10:42 +08:00",
+                    "operator": "Bolton",
+                    "priority": 2
+                  },
+                  {
+                    "id": "833666",
+                    "sequencingPlan": "WGS2.0",
+                    "status": "Planned",
+                    "samplesInBatch": 68,
+                    "batchCreationDate": "2015-01-09T06:05:43 +08:00",
+                    "operator": "Hurst",
+                    "priority": 2
+                  },
+                  {
+                    "id": "379033",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "In Process",
+                    "samplesInBatch": 73,
+                    "batchCreationDate": "2015-04-11T05:20:59 +07:00",
+                    "operator": "Vasquez",
+                    "priority": 2
+                  },
+                  {
+                    "id": "605590",
+                    "sequencingPlan": "WGS2.0",
+                    "status": "In Process",
+                    "samplesInBatch": 72,
+                    "batchCreationDate": "2015-03-09T01:36:26 +07:00",
+                    "operator": "Haney",
+                    "priority": 2
+                  },
+                  {
+                    "id": "556449",
+                    "sequencingPlan": "WGS",
+                    "status": "In Process",
+                    "samplesInBatch": 85,
+                    "batchCreationDate": "2015-08-03T12:53:33 +07:00",
+                    "operator": "Mcbride",
+                    "priority": 2
+                  },
+                  {
+                    "id": "677866",
+                    "sequencingPlan": "WGS2.0",
+                    "status": "Planned",
+                    "samplesInBatch": 19,
+                    "batchCreationDate": "2015-03-14T04:16:32 +07:00",
+                    "operator": "Romero",
+                    "priority": 2
+                  },
+                  {
+                    "id": "147719",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "Planned",
+                    "samplesInBatch": 4,
+                    "batchCreationDate": "2015-02-18T12:12:07 +08:00",
+                    "operator": "Ramirez",
+                    "priority": 2
+                  },
+                  {
+                    "id": "548808",
+                    "sequencingPlan": "WGS",
+                    "status": "Planned",
+                    "samplesInBatch": 37,
+                    "batchCreationDate": "2015-01-02T10:59:43 +08:00",
+                    "operator": "Hooper",
+                    "priority": 2
+                  },
+                  {
+                    "id": "790915",
+                    "sequencingPlan": "WGS",
+                    "status": "In Process",
+                    "samplesInBatch": 70,
+                    "batchCreationDate": "2015-01-27T01:02:01 +08:00",
+                    "operator": "Delaney",
+                    "priority": 1
+                  },
+                  {
+                    "id": "382460",
+                    "sequencingPlan": "WGS2.0",
+                    "status": "Planned",
+                    "samplesInBatch": 29,
+                    "batchCreationDate": "2015-04-16T09:15:42 +07:00",
+                    "operator": "Mcgee",
+                    "priority": 1
+                  },
+                  {
+                    "id": "521449",
+                    "sequencingPlan": "WGS",
+                    "status": "In Process",
+                    "samplesInBatch": 6,
+                    "batchCreationDate": "2015-07-27T12:20:28 +07:00",
+                    "operator": "King",
+                    "priority": 1
+                  },
+                  {
+                    "id": "451437",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "In Process",
+                    "samplesInBatch": 72,
+                    "batchCreationDate": "2015-06-27T12:23:55 +07:00",
+                    "operator": "Rodriquez",
+                    "priority": 1
+                  },
+                  {
+                    "id": "169523",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "In Process",
+                    "samplesInBatch": 11,
+                    "batchCreationDate": "2015-06-17T04:32:08 +07:00",
+                    "operator": "Schwartz",
+                    "priority": 1
+                  },
+                  {
+                    "id": "793563",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "Planned",
+                    "samplesInBatch": 26,
+                    "batchCreationDate": "2015-05-05T01:10:39 +07:00",
+                    "operator": "Buchanan",
+                    "priority": 1
+                  },
+                  {
+                    "id": "817004",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "Planned",
+                    "samplesInBatch": 36,
+                    "batchCreationDate": "2015-02-26T09:31:37 +08:00",
+                    "operator": "Gregory",
+                    "priority": 3
+                  },
+                  {
+                    "id": "491922",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "Planned",
+                    "samplesInBatch": 86,
+                    "batchCreationDate": "2015-06-04T04:27:21 +07:00",
+                    "operator": "Hawkins",
+                    "priority": 3
+                  },
+                  {
+                    "id": "495364",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "In Process",
+                    "samplesInBatch": 48,
+                    "batchCreationDate": "2015-08-09T07:41:15 +07:00",
+                    "operator": "Cote",
+                    "priority": 3
+                  },
+                  {
+                    "id": "712740",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "In Process",
+                    "samplesInBatch": 71,
+                    "batchCreationDate": "2015-06-16T04:11:19 +07:00",
+                    "operator": "Horne",
+                    "priority": 3
+                  },
+                  {
+                    "id": "422286",
+                    "sequencingPlan": "WGS2.0",
+                    "status": "Planned",
+                    "samplesInBatch": 72,
+                    "batchCreationDate": "2015-04-23T11:01:50 +07:00",
+                    "operator": "Willis",
+                    "priority": 1
+                  },
+                  {
+                    "id": "771149",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "In Process",
+                    "samplesInBatch": 71,
+                    "batchCreationDate": "2015-04-12T06:10:19 +07:00",
+                    "operator": "Hall",
+                    "priority": 1
+                  },
+                  {
+                    "id": "779781",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "Planned",
+                    "samplesInBatch": 24,
+                    "batchCreationDate": "2015-05-22T06:08:37 +07:00",
+                    "operator": "Riggs",
+                    "priority": 1
+                  },
+                  {
+                    "id": "299363",
+                    "sequencingPlan": "WGS",
+                    "status": "Planned",
+                    "samplesInBatch": 66,
+                    "batchCreationDate": "2015-06-23T01:53:02 +07:00",
+                    "operator": "Franks",
+                    "priority": 1
+                  },
+                  {
+                    "id": "828380",
+                    "sequencingPlan": "WGS",
+                    "status": "Planned",
+                    "samplesInBatch": 89,
+                    "batchCreationDate": "2015-01-24T02:32:46 +08:00",
+                    "operator": "Reese",
+                    "priority": 1
+                  },
+                  {
+                    "id": "854488",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "In Process",
+                    "samplesInBatch": 58,
+                    "batchCreationDate": "2015-04-30T01:07:56 +07:00",
+                    "operator": "Conner",
+                    "priority": 1
+                  },
+                  {
+                    "id": "747129",
+                    "sequencingPlan": "WGS",
+                    "status": "Planned",
+                    "samplesInBatch": 51,
+                    "batchCreationDate": "2015-02-28T10:57:10 +08:00",
+                    "operator": "Carroll",
+                    "priority": 1
+                  },
+                  {
+                    "id": "860773",
+                    "sequencingPlan": "WGS2.0",
+                    "status": "In Process",
+                    "samplesInBatch": 38,
+                    "batchCreationDate": "2015-03-25T10:31:39 +07:00",
+                    "operator": "Hickman",
+                    "priority": 1
+                  },
+                  {
+                    "id": "548097",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "In Process",
+                    "samplesInBatch": 53,
+                    "batchCreationDate": "2015-03-04T08:07:47 +08:00",
+                    "operator": "Sellers",
+                    "priority": 1
+                  },
+                  {
+                    "id": "763107",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "In Process",
+                    "samplesInBatch": 49,
+                    "batchCreationDate": "2015-01-20T03:33:53 +08:00",
+                    "operator": "Wagner",
+                    "priority": 1
+                  },
+                  {
+                    "id": "188159",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "In Process",
+                    "samplesInBatch": 38,
+                    "batchCreationDate": "2015-03-15T09:20:00 +07:00",
+                    "operator": "Rice",
+                    "priority": 1
+                  },
+                  {
+                    "id": "839939",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "Planned",
+                    "samplesInBatch": 29,
+                    "batchCreationDate": "2015-07-15T02:34:42 +07:00",
+                    "operator": "Mccoy",
+                    "priority": 1
+                  },
+                  {
+                    "id": "592862",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "Planned",
+                    "samplesInBatch": 79,
+                    "batchCreationDate": "2015-05-11T01:48:39 +07:00",
+                    "operator": "Montgomery",
+                    "priority": 1
+                  },
+                  {
+                    "id": "138442",
+                    "sequencingPlan": "WGS",
+                    "status": "In Process",
+                    "samplesInBatch": 49,
+                    "batchCreationDate": "2015-03-10T06:33:21 +07:00",
+                    "operator": "Lynch",
+                    "priority": 1
+                  },
+                  {
+                    "id": "644765",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "In Process",
+                    "samplesInBatch": 27,
+                    "batchCreationDate": "2015-08-12T02:41:04 +07:00",
+                    "operator": "Craft",
+                    "priority": 1
+                  },
+                  {
+                    "id": "881863",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "In Process",
+                    "samplesInBatch": 43,
+                    "batchCreationDate": "2015-01-25T03:41:16 +08:00",
+                    "operator": "Richards",
+                    "priority": 1
+                  },
+                  {
+                    "id": "573104",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "In Process",
+                    "samplesInBatch": 63,
+                    "batchCreationDate": "2015-02-25T11:51:10 +08:00",
+                    "operator": "Jones",
+                    "priority": 1
+                  },
+                  {
+                    "id": "948531",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "Planned",
+                    "samplesInBatch": 43,
+                    "batchCreationDate": "2015-06-05T06:46:40 +07:00",
+                    "operator": "Benton",
+                    "priority": 1
+                  },
+                  {
+                    "id": "521116",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "Planned",
+                    "samplesInBatch": 6,
+                    "batchCreationDate": "2015-01-05T06:53:38 +08:00",
+                    "operator": "Howell",
+                    "priority": 1
+                  },
+                  {
+                    "id": "276683",
+                    "sequencingPlan": "WGS1.0",
+                    "status": "Planned",
+                    "samplesInBatch": 33,
+                    "batchCreationDate": "2015-02-25T05:26:37 +08:00",
+                    "operator": "Manning",
+                    "priority": 1
+                  },
+                  {
+                    "id": "547641",
+                    "sequencingPlan": "WGS2.0",
+                    "status": "In Process",
+                    "samplesInBatch": 44,
+                    "batchCreationDate": "2015-01-19T03:39:28 +08:00",
+                    "operator": "Estrada",
+                    "priority": 1
+                  },
+                  {
+                    "id": "671283",
+                    "sequencingPlan": "WGS2.0",
+                    "status": "Planned",
+                    "samplesInBatch": 66,
+                    "batchCreationDate": "2015-06-01T04:08:17 +07:00",
+                    "operator": "Mcintosh",
+                    "priority": 1
+                  },
+                  {
+                    "id": "169475",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "In Process",
+                    "samplesInBatch": 66,
+                    "batchCreationDate": "2015-07-29T03:10:15 +07:00",
+                    "operator": "Cochran",
+                    "priority": 1
+                  },
+                  {
+                    "id": "644484",
+                    "sequencingPlan": "WGS",
+                    "status": "In Process",
+                    "samplesInBatch": 4,
+                    "batchCreationDate": "2015-03-07T02:32:16 +08:00",
+                    "operator": "Dixon",
+                    "priority": 1
+                  },
+                  {
+                    "id": "460401",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "Planned",
+                    "samplesInBatch": 6,
+                    "batchCreationDate": "2015-02-18T12:03:43 +08:00",
+                    "operator": "Stout",
+                    "priority": 1
+                  },
+                  {
+                    "id": "990059",
+                    "sequencingPlan": "WGS1.3",
+                    "status": "Planned",
+                    "samplesInBatch": 26,
+                    "batchCreationDate": "2015-02-11T05:08:52 +08:00",
+                    "operator": "Terrell",
+                    "priority": 1
+                  },
+                  {
+                    "id": "664715",
+                    "sequencingPlan": "WGS",
+                    "status": "In Process",
+                    "samplesInBatch": 46,
+                    "batchCreationDate": "2015-01-22T04:08:05 +08:00",
+                    "operator": "Vance",
+                    "priority": 1
+                  }
+                ]
+            }
+        
+## Batch [/horizon/osp/planning/batch/{batchId}]
+
+        
+### View Batch [GET]
+
++ Parameters
+    + batchId: `546998` (optional, String) - Unique ID of the Batch
+    
++ Response 200 (application/json)
+
+        {
+                    "batchId": "546998",
+                    "notifications": [],
+                    "samples": [],
+                    "capacity": 7,
+                    "stage": "",
+                    "plate": {
+                          "plateId": "55dbb447d5c2400174c38657",
+                          "wells": [
+                            {
+                              "sampleId": "9610-DNA_888",
+                              "wellLocation": "E12",
+                              "status": "Available",
+                              "sourcePlateId": "27d6850c-7c43-4f2a-91e5-ede7110acac5"
+                            },
+                            {
+                              "sampleId": "1390-DNA_736",
+                              "wellLocation": "C3",
+                              "status": "Unavailable",
+                              "sourcePlateId": "e5edcec5-6402-4a24-9931-17cce00fdda5"
+                            },
+                            {
+                              "sampleId": "3483-DNA_361",
+                              "wellLocation": "B12",
+                              "status": "Available",
+                              "sourcePlateId": "226dc139-99f9-48fc-96a8-43ed94dd8368"
+                            },
+                            {
+                              "sampleId": "6022-DNA_879",
+                              "wellLocation": "B5",
+                              "status": "Available",
+                              "sourcePlateId": "f0438c2e-0546-43fc-a985-d64440d2699d"
+                            },
+                            {
+                              "sampleId": "9075-DNA_395",
+                              "wellLocation": "H1",
+                              "status": "Available",
+                              "sourcePlateId": "95f6cd05-2224-467a-b4b5-e513bceb5f3d"
+                            },
+                            {
+                              "sampleId": "2454-DNA_242",
+                              "wellLocation": "A8",
+                              "status": "Available",
+                              "sourcePlateId": "22b100ad-215c-48eb-8b66-559a4938baec"
+                            },
+                            {
+                              "sampleId": "8476-DNA_329",
+                              "wellLocation": "H1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "ae88a93f-abf2-42a7-bcc0-c597cbb61371"
+                            },
+                            {
+                              "sampleId": "3541-DNA_788",
+                              "wellLocation": "D7",
+                              "status": "Available",
+                              "sourcePlateId": "257958ad-038c-43a0-b335-67a6a595a15d"
+                            },
+                            {
+                              "sampleId": "1022-DNA_660",
+                              "wellLocation": "G5",
+                              "status": "Available",
+                              "sourcePlateId": "aae5f164-3012-421e-b893-dbdeca9ddb30"
+                            },
+                            {
+                              "sampleId": "4959-DNA_896",
+                              "wellLocation": "B12",
+                              "status": "Unavailable",
+                              "sourcePlateId": "f78acfd8-a9bb-4784-be04-4118134de8e2"
+                            },
+                            {
+                              "sampleId": "4537-DNA_379",
+                              "wellLocation": "G6",
+                              "status": "Available",
+                              "sourcePlateId": "33ddd210-1452-49f1-9079-2fc4c0651aea"
+                            },
+                            {
+                              "sampleId": "1475-DNA_909",
+                              "wellLocation": "G9",
+                              "status": "Unavailable",
+                              "sourcePlateId": "9ec6386a-b0ee-4ce8-a35f-17a1bf2fdf00"
+                            },
+                            {
+                              "sampleId": "9550-DNA_844",
+                              "wellLocation": "B6",
+                              "status": "Available",
+                              "sourcePlateId": "00d8f5be-0876-4b33-b906-7689eb723c4d"
+                            },
+                            {
+                              "sampleId": "5072-DNA_813",
+                              "wellLocation": "A4",
+                              "status": "Unavailable",
+                              "sourcePlateId": "091167fe-e98f-4ceb-8d09-acb0e2d7b346"
+                            },
+                            {
+                              "sampleId": "3759-DNA_206",
+                              "wellLocation": "C8",
+                              "status": "Available",
+                              "sourcePlateId": "6abc6630-72b3-4c41-9648-6eb15eaf1924"
+                            },
+                            {
+                              "sampleId": "5197-DNA_261",
+                              "wellLocation": "D7",
+                              "status": "Available",
+                              "sourcePlateId": "c0ff15dc-8c66-4475-8c6f-998145e52bc2"
+                            },
+                            {
+                              "sampleId": "1196-DNA_766",
+                              "wellLocation": "G1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "fe4cb1fc-6050-4747-a641-ee829e41c964"
+                            },
+                            {
+                              "sampleId": "2768-DNA_613",
+                              "wellLocation": "C6",
+                              "status": "Available",
+                              "sourcePlateId": "b64243d3-1f38-493a-8c01-8ab1b8007be3"
+                            },
+                            {
+                              "sampleId": "4846-DNA_556",
+                              "wellLocation": "C7",
+                              "status": "Available",
+                              "sourcePlateId": "a069e28f-dc72-4166-a1d8-aeb6a5e146d0"
+                            },
+                            {
+                              "sampleId": "6954-DNA_790",
+                              "wellLocation": "C6",
+                              "status": "Available",
+                              "sourcePlateId": "3774260d-680f-44db-904a-8a83a3cb6b7e"
+                            },
+                            {
+                              "sampleId": "3367-DNA_569",
+                              "wellLocation": "D4",
+                              "status": "Unavailable",
+                              "sourcePlateId": "70234e35-2c39-4ae6-9890-5e1a5f70073c"
+                            },
+                            {
+                              "sampleId": "8676-DNA_684",
+                              "wellLocation": "G3",
+                              "status": "Available",
+                              "sourcePlateId": "28196519-2bc9-4e22-bb2f-e768625c3876"
+                            },
+                            {
+                              "sampleId": "7941-DNA_700",
+                              "wellLocation": "B11",
+                              "status": "Available",
+                              "sourcePlateId": "6ff45709-868d-495c-8051-95c55b066a33"
+                            },
+                            {
+                              "sampleId": "4879-DNA_673",
+                              "wellLocation": "F4",
+                              "status": "Unavailable",
+                              "sourcePlateId": "ab6c8921-1a07-4ee4-9352-8c749e78709f"
+                            },
+                            {
+                              "sampleId": "1018-DNA_374",
+                              "wellLocation": "D8",
+                              "status": "Unavailable",
+                              "sourcePlateId": "4ae2260a-6f9f-4591-9837-7da161aac358"
+                            },
+                            {
+                              "sampleId": "8671-DNA_541",
+                              "wellLocation": "C9",
+                              "status": "Unavailable",
+                              "sourcePlateId": "bc6fa4bc-c212-4d93-a045-a4d40c8927f1"
+                            },
+                            {
+                              "sampleId": "6964-DNA_388",
+                              "wellLocation": "H3",
+                              "status": "Unavailable",
+                              "sourcePlateId": "c2085835-7f58-4184-81d0-6bf0f36ee547"
+                            },
+                            {
+                              "sampleId": "5274-DNA_443",
+                              "wellLocation": "B8",
+                              "status": "Available",
+                              "sourcePlateId": "db897c2f-c0d2-4080-b996-b8f435b573f8"
+                            },
+                            {
+                              "sampleId": "9903-DNA_603",
+                              "wellLocation": "D5",
+                              "status": "Unavailable",
+                              "sourcePlateId": "da0aed4c-8279-4052-ac14-6c08a7424cb8"
+                            },
+                            {
+                              "sampleId": "3087-DNA_758",
+                              "wellLocation": "G5",
+                              "status": "Available",
+                              "sourcePlateId": "84f0f428-481b-4253-a984-678e68633274"
+                            },
+                            {
+                              "sampleId": "5590-DNA_197",
+                              "wellLocation": "H8",
+                              "status": "Unavailable",
+                              "sourcePlateId": "7e63b4f2-27c5-4da1-a5fc-100c51c5d73d"
+                            },
+                            {
+                              "sampleId": "9016-DNA_369",
+                              "wellLocation": "F1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "163fa03c-a8c3-46f3-8b33-ec02ff853305"
+                            },
+                            {
+                              "sampleId": "6970-DNA_130",
+                              "wellLocation": "F9",
+                              "status": "Available",
+                              "sourcePlateId": "66092032-cfbd-4704-b582-cd7ae40e6ee5"
+                            },
+                            {
+                              "sampleId": "9916-DNA_436",
+                              "wellLocation": "B6",
+                              "status": "Unavailable",
+                              "sourcePlateId": "dc182184-ffd7-4af8-9052-7958e7222d74"
+                            },
+                            {
+                              "sampleId": "8252-DNA_303",
+                              "wellLocation": "A8",
+                              "status": "Available",
+                              "sourcePlateId": "887a037a-d2b5-4746-b7b1-bfd007c8de31"
+                            },
+                            {
+                              "sampleId": "4434-DNA_217",
+                              "wellLocation": "B5",
+                              "status": "Unavailable",
+                              "sourcePlateId": "236dfb5a-dcd1-4a10-a0b6-ba260ed7bf18"
+                            },
+                            {
+                              "sampleId": "9824-DNA_196",
+                              "wellLocation": "F2",
+                              "status": "Available",
+                              "sourcePlateId": "c2d99702-4e04-44a5-8c6a-af2d70b87048"
+                            },
+                            {
+                              "sampleId": "3313-DNA_927",
+                              "wellLocation": "F3",
+                              "status": "Available",
+                              "sourcePlateId": "4e8f3d08-ae7b-4c9f-b5dc-31d51a6c14dd"
+                            },
+                            {
+                              "sampleId": "3703-DNA_647",
+                              "wellLocation": "C7",
+                              "status": "Unavailable",
+                              "sourcePlateId": "dfcae7d7-587b-4f9b-ba5b-dd517865d681"
+                            },
+                            {
+                              "sampleId": "5072-DNA_546",
+                              "wellLocation": "A6",
+                              "status": "Available",
+                              "sourcePlateId": "c29776dd-3099-4720-ab5a-ca8794d97f16"
+                            },
+                            {
+                              "sampleId": "9133-DNA_872",
+                              "wellLocation": "F2",
+                              "status": "Unavailable",
+                              "sourcePlateId": "9d89b351-c043-49bf-b2dd-e7205fa97efb"
+                            },
+                            {
+                              "sampleId": "7052-DNA_442",
+                              "wellLocation": "D1",
+                              "status": "Available",
+                              "sourcePlateId": "3084fe1e-0965-4bbf-a5a8-4abfaf979727"
+                            },
+                            {
+                              "sampleId": "6024-DNA_320",
+                              "wellLocation": "A3",
+                              "status": "Unavailable",
+                              "sourcePlateId": "a2372324-ed74-45b3-8f42-441a907fc238"
+                            },
+                            {
+                              "sampleId": "2351-DNA_855",
+                              "wellLocation": "C2",
+                              "status": "Available",
+                              "sourcePlateId": "81eb9395-373f-4ffa-bd0a-f6b6ef034ca4"
+                            },
+                            {
+                              "sampleId": "9489-DNA_772",
+                              "wellLocation": "H6",
+                              "status": "Unavailable",
+                              "sourcePlateId": "6ceae734-fe80-4da8-8b1d-49b444bc41db"
+                            },
+                            {
+                              "sampleId": "1734-DNA_563",
+                              "wellLocation": "F2",
+                              "status": "Available",
+                              "sourcePlateId": "c47a33f7-afa3-4a49-a393-0b225e7c4471"
+                            },
+                            {
+                              "sampleId": "4745-DNA_498",
+                              "wellLocation": "F5",
+                              "status": "Available",
+                              "sourcePlateId": "a5d676ec-2337-4325-ae80-a66a2a2c38d0"
+                            },
+                            {
+                              "sampleId": "9501-DNA_807",
+                              "wellLocation": "F4",
+                              "status": "Unavailable",
+                              "sourcePlateId": "9f8accad-5276-4684-9fa9-c40a60266de7"
+                            },
+                            {
+                              "sampleId": "7324-DNA_133",
+                              "wellLocation": "H12",
+                              "status": "Unavailable",
+                              "sourcePlateId": "e2aba62c-a21c-46ab-ae71-7c295e2793b0"
+                            },
+                            {
+                              "sampleId": "7247-DNA_778",
+                              "wellLocation": "B1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "d18f4557-7aae-4289-8517-8324d10b01af"
+                            },
+                            {
+                              "sampleId": "6915-DNA_240",
+                              "wellLocation": "F7",
+                              "status": "Available",
+                              "sourcePlateId": "72cca2b1-46af-46ba-81ad-2d7f8ec75782"
+                            },
+                            {
+                              "sampleId": "2702-DNA_528",
+                              "wellLocation": "D9",
+                              "status": "Available",
+                              "sourcePlateId": "bfd0fa1f-99a4-448f-bc0b-5999758d94ae"
+                            },
+                            {
+                              "sampleId": "9909-DNA_451",
+                              "wellLocation": "G1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "cddb46ab-aa1a-4a23-87d3-a707c391417c"
+                            },
+                            {
+                              "sampleId": "4238-DNA_752",
+                              "wellLocation": "G5",
+                              "status": "Unavailable",
+                              "sourcePlateId": "2a60e349-d157-4db1-b602-37363a6c40d4"
+                            },
+                            {
+                              "sampleId": "6684-DNA_455",
+                              "wellLocation": "E1",
+                              "status": "Available",
+                              "sourcePlateId": "2995ee3f-ca33-4ce2-96bc-c99e68c49951"
+                            },
+                            {
+                              "sampleId": "7157-DNA_219",
+                              "wellLocation": "G5",
+                              "status": "Unavailable",
+                              "sourcePlateId": "1578719d-fa4e-4e0b-94f4-0e551f4d2ca5"
+                            },
+                            {
+                              "sampleId": "9884-DNA_911",
+                              "wellLocation": "D7",
+                              "status": "Unavailable",
+                              "sourcePlateId": "f85ab17a-a990-42eb-a48e-058820acac1d"
+                            },
+                            {
+                              "sampleId": "2493-DNA_201",
+                              "wellLocation": "B7",
+                              "status": "Available",
+                              "sourcePlateId": "a40b2094-fb95-46bd-8155-2f304defd175"
+                            },
+                            {
+                              "sampleId": "8099-DNA_138",
+                              "wellLocation": "A6",
+                              "status": "Unavailable",
+                              "sourcePlateId": "88db654a-d2ad-42f6-be23-de76a35892a8"
+                            },
+                            {
+                              "sampleId": "3244-DNA_670",
+                              "wellLocation": "C8",
+                              "status": "Unavailable",
+                              "sourcePlateId": "245999ed-4c88-4b99-aac5-968e760b657d"
+                            },
+                            {
+                              "sampleId": "4647-DNA_216",
+                              "wellLocation": "B7",
+                              "status": "Unavailable",
+                              "sourcePlateId": "40644220-4b10-4ca1-bfc5-1eb97675bf70"
+                            },
+                            {
+                              "sampleId": "6371-DNA_244",
+                              "wellLocation": "C9",
+                              "status": "Unavailable",
+                              "sourcePlateId": "2e1996a4-f804-4744-8fa1-1d54b7af3ce4"
+                            },
+                            {
+                              "sampleId": "6701-DNA_570",
+                              "wellLocation": "H6",
+                              "status": "Unavailable",
+                              "sourcePlateId": "3d82bce4-c524-4cdf-8cc0-df878bd2d23b"
+                            },
+                            {
+                              "sampleId": "7625-DNA_738",
+                              "wellLocation": "D7",
+                              "status": "Unavailable",
+                              "sourcePlateId": "fa2610ee-ed4d-480b-942e-1746040a0cb9"
+                            },
+                            {
+                              "sampleId": "3727-DNA_157",
+                              "wellLocation": "H1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "56af8df5-74d8-496d-b30f-d381bdec563a"
+                            },
+                            {
+                              "sampleId": "3978-DNA_658",
+                              "wellLocation": "B6",
+                              "status": "Unavailable",
+                              "sourcePlateId": "2cd26c6c-f6ce-4d14-9874-32cb0c87f3d8"
+                            },
+                            {
+                              "sampleId": "1720-DNA_309",
+                              "wellLocation": "D2",
+                              "status": "Unavailable",
+                              "sourcePlateId": "0fcdcfda-b519-4ec9-b84e-034c8fa78a71"
+                            },
+                            {
+                              "sampleId": "7595-DNA_277",
+                              "wellLocation": "C3",
+                              "status": "Unavailable",
+                              "sourcePlateId": "8927fce4-4a8f-47f4-ac43-323e45f8a796"
+                            },
+                            {
+                              "sampleId": "4459-DNA_597",
+                              "wellLocation": "F8",
+                              "status": "Available",
+                              "sourcePlateId": "d65769ac-8293-4b05-8c68-f3bcaa18d354"
+                            },
+                            {
+                              "sampleId": "1742-DNA_266",
+                              "wellLocation": "E5",
+                              "status": "Unavailable",
+                              "sourcePlateId": "4edc2f80-eb8c-4a6c-b709-36cb868d8943"
+                            },
+                            {
+                              "sampleId": "5809-DNA_162",
+                              "wellLocation": "E6",
+                              "status": "Available",
+                              "sourcePlateId": "2137d459-11d8-4903-85ef-188a6ad2df01"
+                            },
+                            {
+                              "sampleId": "9654-DNA_348",
+                              "wellLocation": "E7",
+                              "status": "Unavailable",
+                              "sourcePlateId": "5e01bc2c-bd73-48e5-afa1-d28b2fdd78b1"
+                            },
+                            {
+                              "sampleId": "1402-DNA_201",
+                              "wellLocation": "H12",
+                              "status": "Available",
+                              "sourcePlateId": "e489cb0a-0875-4719-a50f-f7c799e03451"
+                            },
+                            {
+                              "sampleId": "5292-DNA_235",
+                              "wellLocation": "D9",
+                              "status": "Available",
+                              "sourcePlateId": "e619a619-5866-46a0-a65c-2da2b1db56b2"
+                            }
+                          ]
+                        }
+        }
+        
+## Pick List [/horizon/osp/planning/picklist/{batchId}]
+
++ Parameters
+    + batchId: `123456` (String) - Unique ID of the Batch
+
+### View Pick List [GET]
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "batchId": "123456",
+                "resources": [
+                    {
+                        "resource": "50 ul Filtered Tips",
+                        "barcode": "",
+                        "quantity": 5,
+                        "itemDescription": "",
+                        "confirmation": false
+                    },
+                    {
+                        "resource": "300 ul Filtered Tips",
+                        "barcode": "",
+                        "quantity": 2,
+                        "itemDescription": "",
+                        "confirmation": false
+                    },
+                    {
+                        "resource": "Empty Deep Well Trough",
+                        "barcode": "",
+                        "quantity": 1,
+                        "itemDescription": "",
+                        "confirmation": false
+                    },
+                    {
+                        "resource": "Empty 384-well Reader Plate",
+                        "barcode": "",
+                        "quantity": 1,
+                        "itemDescription": "",
+                        "confirmation": false
+                    },
+                    {
+                        "resource": "Empty 0.8 mL Dilution Plate",
+                        "barcode": "",
+                        "quantity": 1,
+                        "itemDescription": "",
+                        "confirmation": false
+                    },
+                    {
+                        "resource": "Pico Quant Reagent Plate",
+                        "barcode": "",
+                        "quantity": 1,
+                        "itemDescription": "",
+                        "confirmation": false
+                    },
+                    {
+                        "resource": "Sample Plate",
+                        "barcode": "",
+                        "quantity": 1,
+                        "itemDescription": "",
+                        "confirmation": false
+                    },
+                    {
+                        "resource": "1X TE Bulk",
+                        "barcode": "",
+                        "quantity": 1,
+                        "itemDescription": "",
+                        "confirmation": false
+                    }
+                ]
+            }
+            
+### Update Pick List [PUT]
+
++ Request (application/json)
+
+        {
+            "batchId": "123456",
+            "resources": [
+                            {
+                                "resource": "50 ul Filtered Tips",
+                                "barcode": "",
+                                "quantity": 5,
+                                "itemDescription": "",
+                                "confirmation": true
+                            },
+                            {
+                                "resource": "300 ul Filtered Tips",
+                                "barcode": "",
+                                "quantity": 2,
+                                "itemDescription": "",
+                                "confirmation": false
+                            },
+                            {
+                                "resource": "Empty Deep Well Trough",
+                                "barcode": "",
+                                "quantity": 1,
+                                "itemDescription": "",
+                                "confirmation": true
+                            },
+                            {
+                                "resource": "Empty 384-well Reader Plate",
+                                "barcode": "",
+                                "quantity": 1,
+                                "itemDescription": "",
+                                "confirmation": false
+                            },
+                            {
+                                "resource": "Empty 0.8 mL Dilution Plate",
+                                "barcode": "",
+                                "quantity": 1,
+                                "itemDescription": "",
+                                "confirmation": false
+                            },
+                            {
+                                "resource": "Pico Quant Reagent Plate",
+                                "barcode": "",
+                                "quantity": 1,
+                                "itemDescription": "",
+                                "confirmation": false
+                            },
+                            {
+                                "resource": "Sample Plate",
+                                "barcode": "",
+                                "quantity": 1,
+                                "itemDescription": "",
+                                "confirmation": true
+                            },
+                            {
+                                "resource": "1X TE Bulk",
+                                "barcode": "",
+                                "quantity": 1,
+                                "itemDescription": "",
+                                "confirmation": false
+                            }
+                        ]
+        }
+
++ Response 200 (application/json)
+
+        {
+            "success": "true"
+        }
+        
+## Workflow [/horizon/osp/planning/workflow]
+
+### Create Workflow [POST]
+
++ Request (application/json)
+
+        {
+            "batchId": "123456",
+            "stage": "Step 6 (ssCirc)",
+            "totalTimeToComplete": 120
+        }
+
++ Response 200 (application/json)
+
+        {
+            "success": "true"
+        }
+
+
+## Group OSP In Process
+
+## Batch In Process [/horizon/osp/inp/batchInProcess]
+
+        
+### View Batch In Process [GET]
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                    "batchId": "546998",
+                    "sequencingPlan": "WES 1.0",
+                    "stage": "Step 4 (AdB)",
+                    "status": "In Process",
+                    "samplesInBatch": 45,
+                    "batchCreationDate": "2015-06-03T04:24:55 +07:00",
+                    "notifications": [],
+                    "samples": [],
+                    "capacity": 6,
+                    "currentStage": "Step 4 (AdB)",
+                    "currentLibrarySubStep": "3",
+                    "timeUntilCompletion": 75,
+                    "totalCompletionTime": 120,
+                    "quantRuns": [
+                                    {
+                                        "label": "Quant Run 1",
+                                        "value": 1
+                                    },
+                                    {
+                                        "label": "Quant Run 2",
+                                        "value": 2
+                                    }
+                                ],
+                    "workflow": [
+                                    {
+                                        "stage": "Step 1 (AdA)",
+                                        "status": "complete",
+                                        "failedSubSteps": []
+                                    },
+                                    {
+                                        "stage": "Step 2 (dsCirc)",
+                                        "status": "complete",
+                                        "failedSubSteps": [2,7]
+                                    },
+                                    {
+                                        "stage": "Step 3 (CNT)",
+                                        "status": "complete",
+                                        "failedSubSteps": [5]
+                                    },
+                                    {
+                                        "stage": "Step 4 (AdB)",
+                                        "status": "inprocess",
+                                        "failedSubSteps": []
+                                    },
+                                    {
+                                        "stage": "Step 5 (Reload)",
+                                        "status": "",
+                                        "failedSubSteps": []
+                                    },
+                                    {
+                                        "stage": "Step 6 (Make DNBs)",
+                                        "status": "",
+                                        "failedSubSteps": []
+                                    },
+                                    {
+                                        "stage": "Step 7 (Pool DNBs)",
+                                        "status": "",
+                                        "failedSubSteps": []
+                                    }
+                                ],
+                    "comments": [],
+                    "plate": {
+                          "plateId": "55dbb447d5c2400174c38657",
+                          "wells": [
+                            {
+                              "sampleId": "9610-DNA_888",
+                              "wellLocation": "E0",
+                              "status": "Available",
+                              "sourcePlateId": "27d6850c-7c43-4f2a-91e5-ede7110acac5"
+                            },
+                            {
+                              "sampleId": "1390-DNA_736",
+                              "wellLocation": "C3",
+                              "status": "Unavailable",
+                              "sourcePlateId": "e5edcec5-6402-4a24-9931-17cce00fdda5"
+                            },
+                            {
+                              "sampleId": "3483-DNA_361",
+                              "wellLocation": "B0",
+                              "status": "Available",
+                              "sourcePlateId": "226dc139-99f9-48fc-96a8-43ed94dd8368"
+                            },
+                            {
+                              "sampleId": "6022-DNA_879",
+                              "wellLocation": "B5",
+                              "status": "Available",
+                              "sourcePlateId": "f0438c2e-0546-43fc-a985-d64440d2699d"
+                            },
+                            {
+                              "sampleId": "9075-DNA_395",
+                              "wellLocation": "H1",
+                              "status": "Available",
+                              "sourcePlateId": "95f6cd05-2224-467a-b4b5-e513bceb5f3d"
+                            },
+                            {
+                              "sampleId": "2454-DNA_242",
+                              "wellLocation": "A8",
+                              "status": "Available",
+                              "sourcePlateId": "22b100ad-215c-48eb-8b66-559a4938baec"
+                            },
+                            {
+                              "sampleId": "8476-DNA_329",
+                              "wellLocation": "H1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "ae88a93f-abf2-42a7-bcc0-c597cbb61371"
+                            },
+                            {
+                              "sampleId": "3541-DNA_788",
+                              "wellLocation": "D7",
+                              "status": "Available",
+                              "sourcePlateId": "257958ad-038c-43a0-b335-67a6a595a15d"
+                            },
+                            {
+                              "sampleId": "1022-DNA_660",
+                              "wellLocation": "G5",
+                              "status": "Available",
+                              "sourcePlateId": "aae5f164-3012-421e-b893-dbdeca9ddb30"
+                            },
+                            {
+                              "sampleId": "4959-DNA_896",
+                              "wellLocation": "B0",
+                              "status": "Unavailable",
+                              "sourcePlateId": "f78acfd8-a9bb-4784-be04-4118134de8e2"
+                            },
+                            {
+                              "sampleId": "4537-DNA_379",
+                              "wellLocation": "G6",
+                              "status": "Available",
+                              "sourcePlateId": "33ddd210-1452-49f1-9079-2fc4c0651aea"
+                            },
+                            {
+                              "sampleId": "1475-DNA_909",
+                              "wellLocation": "G9",
+                              "status": "Unavailable",
+                              "sourcePlateId": "9ec6386a-b0ee-4ce8-a35f-17a1bf2fdf00"
+                            },
+                            {
+                              "sampleId": "9550-DNA_844",
+                              "wellLocation": "B6",
+                              "status": "Available",
+                              "sourcePlateId": "00d8f5be-0876-4b33-b906-7689eb723c4d"
+                            },
+                            {
+                              "sampleId": "5072-DNA_813",
+                              "wellLocation": "A4",
+                              "status": "Unavailable",
+                              "sourcePlateId": "091167fe-e98f-4ceb-8d09-acb0e2d7b346"
+                            },
+                            {
+                              "sampleId": "3759-DNA_206",
+                              "wellLocation": "C8",
+                              "status": "Available",
+                              "sourcePlateId": "6abc6630-72b3-4c41-9648-6eb15eaf1924"
+                            },
+                            {
+                              "sampleId": "5197-DNA_261",
+                              "wellLocation": "D7",
+                              "status": "Available",
+                              "sourcePlateId": "c0ff15dc-8c66-4475-8c6f-998145e52bc2"
+                            },
+                            {
+                              "sampleId": "1196-DNA_766",
+                              "wellLocation": "G1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "fe4cb1fc-6050-4747-a641-ee829e41c964"
+                            },
+                            {
+                              "sampleId": "2768-DNA_613",
+                              "wellLocation": "C6",
+                              "status": "Available",
+                              "sourcePlateId": "b64243d3-1f38-493a-8c01-8ab1b8007be3"
+                            },
+                            {
+                              "sampleId": "4846-DNA_556",
+                              "wellLocation": "C7",
+                              "status": "Available",
+                              "sourcePlateId": "a069e28f-dc72-4166-a1d8-aeb6a5e146d0"
+                            },
+                            {
+                              "sampleId": "6954-DNA_790",
+                              "wellLocation": "C6",
+                              "status": "Available",
+                              "sourcePlateId": "3774260d-680f-44db-904a-8a83a3cb6b7e"
+                            },
+                            {
+                              "sampleId": "3367-DNA_569",
+                              "wellLocation": "D4",
+                              "status": "Unavailable",
+                              "sourcePlateId": "70234e35-2c39-4ae6-9890-5e1a5f70073c"
+                            },
+                            {
+                              "sampleId": "8676-DNA_684",
+                              "wellLocation": "G3",
+                              "status": "Available",
+                              "sourcePlateId": "28196519-2bc9-4e22-bb2f-e768625c3876"
+                            },
+                            {
+                              "sampleId": "7941-DNA_700",
+                              "wellLocation": "B0",
+                              "status": "Available",
+                              "sourcePlateId": "6ff45709-868d-495c-8051-95c55b066a33"
+                            },
+                            {
+                              "sampleId": "4879-DNA_673",
+                              "wellLocation": "F4",
+                              "status": "Unavailable",
+                              "sourcePlateId": "ab6c8921-1a07-4ee4-9352-8c749e78709f"
+                            },
+                            {
+                              "sampleId": "1018-DNA_374",
+                              "wellLocation": "D8",
+                              "status": "Unavailable",
+                              "sourcePlateId": "4ae2260a-6f9f-4591-9837-7da161aac358"
+                            },
+                            {
+                              "sampleId": "8671-DNA_541",
+                              "wellLocation": "C9",
+                              "status": "Unavailable",
+                              "sourcePlateId": "bc6fa4bc-c212-4d93-a045-a4d40c8927f1"
+                            },
+                            {
+                              "sampleId": "6964-DNA_388",
+                              "wellLocation": "H3",
+                              "status": "Unavailable",
+                              "sourcePlateId": "c2085835-7f58-4184-81d0-6bf0f36ee547"
+                            },
+                            {
+                              "sampleId": "5274-DNA_443",
+                              "wellLocation": "B8",
+                              "status": "Available",
+                              "sourcePlateId": "db897c2f-c0d2-4080-b996-b8f435b573f8"
+                            },
+                            {
+                              "sampleId": "9903-DNA_603",
+                              "wellLocation": "D5",
+                              "status": "Unavailable",
+                              "sourcePlateId": "da0aed4c-8279-4052-ac14-6c08a7424cb8"
+                            },
+                            {
+                              "sampleId": "3087-DNA_758",
+                              "wellLocation": "G5",
+                              "status": "Available",
+                              "sourcePlateId": "84f0f428-481b-4253-a984-678e68633274"
+                            },
+                            {
+                              "sampleId": "5590-DNA_197",
+                              "wellLocation": "H8",
+                              "status": "Unavailable",
+                              "sourcePlateId": "7e63b4f2-27c5-4da1-a5fc-100c51c5d73d"
+                            },
+                            {
+                              "sampleId": "9016-DNA_369",
+                              "wellLocation": "F1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "163fa03c-a8c3-46f3-8b33-ec02ff853305"
+                            },
+                            {
+                              "sampleId": "6970-DNA_130",
+                              "wellLocation": "F9",
+                              "status": "Available",
+                              "sourcePlateId": "66092032-cfbd-4704-b582-cd7ae40e6ee5"
+                            },
+                            {
+                              "sampleId": "9916-DNA_436",
+                              "wellLocation": "B6",
+                              "status": "Unavailable",
+                              "sourcePlateId": "dc182184-ffd7-4af8-9052-7958e7222d74"
+                            },
+                            {
+                              "sampleId": "8252-DNA_303",
+                              "wellLocation": "A8",
+                              "status": "Available",
+                              "sourcePlateId": "887a037a-d2b5-4746-b7b1-bfd007c8de31"
+                            },
+                            {
+                              "sampleId": "4434-DNA_217",
+                              "wellLocation": "B5",
+                              "status": "Unavailable",
+                              "sourcePlateId": "236dfb5a-dcd1-4a10-a0b6-ba260ed7bf18"
+                            },
+                            {
+                              "sampleId": "9824-DNA_196",
+                              "wellLocation": "F2",
+                              "status": "Available",
+                              "sourcePlateId": "c2d99702-4e04-44a5-8c6a-af2d70b87048"
+                            },
+                            {
+                              "sampleId": "3313-DNA_927",
+                              "wellLocation": "F3",
+                              "status": "Available",
+                              "sourcePlateId": "4e8f3d08-ae7b-4c9f-b5dc-31d51a6c14dd"
+                            },
+                            {
+                              "sampleId": "3703-DNA_647",
+                              "wellLocation": "C7",
+                              "status": "Unavailable",
+                              "sourcePlateId": "dfcae7d7-587b-4f9b-ba5b-dd517865d681"
+                            },
+                            {
+                              "sampleId": "5072-DNA_546",
+                              "wellLocation": "A6",
+                              "status": "Available",
+                              "sourcePlateId": "c29776dd-3099-4720-ab5a-ca8794d97f16"
+                            },
+                            {
+                              "sampleId": "9133-DNA_872",
+                              "wellLocation": "F2",
+                              "status": "Unavailable",
+                              "sourcePlateId": "9d89b351-c043-49bf-b2dd-e7205fa97efb"
+                            },
+                            {
+                              "sampleId": "7052-DNA_442",
+                              "wellLocation": "D1",
+                              "status": "Available",
+                              "sourcePlateId": "3084fe1e-0965-4bbf-a5a8-4abfaf979727"
+                            },
+                            {
+                              "sampleId": "6024-DNA_320",
+                              "wellLocation": "A3",
+                              "status": "Unavailable",
+                              "sourcePlateId": "a2372324-ed74-45b3-8f42-441a907fc238"
+                            },
+                            {
+                              "sampleId": "2351-DNA_855",
+                              "wellLocation": "C2",
+                              "status": "Available",
+                              "sourcePlateId": "81eb9395-373f-4ffa-bd0a-f6b6ef034ca4"
+                            },
+                            {
+                              "sampleId": "9489-DNA_772",
+                              "wellLocation": "H6",
+                              "status": "Unavailable",
+                              "sourcePlateId": "6ceae734-fe80-4da8-8b1d-49b444bc41db"
+                            },
+                            {
+                              "sampleId": "1734-DNA_563",
+                              "wellLocation": "F2",
+                              "status": "Available",
+                              "sourcePlateId": "c47a33f7-afa3-4a49-a393-0b225e7c4471"
+                            },
+                            {
+                              "sampleId": "4745-DNA_498",
+                              "wellLocation": "F5",
+                              "status": "Available",
+                              "sourcePlateId": "a5d676ec-2337-4325-ae80-a66a2a2c38d0"
+                            },
+                            {
+                              "sampleId": "9501-DNA_807",
+                              "wellLocation": "F4",
+                              "status": "Unavailable",
+                              "sourcePlateId": "9f8accad-5276-4684-9fa9-c40a60266de7"
+                            },
+                            {
+                              "sampleId": "7324-DNA_133",
+                              "wellLocation": "H0",
+                              "status": "Unavailable",
+                              "sourcePlateId": "e2aba62c-a21c-46ab-ae71-7c295e2793b0"
+                            },
+                            {
+                              "sampleId": "7247-DNA_778",
+                              "wellLocation": "B1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "d18f4557-7aae-4289-8517-8324d10b01af"
+                            },
+                            {
+                              "sampleId": "6915-DNA_240",
+                              "wellLocation": "F7",
+                              "status": "Available",
+                              "sourcePlateId": "72cca2b1-46af-46ba-81ad-2d7f8ec75782"
+                            },
+                            {
+                              "sampleId": "2702-DNA_528",
+                              "wellLocation": "D9",
+                              "status": "Available",
+                              "sourcePlateId": "bfd0fa1f-99a4-448f-bc0b-5999758d94ae"
+                            },
+                            {
+                              "sampleId": "9909-DNA_451",
+                              "wellLocation": "G1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "cddb46ab-aa1a-4a23-87d3-a707c391417c"
+                            },
+                            {
+                              "sampleId": "4238-DNA_752",
+                              "wellLocation": "G5",
+                              "status": "Unavailable",
+                              "sourcePlateId": "2a60e349-d157-4db1-b602-37363a6c40d4"
+                            },
+                            {
+                              "sampleId": "6684-DNA_455",
+                              "wellLocation": "E1",
+                              "status": "Available",
+                              "sourcePlateId": "2995ee3f-ca33-4ce2-96bc-c99e68c49951"
+                            },
+                            {
+                              "sampleId": "7157-DNA_219",
+                              "wellLocation": "G5",
+                              "status": "Unavailable",
+                              "sourcePlateId": "1578719d-fa4e-4e0b-94f4-0e551f4d2ca5"
+                            },
+                            {
+                              "sampleId": "9884-DNA_911",
+                              "wellLocation": "D7",
+                              "status": "Unavailable",
+                              "sourcePlateId": "f85ab17a-a990-42eb-a48e-058820acac1d"
+                            },
+                            {
+                              "sampleId": "2493-DNA_201",
+                              "wellLocation": "B7",
+                              "status": "Available",
+                              "sourcePlateId": "a40b2094-fb95-46bd-8155-2f304defd175"
+                            },
+                            {
+                              "sampleId": "8099-DNA_138",
+                              "wellLocation": "A6",
+                              "status": "Unavailable",
+                              "sourcePlateId": "88db654a-d2ad-42f6-be23-de76a35892a8"
+                            },
+                            {
+                              "sampleId": "3244-DNA_670",
+                              "wellLocation": "C8",
+                              "status": "Unavailable",
+                              "sourcePlateId": "245999ed-4c88-4b99-aac5-968e760b657d"
+                            },
+                            {
+                              "sampleId": "4647-DNA_216",
+                              "wellLocation": "B7",
+                              "status": "Unavailable",
+                              "sourcePlateId": "40644220-4b10-4ca1-bfc5-1eb97675bf70"
+                            },
+                            {
+                              "sampleId": "6371-DNA_244",
+                              "wellLocation": "C9",
+                              "status": "Unavailable",
+                              "sourcePlateId": "2e1996a4-f804-4744-8fa1-1d54b7af3ce4"
+                            },
+                            {
+                              "sampleId": "6701-DNA_570",
+                              "wellLocation": "H6",
+                              "status": "Unavailable",
+                              "sourcePlateId": "3d82bce4-c524-4cdf-8cc0-df878bd2d23b"
+                            },
+                            {
+                              "sampleId": "7625-DNA_738",
+                              "wellLocation": "D7",
+                              "status": "Unavailable",
+                              "sourcePlateId": "fa2610ee-ed4d-480b-942e-1746040a0cb9"
+                            },
+                            {
+                              "sampleId": "3727-DNA_157",
+                              "wellLocation": "H1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "56af8df5-74d8-496d-b30f-d381bdec563a"
+                            },
+                            {
+                              "sampleId": "3978-DNA_658",
+                              "wellLocation": "B6",
+                              "status": "Unavailable",
+                              "sourcePlateId": "2cd26c6c-f6ce-4d14-9874-32cb0c87f3d8"
+                            },
+                            {
+                              "sampleId": "1720-DNA_309",
+                              "wellLocation": "D2",
+                              "status": "Unavailable",
+                              "sourcePlateId": "0fcdcfda-b519-4ec9-b84e-034c8fa78a71"
+                            },
+                            {
+                              "sampleId": "7595-DNA_277",
+                              "wellLocation": "C3",
+                              "status": "Unavailable",
+                              "sourcePlateId": "8927fce4-4a8f-47f4-ac43-323e45f8a796"
+                            },
+                            {
+                              "sampleId": "4459-DNA_597",
+                              "wellLocation": "F8",
+                              "status": "Available",
+                              "sourcePlateId": "d65769ac-8293-4b05-8c68-f3bcaa18d354"
+                            },
+                            {
+                              "sampleId": "1742-DNA_266",
+                              "wellLocation": "E5",
+                              "status": "Unavailable",
+                              "sourcePlateId": "4edc2f80-eb8c-4a6c-b709-36cb868d8943"
+                            },
+                            {
+                              "sampleId": "5809-DNA_162",
+                              "wellLocation": "E6",
+                              "status": "Available",
+                              "sourcePlateId": "2137d459-11d8-4903-85ef-188a6ad2df01"
+                            },
+                            {
+                              "sampleId": "9654-DNA_348",
+                              "wellLocation": "E7",
+                              "status": "Unavailable",
+                              "sourcePlateId": "5e01bc2c-bd73-48e5-afa1-d28b2fdd78b1"
+                            },
+                            {
+                              "sampleId": "1402-DNA_201",
+                              "wellLocation": "H0",
+                              "status": "Available",
+                              "sourcePlateId": "e489cb0a-0875-4719-a50f-f7c799e03451"
+                            },
+                            {
+                              "sampleId": "5292-DNA_235",
+                              "wellLocation": "D9",
+                              "status": "Available",
+                              "sourcePlateId": "e619a619-5866-46a0-a65c-2da2b1db56b2"
+                            }
+                          ]
+                        }
+            }
+      
+## Action [/horizon/osp/inp/action/{batchId}]
+
+Pause, Resume, Abort, Retry Quant actions from action menu on an in process batch.
+
+### Submit Action [POST]
+
++ Parameters
+    + batchId: `17773724` (String) - Unique ID of the Batch
+
++ Request (application/json)
+
+        {
+            "action": "pause"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "success": "true"
+        }
+
+## Concentrations [/horizon/osp/inp/concentrations/{batchId}/{quantRun}]
+
+### View Concentrations [GET]
+
++ Parameters
+    + batchId: `546998` (optional, String) - Unique ID of the Batch
+    + quantRun: 1 (optional, Number) - Quant Run value
+    
++ Response 200 (application/json)
+
+    + Body
+
+            [
+                    {
+                        "concentration": 29.2,
+                        "sampleId": "510825",
+                        "standardDeviationRFU": 617.81,
+                        "type": "Passed",
+                        "wellPosition": "A2"
+                    },
+                    {
+                        "concentration": 30.1,
+                        "sampleId": "329245",
+                        "standardDeviationRFU": 371.32,
+                        "type": "Positive",
+                        "wellPosition": "A10"
+                    },
+                    {
+                        "concentration": 29.3,
+                        "sampleId": "551322",
+                        "standardDeviationRFU": 308.00,
+                        "type": "Passed",
+                        "wellPosition": "B9"
+                    },
+                    {
+                        "concentration": 25.8,
+                        "sampleId": "374246",
+                        "standardDeviationRFU": 248.57,
+                        "type": "Negative",
+                        "wellPosition": "D5"
+                    },
+                    {
+                        "concentration": 29.3,
+                        "sampleId": "363091",
+                        "standardDeviationRFU": 807.16,
+                        "type": "Positive",
+                        "wellPosition": "E8"
+                    },
+                    {
+                        "concentration": 28.5,
+                        "sampleId": "653373",
+                        "standardDeviationRFU": 554.39,
+                        "type": "Passed",
+                        "wellPosition": "F7"
+                    },
+                    {
+                        "concentration": 26.8,
+                        "sampleId": "989786",
+                        "standardDeviationRFU": 257.08,
+                        "type": "Failed",
+                        "wellPosition": "G6"
+                    },
+                    {
+                        "concentration": 29.1,
+                        "sampleId": "846598",
+                        "standardDeviationRFU": 144.01,
+                        "type": "Passed",
+                        "wellPosition": "H3"
+                    },
+                    {
+                        "concentration": 26.6,
+                        "sampleId": "267632",
+                        "standardDeviationRFU": 145.91,
+                        "type": "Negative",
+                        "wellPosition": "B5"
+                    },
+                    {
+                        "concentration": 29.1,
+                        "sampleId": "674223",
+                        "standardDeviationRFU": 202.36,
+                        "type": "Passed",
+                        "wellPosition": "F1"
+                    }
+            ]
+        
+## Group OSP Output Queue
+
+## DNBs [/horizon/osp/oq/dnbs]
+
+### View DNBs [GET]
+
++ Response 200 (application/json)
+
+    + Body
+
+            [
+                {
+                    "batchId": "15571283",
+                    "completionDate": "2015-09-04 02:28 PM",
+                    "dnbId": "17696278",
+                    "failureStep": "Step 1 (AdA)",
+                    "failureWell": "",
+                    "insertionPoint": "AdA",
+                    "sequencingPlan": "WGSv0.0.68",
+                    "status": "Aborted"
+                },
+                {
+                    "batchId": "10980478",
+                    "completionDate": "2015-09-04 02:28 PM",
+                    "dnbId": "12002861",
+                    "failureStep": "Step 2 (dsCirc)",
+                    "failureWell": "",
+                    "insertionPoint": "N/A",
+                    "sequencingPlan": "WGS_1_0",
+                    "status": "Aborted"
+                },
+                {
+                    "batchId": "18818799",
+                    "completionDate": "2015-09-04 02:28 PM",
+                    "dnbId": "11592828",
+                    "failureStep": "Step 3 (CNT)",
+                    "failureWell": "",
+                    "insertionPoint": "N/A",
+                    "sequencingPlan": "JC_2_DNB_POS",
+                    "status": ""
+                },
+                {
+                    "batchId": "17749518",
+                    "completionDate": "2015-09-04 02:28 PM",
+                    "dnbId": "11248904",
+                    "failureStep": "Step 4 (AdB)",
+                    "failureWell": "",
+                    "insertionPoint": "AdB",
+                    "sequencingPlan": "WGS_1_0_Temp",
+                    "status": ""
+                },
+                {
+                    "batchId": "16631901",
+                    "completionDate": "2015-09-04 02:28 PM",
+                    "dnbId": "17795619",
+                    "failureStep": "Step 5 (Reload)",
+                    "failureWell": "D08",
+                    "insertionPoint": "AdB",
+                    "sequencingPlan": "WGS_1_0_Temp",
+                    "status": "Error"
+                },
+                {
+                    "batchId": "11512810",
+                    "completionDate": "2015-09-04 02:28 PM",
+                    "dnbId": "17334554",
+                    "failureStep": "Step 6 (Make)",
+                    "failureWell": "",
+                    "insertionPoint": "AdB",
+                    "sequencingPlan": "WGS_1_0",
+                    "status": "Aborted"
+                },
+                {
+                    "batchId": "18743701",
+                    "completionDate": "2015-09-04 02:28 PM",
+                    "dnbId": "10159037",
+                    "failureStep": "Step 7 (Pool)",
+                    "failureWell": "",
+                    "insertionPoint": "N/A",
+                    "sequencingPlan": "WGS_1_0",
+                    "status": "Completed"
+                }
+            ]
+            
+## Batch [/horizon/osp/oq/batch/{batchId}]
+        
+### View Batch [GET]
+
++ Parameters
+    + batchId: `546998` (optional, String) - Unique ID of the Batch
+    
++ Response 200 (application/json)
+
+        {
+                    "batchId": "546998",
+                    "notifications": [],
+                    "samples": [],
+                    "capacity": 7,
+                    "workflow": [
+                                    {
+                                        "stage": "Step 1 (AdA)",
+                                        "status": "complete",
+                                        "failedSubSteps": [2]
+                                    },
+                                    {
+                                        "stage": "Step 2 (dsCirc)",
+                                        "status": "complete",
+                                        "failedSubSteps": []
+                                    },
+                                    {
+                                        "stage": "Step 3 (CNT)",
+                                        "status": "complete",
+                                        "failedSubSteps": [5]
+                                    },
+                                    {
+                                        "stage": "Step 4 (AdB)",
+                                        "status": "complete",
+                                        "failedSubSteps": []
+                                    },
+                                    {
+                                        "stage": "Step 5 (Reload)",
+                                        "status": "complete",
+                                        "failedSubSteps": []
+                                    },
+                                    {
+                                        "stage": "Step 6 (Make DNBs)",
+                                        "status": "complete",
+                                        "failedSubSteps": []
+                                    },
+                                    {
+                                        "stage": "Step 7 (Pool DNBs)",
+                                        "status": "",
+                                        "failedSubSteps": []
+                                    }
+                                ],
+                    "comments": [],
+                    "plate": {
+                          "plateId": "55dbb447d5c2400174c38657",
+                          "wells": [
+                            {
+                              "sampleId": "9610-DNA_888",
+                              "wellLocation": "E12",
+                              "status": "Available",
+                              "sourcePlateId": "27d6850c-7c43-4f2a-91e5-ede7110acac5"
+                            },
+                            {
+                              "sampleId": "1390-DNA_736",
+                              "wellLocation": "C3",
+                              "status": "Unavailable",
+                              "sourcePlateId": "e5edcec5-6402-4a24-9931-17cce00fdda5"
+                            },
+                            {
+                              "sampleId": "3483-DNA_361",
+                              "wellLocation": "B12",
+                              "status": "Available",
+                              "sourcePlateId": "226dc139-99f9-48fc-96a8-43ed94dd8368"
+                            },
+                            {
+                              "sampleId": "6022-DNA_879",
+                              "wellLocation": "B5",
+                              "status": "Available",
+                              "sourcePlateId": "f0438c2e-0546-43fc-a985-d64440d2699d"
+                            },
+                            {
+                              "sampleId": "9075-DNA_395",
+                              "wellLocation": "H1",
+                              "status": "Available",
+                              "sourcePlateId": "95f6cd05-2224-467a-b4b5-e513bceb5f3d"
+                            },
+                            {
+                              "sampleId": "2454-DNA_242",
+                              "wellLocation": "A8",
+                              "status": "Available",
+                              "sourcePlateId": "22b100ad-215c-48eb-8b66-559a4938baec"
+                            },
+                            {
+                              "sampleId": "8476-DNA_329",
+                              "wellLocation": "H1",
+                              "status": "Unavailable",
+                              "sourcePlateId": "ae88a93f-abf2-42a7-bcc0-c597cbb61371"
+                            },
+                            {
+                              "sampleId": "3541-DNA_788",
+                              "wellLocation": "D7",
+                              "status": "Available",
+                              "sourcePlateId": "257958ad-038c-43a0-b335-67a6a595a15d"
+                            },
+                            {
+                              "sampleId": "1022-DNA_660",
+                              "wellLocation": "G5",
+                              "status": "Available",
+                              "sourcePlateId": "aae5f164-3012-421e-b893-dbdeca9ddb30"
+                            },
+                            {
+                              "sampleId": "4959-DNA_896",
+                              "wellLocation": "B12",
+                              "status": "Unavailable",
+                              "sourcePlateId": "f78acfd8-a9bb-4784-be04-4118134de8e2"
+                            },
+                            {
+                              "sampleId": "4537-DNA_379",
+                              "wellLocation": "G6",
+                              "status": "Available",
+                              "sourcePlateId": "33ddd210-1452-49f1-9079-2fc4c0651aea"
+                            },
+                            {
+                              "sampleId": "1475-DNA_909",
+                              "wellLocation": "G9",
+                              "status": "Unavailable",
+                              "sourcePlateId": "9ec6386a-b0ee-4ce8-a35f-17a1bf2fdf00"
+                            },
+                            {
+                              "sampleId": "9550-DNA_844",
+                              "wellLocation": "B6",
+                              "status": "Available",
+                              "sourcePlateId": "00d8f5be-0876-4b33-b906-7689eb723c4d"
+                            }
+                          ]
+                        }
+        }
