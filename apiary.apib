@@ -4,8 +4,8 @@ HOST: http://ohs-dev01:8080/
 # Horizon UI Middleware
 
 Horizon UI Middleware to support the Backbone.JS UI application through a RESTful interface
-
 # OSP APIs [/horizon/osp/]
+
 
 ## Check status [GET]
 
@@ -3456,4 +3456,96 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
                             }
                           ]
                         }
+        }
+        
+        
+# OSD APIs [/horizon/osd/]
+
+## Check status [GET]
+
++ Response 200 (application/json)
+
+        {
+            "success": true
+        }
+
+## Group OSD Input Queue
+## Samples [/horizon/osd/inputqueue]
+
+### View Samples [GET]
+
++ Response 200 (application/json)
+
+        {
+            {
+            "id": "",
+            "sampleId": "",
+            "flowcellId": "",
+            "priority": "",
+            "inputType": "",
+            "inputTypes": [],
+            "jobs": [{
+                "jobID": "",
+                "outputOption": "",
+                "projectedStart": "",
+                "positions":[{
+                    "path": "",
+                    "position": "",
+                    "readLocation": "",
+                    "readPosition": "0",
+                    "scanID": "0",
+                    "scanSetId": "0",
+                    "use": "false"
+                }]
+            }],
+            "notifications": [{
+                "code": "",
+                "dateReported": "",
+                "jobId": "",
+                "subTask": "",
+                "taskId": "",
+                "description": "",
+                "flowcellId": "",
+                "scanSetId": "",
+                "errorLog": ""
+            }],
+            "metrics": {
+                "demuxRates": "0",
+                "mappingRates": "0"
+            }
+        }
+            "sampleId": "",
+            "flowcellId": "",
+            "priority": "",
+            "inputType": "",
+            "inputTypes": [],
+            "jobs": [{
+                "jobID": "",
+                "outputOption": "",
+                "projectedStart": "",
+                "positions":[{
+                    "path": "",
+                    "position": "",
+                    "readLocation": "",
+                    "readPosition": "0",
+                    "scanID": "0",
+                    "scanSetId": "0",
+                    "use": "false"
+                }]
+            }],
+            "notifications": [{
+                "code": "",
+                "dateReported": "",
+                "jobId": "",
+                "subTask": "",
+                "taskId": "",
+                "description": "",
+                "flowcellId": "",
+                "scanSetId": "",
+                "errorLog": ""
+            }],
+            "metrics": {
+                "demuxRates": "0",
+                "mappingRates": "0"
+            }
         }
