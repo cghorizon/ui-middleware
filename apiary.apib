@@ -3470,7 +3470,7 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
         }
 
 ## Group OSD Input Queue
-## Samples [/horizon/osd/inputqueue]
+## Samples [/horizon/osd/inputQueue]
 
 ### View Samples [GET]
 
@@ -3515,9 +3515,9 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
             }
         }
         
-## Samples [/horizon/osd/resources]
+## Resources [/horizon/osd/resources]
 
-### Resources [GET]
+### View Resources [GET]
 
 + Response 200 (application/json)
 
@@ -3547,3 +3547,72 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
             "taskStage": "",
             "taskErrors": []
         }
+
+## Process Samples [GET /horizon/osd/processSamples]
+
++ Response 200 (application/json)
+
+        {}
+        
+## Resources Offline [GET /horizon/osd/takeResourcesOffline]
+
++ Response 200 (application/json)
+    
+        {}
+
+## Group OSD In Process
+## Samples [/horizon/osd/inProcess]
+
+### View Samples [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "",
+                "sampleId": "",
+                "flowcellId": "",
+                "inputType": "",
+                "inputTypes": [],
+                "status": "",
+                "jobs": [
+                    {
+                        "jobID": "",
+                        "outputOption": "",
+                        "timeToComplete": 0
+                    }
+                ],
+                "notifications": [
+                    {
+                        "code": "",
+                        "dateReported": "",
+                        "jobId": "",
+                        "subTask": "",
+                        "taskId": "",
+                        "description": "",
+                        "flowcellId": "",
+                        "scanSetId": "",
+                        "errorLog": ""
+                    }
+                ],
+                "metrics": {
+                    "demux": {
+                        "demuxRates": 0,
+                        "mappingRates": 0
+                    },
+                    "assembly": {
+                        "fullyMappedYield": 0,
+                        "overallDiscordance": 0,
+                        "duplicatedDNBFraction": 0,
+                        "highScoringDiscordance": 0,
+                        "genomeCoverage": 0,
+                        "autosomalExomeCoverage": 0
+                    }
+                },
+                "comments": {
+                    "creationDate": "",
+                    "user": "",
+                    "comment": ""
+                }
+            }
+        ]
