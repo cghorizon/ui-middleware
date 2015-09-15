@@ -3476,44 +3476,46 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
 
 + Response 200 (application/json)
 
-        {
-            
-            "id": "",
-            "sampleId": "",
-            "flowcellId": "",
-            "priority": "",
-            "inputType": "",
-            "inputTypes": [],
-            "jobs": [{
-                "jobID": "",
-                "outputOption": "",
-                "projectedStart": "",
-                "positions":[{
-                    "path": "",
-                    "position": "",
-                    "readLocation": "",
-                    "readPosition": "0",
-                    "scanID": "0",
-                    "scanSetId": "0",
-                    "use": "false"
-                }]
-            }],
-            "notifications": [{
-                "code": "",
-                "dateReported": "",
-                "jobId": "",
-                "subTask": "",
-                "taskId": "",
-                "description": "",
+        [
+            {
+                
+                "id": "",
+                "sampleId": "",
                 "flowcellId": "",
-                "scanSetId": "",
-                "errorLog": ""
-            }],
-            "metrics": {
-                "demuxRates": "0",
-                "mappingRates": "0"
+                "priority": "",
+                "inputType": "",
+                "inputTypes": [],
+                "jobs": [{
+                    "jobID": "",
+                    "outputOption": "",
+                    "projectedStart": "",
+                    "positions":[{
+                        "path": "",
+                        "position": "",
+                        "readLocation": "",
+                        "readPosition": "0",
+                        "scanID": "0",
+                        "scanSetId": "0",
+                        "use": "false"
+                    }]
+                }],
+                "notifications": [{
+                    "code": "",
+                    "dateReported": "",
+                    "jobId": "",
+                    "subTask": "",
+                    "taskId": "",
+                    "description": "",
+                    "flowcellId": "",
+                    "scanSetId": "",
+                    "errorLog": ""
+                }],
+                "metrics": {
+                    "demuxRates": "0",
+                    "mappingRates": "0"
+                }
             }
-        }
+        ]
         
 ## Resources [/horizon/osd/resources]
 
@@ -3521,32 +3523,34 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
 
 + Response 200 (application/json)
 
-        {
-            "id": "",
-            "resource": "",
-            "currentTask": [{
-                "flowcellId": "",
-                "samples": [],
-                "taskStatus": ""
-            }],
-            "cpuPercent": "0",
-            "cpuCount": "0",
-            "memoryInUse": "0",
-            "totalMemory": "0",
-            "usedStorage": "0",
-            "availableStorage": "0",
-            "resourceState": "",
-            "partitions": [
-                {
-                    "path": "",
-                    "usedStorage": "0",
-                    "totalStorage": "0"
-                }
-            ],
-            "percentComplete": "0",
-            "taskStage": "",
-            "taskErrors": []
-        }
+        [
+            {
+                "id": "",
+                "resource": "",
+                "currentTask": [{
+                    "flowcellId": "",
+                    "samples": [],
+                    "taskStatus": ""
+                }],
+                "cpuPercent": "0",
+                "cpuCount": "0",
+                "memoryInUse": "0",
+                "totalMemory": "0",
+                "usedStorage": "0",
+                "availableStorage": "0",
+                "resourceState": "",
+                "partitions": [
+                    {
+                        "path": "",
+                        "usedStorage": "0",
+                        "totalStorage": "0"
+                    }
+                ],
+                "percentComplete": "0",
+                "taskStage": "",
+                "taskErrors": []
+            }
+        ]
 
 ## Process Samples [GET /horizon/osd/processSamples]
 
