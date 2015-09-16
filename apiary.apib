@@ -3165,78 +3165,183 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
 
     + Body
 
-            [
-                    {
-                        "concentration": 29.2,
-                        "sampleId": "510825",
-                        "standardDeviationRFU": 617.81,
-                        "type": "Passed",
-                        "wellPosition": "A2"
-                    },
-                    {
-                        "concentration": 30.1,
-                        "sampleId": "329245",
-                        "standardDeviationRFU": 371.32,
-                        "type": "Positive",
-                        "wellPosition": "A10"
-                    },
-                    {
-                        "concentration": 29.3,
-                        "sampleId": "551322",
-                        "standardDeviationRFU": 308.00,
-                        "type": "Passed",
-                        "wellPosition": "B9"
-                    },
-                    {
-                        "concentration": 25.8,
-                        "sampleId": "374246",
-                        "standardDeviationRFU": 248.57,
-                        "type": "Negative",
-                        "wellPosition": "D5"
-                    },
-                    {
-                        "concentration": 29.3,
-                        "sampleId": "363091",
-                        "standardDeviationRFU": 807.16,
-                        "type": "Positive",
-                        "wellPosition": "E8"
-                    },
-                    {
-                        "concentration": 28.5,
-                        "sampleId": "653373",
-                        "standardDeviationRFU": 554.39,
-                        "type": "Passed",
-                        "wellPosition": "F7"
-                    },
-                    {
-                        "concentration": 26.8,
-                        "sampleId": "989786",
-                        "standardDeviationRFU": 257.08,
-                        "type": "Failed",
-                        "wellPosition": "G6"
-                    },
-                    {
-                        "concentration": 29.1,
-                        "sampleId": "846598",
-                        "standardDeviationRFU": 144.01,
-                        "type": "Passed",
-                        "wellPosition": "H3"
-                    },
-                    {
-                        "concentration": 26.6,
-                        "sampleId": "267632",
-                        "standardDeviationRFU": 145.91,
-                        "type": "Negative",
-                        "wellPosition": "B5"
-                    },
-                    {
-                        "concentration": 29.1,
-                        "sampleId": "674223",
-                        "standardDeviationRFU": 202.36,
-                        "type": "Passed",
-                        "wellPosition": "F1"
-                    }
-            ]
+            {
+                "concentrations": [
+                        {
+                            "concentration": 29.2,
+                            "sampleId": "510825",
+                            "standardDeviation": 617.81,
+                            "type": "Passed",
+                            "wellPosition": "A2"
+                        },
+                        {
+                            "concentration": 30.1,
+                            "sampleId": "329245",
+                            "standardDeviation": 371.32,
+                            "type": "Positive",
+                            "wellPosition": "A10"
+                        },
+                        {
+                            "concentration": 29.3,
+                            "sampleId": "551322",
+                            "standardDeviation": 308.00,
+                            "type": "Passed",
+                            "wellPosition": "B9"
+                        },
+                        {
+                            "concentration": 25.8,
+                            "sampleId": "374246",
+                            "standardDeviation": 248.57,
+                            "type": "Negative",
+                            "wellPosition": "D5"
+                        },
+                        {
+                            "concentration": 29.3,
+                            "sampleId": "363091",
+                            "standardDeviation": 807.16,
+                            "type": "Positive",
+                            "wellPosition": "E8"
+                        },
+                        {
+                            "concentration": 28.5,
+                            "sampleId": "653373",
+                            "standardDeviation": 554.39,
+                            "type": "Passed",
+                            "wellPosition": "F7"
+                        },
+                        {
+                            "concentration": 26.8,
+                            "sampleId": "989786",
+                            "standardDeviation": 257.08,
+                            "type": "Failed",
+                            "wellPosition": "G6"
+                        },
+                        {
+                            "concentration": 29.1,
+                            "sampleId": "846598",
+                            "standardDeviation": 144.01,
+                            "type": "Passed",
+                            "wellPosition": "H3"
+                        },
+                        {
+                            "concentration": 26.6,
+                            "sampleId": "267632",
+                            "standardDeviation": 145.91,
+                            "type": "Negative",
+                            "wellPosition": "B5"
+                        },
+                        {
+                            "concentration": 29.1,
+                            "sampleId": "674223",
+                            "standardDeviation": 202.36,
+                            "type": "Passed",
+                            "wellPosition": "F1"
+                        }
+                ],
+                "averageConcentration": 28.5,
+                "standardCurves": [
+                        {
+                            "concentration": 0.54,
+                            "rfu": 18660,
+                            "type": "",
+                            "wellPosition": "A1"
+                        },
+                        {
+                            "concentration": 0.46,
+                            "rfu": 15230,
+                            "type": "",
+                            "wellPosition": "A2"
+                        },
+                        {
+                            "concentration": 0.39,
+                            "rfu": 12704,
+                            "type": "",
+                            "wellPosition": "A3"
+                        },
+                        {
+                            "concentration": 0.31,
+                            "rfu": 9952,
+                            "type": "",
+                            "wellPosition": "A4"
+                        },
+                        {
+                            "concentration": 0.24,
+                            "rfu": 7723,
+                            "type": "",
+                            "wellPosition": "A5"
+                        },
+                        {
+                            "concentration": 0.16,
+                            "rfu": 5200,
+                            "type": "",
+                            "wellPosition": "A6"
+                        },
+                        {
+                            "concentration": 0.09,
+                            "rfu": 2791,
+                            "type": "",
+                            "wellPosition": "A7"
+                        },
+                        {
+                            "concentration": 0.01,
+                            "rfu": 468,
+                            "type": "",
+                            "wellPosition": "A8"
+                        },
+                        {
+                            "concentration": 0.54,
+                            "rfu": 18020,
+                            "type": "",
+                            "wellPosition": "F1"
+                        },
+                        {
+                            "concentration": 0.46,
+                            "rfu": 15162,
+                            "type": "",
+                            "wellPosition": "F2"
+                        },
+                        {
+                            "concentration": 0.39,
+                            "rfu": 13339,
+                            "type": "",
+                            "wellPosition": "F3"
+                        },
+                        {
+                            "concentration": 0.31,
+                            "rfu": 10237,
+                            "type": "",
+                            "wellPosition": "F4"
+                        },
+                        {
+                            "concentration": 0.24,
+                            "rfu": 7910,
+                            "type": "",
+                            "wellPosition": "F5"
+                        },
+                        {
+                            "concentration": 0.16,
+                            "rfu": 5054,
+                            "type": "",
+                            "wellPosition": "F6"
+                        },
+                        {
+                            "concentration": 0.09,
+                            "rfu": 2759,
+                            "type": "",
+                            "wellPosition": "F7"
+                        },
+                        {
+                            "concentration": 0.01,
+                            "rfu": 460,
+                            "type": "",
+                            "wellPosition": "F8"
+                        }
+                ],
+                "r2": 0.9973,
+                "slope": 33226.30,
+                "yInt": -182.34,
+                "gain": 0
+            }
         
 ## Group OSP Output Queue
 
