@@ -3625,57 +3625,51 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
             {
                 "id": "2",
                 "sampleId": "1261042",
-                "flowcellId": "14562994",
-                "inputType": "",
-                "inputTypes": ["Demux", "Assembly"],
+                "flowcellId": "14562995",
+                "inputType": "Demux",
+                "inputTypes": ["Assembly, "Demux"],
                 "status": "",
-                "timeToComplete": "2015-09-15 04:50 PM",
+                "timeToComplete": "2015-09-15 03:50 PM",
                 "jobs": [
                     {
                         "jobID": "1",
-                        "outputOption": "FASTQ"
-                    },
-                    {
-                        "jobID": "2",
-                        "outputOption": "VCF"
-                    },
-                    {
-                        "jobID": "3",
-                        "outputOption": "BAM"
+                        "outputOption": "FASTQ, "VCF"
                     }
                 ],
                 "notifications": [
                     {
-                        "code": "",
-                        "dateReported": "",
-                        "jobId": "",
-                        "subTask": "",
-                        "taskId": "",
-                        "description": "",
-                        "flowcellId": "",
-                        "scanSetId": "",
-                        "errorLog": ""
+                        "code": "123",
+                        "dateReported": "2015-09-15 03:50 PM",
+                        "jobId": "2",
+                        "subTask": "Foo",
+                        "taskId": "1234",
+                        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                        "flowcellId": "1234",
+                        "scanSetId": "1234",
+                        "errorLog": "Error Log for 1234"
                     }
                 ],
                 "metrics": {
                     "demux": {
-                        "demuxRates": 0,
-                        "mappingRates": 0
+                        "demuxRates": "1.93",
+                        "mappingRates": "1.93"
                     },
                     "assembly": {
-                        "fullyMappedYield": 0,
-                        "overallDiscordance": 0,
-                        "duplicatedDNBFraction": 0,
-                        "highScoringDiscordance": 0,
-                        "genomeCoverage": 0,
-                        "autosomalExomeCoverage": 0
+                        "fullyMappedYield": "3.30",
+                        "overallDiscordance": "555",
+                        "duplicatedDNBFraction": "0.96",
+                        "highScoringDiscordance": "1.09",
+                        "genomeCoverage": "28.11",
+                        "autosomalExomeCoverage": "17.48"
                     }
                 },
-                "comments": {
-                    "creationDate": "",
-                    "user": "",
-                    "comment": ""
-                }
+                "comments": [
+                    {
+                        "creationDate": "2015-09-16 09:14 AM",
+                        "user": "jSmith",
+                        "comment": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    }
+                ]
             }
         ]
 ## Group OSL Dashlets
