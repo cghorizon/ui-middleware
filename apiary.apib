@@ -3677,6 +3677,25 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
                 ]
             }
         ]
+## Pause [/horizon/osd/inProcess/analysisAction/{action}]
+
+### In Process Pause [POST]
++ Parameters
+    + action: `17773724` (String) - Unique ID of the Batch
+
++ Request (application/json)
+
+        {
+            "action": "pause"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "success": "true"
+        }
+    
+
 ## Group OSL POOLING
 
 ## Dashlets [/horizon/osl/dashlet]
