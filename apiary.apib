@@ -3676,3 +3676,40 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
                 }
             }
         ]
+## Group OSL Dashlets
+
+## Dashlets [/horizon/osl/dashlet/{id}]
+
+Dashlets are components of the dashboard with custom data attributes
+
+### View Dashlets [GET]
+
++ Parameters
+    + id: `input_queue` (optional, String) - Dashlet ID
+
++ Response 200 (application/json)
+
+        [
+            {
+                "title": "Input Queue",
+                "dnbs": {
+                    "cnt": 10,
+                    "title": "Input Queue"
+                },
+                "isProgressBar": true
+            },
+            {
+                "title": "In Process",
+                "plates": {
+                    "cnt": 40,
+                    "title": "In Process"
+                }
+            },
+            {
+                "title": "Output Queue",
+                "pDnbs": {
+                    "cnt": 3,
+                    "title": "Output Queue"
+                }
+            }
+        ]
