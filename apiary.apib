@@ -3797,6 +3797,91 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
             "success": "true"
         }
 
+## Group OSD Reporting
+## OSD Reporting [/horizon/osd/reporting]
+
+### Samples [GET]
++ Response 200 (application/json)
+
+        {
+            "id": "",
+            "sampleId": "",
+            "flowcell": "",
+            "completionDate": "",
+            "aqcStatus": "",
+            "pathDestination": "",
+            "persistDir": "",
+            "metrics": {
+                "libraryId": "",
+                "assemblyId": "0",
+                "genderDetected": {
+                    "value": "",
+                    "status": ""
+                },
+                "genderCallsCompatible": {
+                    "value": "0",
+                    "status": ""
+                },
+                "fractionIDQC": {
+                    "value": "0",
+                    "status": ""
+                },
+                "genomeFraction": {
+                    "value": "0",
+                    "status": ""
+                },
+                "codeSequenceFraction": {
+                    "value": "0",
+                    "status": ""
+                },
+                "mateDistributionMean": {
+                    "value": "0",
+                    "status": ""
+                },
+                "mappedYield": {
+                    "value": "0",
+                    "status": ""
+                },
+                "totalInputDNBs": {
+                    "value": "0",
+                    "status": ""
+                },
+                "overallDiscordance": {
+                    "value": "0",
+                    "status": ""
+                },
+                "percentCoverage": {
+                    "value": "0",
+                    "status": ""
+                },
+                "snpTotalCount": {
+                    "value": "0",
+                    "status": ""
+                },
+                "fractionSNPs": {
+                    "value": "0",
+                    "status": ""
+                },
+                "snpRatio": {
+                    "value": "0",
+                    "status": ""
+                },
+                "normalizedCoverage": {
+                    "value": "0",
+                    "status": ""
+                },
+                "highJunctionCount": {
+                    "value": "0",
+                    "status": ""
+                },
+                "nonsenseFrameshifts": {
+                    "value": "0",
+                    "status": ""
+                }
+            }
+        }
+
+
 ## Group OSL POOLING
 
 ## Dashlets [/horizon/osl/dashlet]
