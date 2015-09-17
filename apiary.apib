@@ -3669,6 +3669,7 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
     
         {}
 
+
 ## Group OSD In Process
 ## Samples [/horizon/osd/inProcess]
 
@@ -3782,8 +3783,10 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
                 ]
             }
         ]
-## Pause Abort Resume [POST /horizon/osd/inProcess/{actions}]
+## Pause, Abort, Resume, Delete, Export [/horizon/osd/inProcess/{actions}]
 
+Common sub-actions for OSD
+### OSD Actions [POST]
 + Request (application/json)
 
         {
@@ -3795,7 +3798,6 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
         {
             "success": "true"
         }
-
 ## Group OSD Reporting
 ## Samples [/horizon/osd/reporting]
 
@@ -3879,36 +3881,6 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
                 }
             }
         }
-
-
-## Delete [POST /horizon/osd/reporting/delete/{reportId}]
-
-+ Request (application/json)
-
-        {
-            "reportId": "1234"
-        }
-
-+ Response 200 (application/json)
-
-        {
-            "success: "true"
-        }
-        
-## Export [POST /horizon/osd/reporting/export/{reportId}]
-
-+ Request (application/json)
-
-        {
-            "reportId": "1234"
-        }
-
-+ Response 200 (application/json)
-
-        {
-            "success: "true"
-        }
-
 
 ## Group OSL POOLING
 
