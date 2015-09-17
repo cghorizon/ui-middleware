@@ -3782,13 +3782,12 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
                 ]
             }
         ]
-## Pause [/horizon/osd/inProcess/analysisAction/{action}]
+## Pause Abort Resume [POST /horizon/osd/inProcess/analysisAction/{action}]
 
-### In Process Pause [POST]
 + Request (application/json)
 
         {
-            "action": "pause"
+            "action": "actionType"
         }
 
 + Response 200 (application/json)
@@ -3804,7 +3803,7 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
 + Response 200 (application/json)
 
         {
-            "id": "",
+            "id": "1",
             "sampleId": "",
             "flowcell": "",
             "completionDate": "",
@@ -3882,9 +3881,8 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
         }
 
 
-## Delete [/horizon/osd/reporting/delete/{reportId}]
+## Delete [POST /horizon/osd/reporting/delete/{reportId}]
 
-### Delete Report [POST]
 + Request (application/json)
 
         {
@@ -3897,9 +3895,8 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
             "success: "true"
         }
         
-## Export [/horizon/osd/reporting/export/{reportId}]
+## Export [POST /horizon/osd/reporting/export/{reportId}]
 
-### Export Report [POST]
 + Request (application/json)
 
         {
