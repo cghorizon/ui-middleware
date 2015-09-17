@@ -3782,9 +3782,17 @@ Pause, Resume, Abort, Retry Quant actions from action menu on an in process batc
                 ]
             }
         ]
-## Pause [/horizon/osd/inProcess/analysisAction/]
+## Pause [/horizon/osd/inProcess/analysisAction/{action}]
 
-### In Process Pause [GET]
+### In Process Pause [POST]
++ Parameters
+    + action: "{}" (Object) - Action Object
+
++ Request (application/json)
+
+        {
+            "action": "pause"
+        }
 
 + Response 200 (application/json)
 
