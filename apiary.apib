@@ -4027,3 +4027,27 @@ Dashlets are components of the dashboard with custom data attributes
                 "dnbCreationDate":"2015-09-16 12:30 PM"
             }
         ]
+        
+## Group Admin Samples
+
+## Action [/horizon/admin/samplequery/action]
+
+overrideSampleQC actions from action menu on sample query table.
+
+### Submit Action [POST]
+
++ Request (application/json)
+
+        {
+            "action": "overrideSampleQC",
+            "samples": [],
+            "status": "Fail",
+            "comment": "This is my comment."
+        }
+
++ Response 200 (application/json)
+
+        {
+            "success": "true"
+        }
+
