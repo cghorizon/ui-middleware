@@ -4051,3 +4051,874 @@ overrideSampleQC actions from action menu on sample query table.
             "success": "true"
         }
 
+## Search Samples [/horizon/admin/samplequery/search]
+
+search results for the samples admin
+
+### Grid Contents [POST]
+
++ Request (application/json)
+
+        {
+            "searchString": "1"
+        }
+
++ Response 200 (application/json)
+
+        [
+            {
+                "sampleId": "179959",
+                "sequencingPlan": "JC_2_DNB_POS",
+                "type": "gDNA",
+                "status": "In Process",
+                "notifications": [
+                    {
+                        "code": "163044",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "ERROR: Basecall task (OsiBasecall_v1) metric BIC-50 not present in metrics",
+                        "flowcellId": "16450301",
+                        "inputDocId": "160845373710617400",
+                        "jobId": "156",
+                        "location": "SEQ_1.B3",
+                        "scanSetId": "14",
+                        "sequencingPlan": "WGS_1_0",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiImage_v1",
+                        "errorLog": "Error Log for 163044"
+                    },
+                    {
+                        "code": "192464",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: Coarse theta failed",
+                        "flowcellId": "16450301",
+                        "inputDocId": "116552242473699150",
+                        "jobId": "127",
+                        "location": "SEQ_3.B2",
+                        "scanSetId": "25",
+                        "sequencingPlan": "WGSv0.0.68",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiImage_v1",
+                        "errorLog": "Error Log for 192464"
+                    },
+                    {
+                        "code": "196509",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: XY Registration failed.  Check focus (check TL/HL stages and water bead).  Try to redo coarse/fine theta adjustment, then retry XY registration.",
+                        "flowcellId": "16450301",
+                        "inputDocId": "184213471063412740",
+                        "jobId": "400",
+                        "location": "SEQ_1.B3",
+                        "scanSetId": "47",
+                        "sequencingPlan": "WGS_1_0",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiLiquidHandlerActions_v1",
+                        "errorLog": "Error Log for 196509"
+                    },
+                    {
+                        "code": "170687",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "ERROR: Basecall task (OsiBasecall_v1) metric BIC-50 not present in metrics",
+                        "flowcellId": "16450301",
+                        "inputDocId": "160011566895991550",
+                        "jobId": "49",
+                        "location": "SEQ_3.B2",
+                        "scanSetId": "4",
+                        "sequencingPlan": "WGS_1_0",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiLiquidHandlerActions_v1",
+                        "errorLog": "Error Log for 170687"
+                    },
+                    {
+                        "code": "195466",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: XY Registration failed.  Check focus (check TL/HL stages and water bead).  Try to redo coarse/fine theta adjustment, then retry XY registration.",
+                        "flowcellId": "16450301",
+                        "inputDocId": "193070834758691500",
+                        "jobId": "297",
+                        "location": "SEQ_3.B2",
+                        "scanSetId": "45",
+                        "sequencingPlan": "JC_2_DNB_POS",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiBasecall_v1",
+                        "errorLog": "Error Log for 195466"
+                    },
+                    {
+                        "code": "133570",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: 2pt fine theta: registered point near bottom of flowcell has a Y offset of -234.34 um.  This exceeds the max allowable Y offset magnitude of 230.40 um",
+                        "flowcellId": "16450301",
+                        "inputDocId": "140763218561187400",
+                        "jobId": "361",
+                        "location": "SEQ_3.B2",
+                        "scanSetId": "41",
+                        "sequencingPlan": "WGSv0.0.68",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiLiquidHandlerActions_v1",
+                        "errorLog": "Error Log for 133570"
+                    },
+                    {
+                        "code": "174926",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "ERROR: Basecall task (OsiBasecall_v1) metric BIC-50 not present in metrics",
+                        "flowcellId": "16450301",
+                        "inputDocId": "198121968377381570",
+                        "jobId": "200",
+                        "location": "SEQ_1.B3",
+                        "scanSetId": "14",
+                        "sequencingPlan": "WGSv0.0.68",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiImage_v1",
+                        "errorLog": "Error Log for 174926"
+                    },
+                    {
+                        "code": "156769",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: XY Registration failed.  Check focus (check TL/HL stages and water bead).  Try to redo coarse/fine theta adjustment, then retry XY registration.",
+                        "flowcellId": "16450301",
+                        "inputDocId": "136174599151127040",
+                        "jobId": "156",
+                        "location": "SEQ_2.B4",
+                        "scanSetId": "4",
+                        "sequencingPlan": "JC_2_DNB_POS",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiImage_v1",
+                        "errorLog": "Error Log for 156769"
+                    },
+                    {
+                        "code": "101844",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: Coarse theta failed",
+                        "flowcellId": "16450301",
+                        "inputDocId": "123202718631364400",
+                        "jobId": "265",
+                        "location": "SEQ_2.B4",
+                        "scanSetId": "30",
+                        "sequencingPlan": "WGS_1_0",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiBasecall_v1",
+                        "errorLog": "Error Log for 101844"
+                    },
+                    {
+                        "code": "192893",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: XY Registration failed.  Check focus (check TL/HL stages and water bead).  Try to redo coarse/fine theta adjustment, then retry XY registration.",
+                        "flowcellId": "16450301",
+                        "inputDocId": "185272311046719550",
+                        "jobId": "385",
+                        "location": "SEQ_3.B2",
+                        "scanSetId": "10",
+                        "sequencingPlan": "JC_2_DNB_POS",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiImage_v1",
+                        "errorLog": "Error Log for 192893"
+                    },
+                    {
+                        "code": "167725",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: 2pt fine theta: registered point near bottom of flowcell has a Y offset of -234.34 um.  This exceeds the max allowable Y offset magnitude of 230.40 um",
+                        "flowcellId": "16450301",
+                        "inputDocId": "193833093391731400",
+                        "jobId": "98",
+                        "location": "SEQ_2.B4",
+                        "scanSetId": "36",
+                        "sequencingPlan": "WGS_1_0_Temp",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiImage_v1",
+                        "errorLog": "Error Log for 167725"
+                    },
+                    {
+                        "code": "161209",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: 2pt fine theta: registered point near bottom of flowcell has a Y offset of -234.34 um.  This exceeds the max allowable Y offset magnitude of 230.40 um",
+                        "flowcellId": "16450301",
+                        "inputDocId": "123571047093719250",
+                        "jobId": "466",
+                        "location": "SEQ_3.B2",
+                        "scanSetId": "35",
+                        "sequencingPlan": "WGS_1_0_Temp",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiLiquidHandlerActions_v1",
+                        "errorLog": "Error Log for 161209"
+                    }
+                ],
+                "qcStatus": "Pass",
+                "location": {
+                    "current": "Extraction",
+                    "status": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "errorMessage": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                "projectName": "ProjectBeta",
+                "accessionDate": "2015-09-18 03:06 PM",
+                "beginProcessDate": "2015-09-18 03:06 PM",
+                "operatorName": "Jane Smith",
+                "salesOrder": "1497736871",
+                "batchId": "10051",
+                "batchPlateId": "11068",
+                "pDnb": "1324283",
+                "pDnbId": "179393185",
+                "flowcellId": "16450301",
+                "sourcePlateId": "16480",
+                "projectId": "19437677",
+                "coverageRequested": "Yes",
+                "coverageCompleted": "Yes",
+                "coverageTarget": "",
+                "sampleQCStatus": "Fail",
+                "sampleAcceptanceDate": "2015-09-18 03:06 PM",
+                "pm": "",
+                "protected": "No",
+                "referenceBuild": "",
+                "tumorStatus": "",
+                "pathToDirectory": "",
+                "productVersion": "Revolocity 1.0",
+                "comments": [
+                    {
+                        "creationDate": "2015-09-18 03:06 PM",
+                        "user": "mJones",
+                        "comment": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    },
+                    {
+                        "creationDate": "2015-09-18 03:06 PM",
+                        "user": "mJones",
+                        "comment": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    }
+                ],
+                "extraction": {
+                    "sampleId": "179959",
+                    "sequencingPlan": "WGS_1_0",
+                    "type": "gDNA",
+                    "status": "Paused",
+                    "qcStatus": "Pass",
+                    "location": "Extraction",
+                    "projectName": "ProjectAlpha",
+                    "accessionDate": "2015-09-18 03:06 PM",
+                    "beginProcessDate": "2015-09-18 03:06 PM",
+                    "operatorName": "John Doe"
+                },
+                "libraryPrep": {
+                    "sampleId": "179959",
+                    "sequencingPlan": "WGSv0.0.68",
+                    "type": "gDNA",
+                    "status": "Paused",
+                    "qcStatus": "Fail",
+                    "location": "Extraction",
+                    "projectName": "ProjectAlpha",
+                    "accessionDate": "2015-09-18 03:06 PM",
+                    "beginProcessDate": "2015-09-18 03:06 PM",
+                    "operatorName": "John Doe",
+                    "poolId": "14943084A15",
+                    "tagSet": "",
+                    "pooledPlateId": "1049908309",
+                    "libraryId": "1670455402",
+                    "startEndBatchPlate": [
+                        "10590",
+                        "11583"
+                    ],
+                    "concentrations": {
+                        "adA": "16.77",
+                        "dsCirc": "6.53",
+                        "cnt": "4.65",
+                        "adB": "14.60",
+                        "ssCirc": "1.84",
+                        "makeDnb": "6.86"
+                    }
+                },
+                "sequencing": {
+                    "sampleId": "179959",
+                    "samples": {
+                        "name": "GS01496-CLS_B01"
+                    },
+                    "jobs": [
+                        {
+                            "jobId": "17",
+                            "brdKits": [
+                            ],
+                            "lvdKits": [
+                            ],
+                            "sequencingPlan": "JC_2_DNB_POS",
+                            "cycles": [
+                                {
+                                    "dnbPosition": "A5P028",
+                                    "condition": "inProcess",
+                                    "scanSetId": 0,
+                                    "methodName": "A5P028_M001",
+                                    "position": "A5P028",
+                                    "runs": [
+                                        {
+                                            "runNo": "1",
+                                            "location": "SEQ_2.A1",
+                                            "operatorRequest": {
+                                                "name": "NAME_PLACEHOLDER"
+                                            },
+                                            "cycleNo": 0,
+                                            "step1": {
+                                                "taskId": "OsiLiquidHandlerActions_v1",
+                                                "startDate": "2015-08-14T20:56:56.401Z"
+                                            }
+                                        }
+                                    ],
+                                    "cycle": 0,
+                                    "completedRuns": 0,
+                                    "quality": "Unknown"
+                                },
+                                {
+                                    "dnbPosition": "A5P027",
+                                    "condition": "none",
+                                    "scanSetId": 1,
+                                    "methodName": "A5P027_M001",
+                                    "position": "A5P027",
+                                    "runs": [
+                                    ],
+                                    "cycle": 1,
+                                    "completedRuns": 0,
+                                    "quality": "Unknown"
+                                },
+                                {
+                                    "dnbPosition": "A5P026",
+                                    "condition": "none",
+                                    "scanSetId": 2,
+                                    "methodName": "A5P026_M001",
+                                    "position": "A5P026",
+                                    "runs": [
+                                    ],
+                                    "cycle": 2,
+                                    "completedRuns": 0,
+                                    "quality": "Unknown"
+                                },
+                                {
+                                    "dnbPosition": "A5P025",
+                                    "condition": "none",
+                                    "scanSetId": 3,
+                                    "methodName": "A5P025_M001",
+                                    "position": "A5P025",
+                                    "runs": [
+                                    ],
+                                    "cycle": 3,
+                                    "completedRuns": 0,
+                                    "quality": "Unknown"
+                                }
+                            ]
+                        }
+                    ],
+                    "checksum": "35470ba659b44c149ea7d054bed1640b",
+                    "sequencingPlan": "JC_2_DNB_POS",
+                    "type": "gDNA",
+                    "status": "Paused",
+                    "qcStatus": "Pass",
+                    "location": "Extraction",
+                    "projectName": "ProjectAlpha",
+                    "accessionDate": "2015-09-18 03:06 PM",
+                    "beginProcessDate": "2015-09-18 03:06 PM",
+                    "operatorName": "Jane Smith",
+                    "flowcellId": "1991773",
+                    "cyclesCompleted": "56",
+                    "flowcellVersion": "FC71",
+                    "sequencingPlanId": "1423873"
+                },
+                "dataAnalysis": {
+                    "sampleId": "179959",
+                    "sequencingPlan": "WGS_1_0_Temp",
+                    "type": "gDNA",
+                    "status": "Paused",
+                    "qcStatus": "Pass",
+                    "location": "Extraction",
+                    "projectName": "ProjectDelta",
+                    "accessionDate": "2015-09-18 03:06 PM",
+                    "beginProcessDate": "2015-09-18 03:06 PM",
+                    "operatorName": "John Doe",
+                    "assemblyId": "1605165",
+                    "assemblyStartDate": "2015-09-18 03:06 PM",
+                    "assemblyEndDate": "2015-09-18 03:06 PM",
+                    "libraryId": "1153208",
+                    "assemblyQCStatus": "Pass",
+                    "assemblyQCDate": "2015-09-18 03:06 PM",
+                    "failureReason": "Library Issue",
+                    "metrics": {
+                        "demux": {
+                            "demuxRates": 1281,
+                            "mappingRates": 1928
+                        }
+                    }
+                },
+                "stage": "Step 7 (Pool DNBs)",
+                "insertionPoint": "N/A",
+                "samplesInBatch": 75,
+                "batchCreationDate": "2015-09-18 03:06 PM",
+                "currentLibrarySubStep": 6,
+                "timeUntilCompletion": 21,
+                "totalCompletionTime": 86,
+                "quantGraphRuns": [
+                    {
+                        "label": "Quant Run 1",
+                        "value": 1
+                    },
+                    {
+                        "label": "Quant Run 2",
+                        "value": 2
+                    }
+                ]
+            },
+            {
+                "sampleId": "111123",
+                "sequencingPlan": "JC_2_DNB_POS",
+                "type": "gDNA",
+                "status": "Idle",
+                "notifications": [
+                    {
+                        "code": "117473",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: XY Registration failed.  Check focus (check TL/HL stages and water bead).  Try to redo coarse/fine theta adjustment, then retry XY registration.",
+                        "flowcellId": "19400534",
+                        "inputDocId": "179477884457446660",
+                        "jobId": "422",
+                        "location": "SEQ_3.B2",
+                        "scanSetId": "34",
+                        "sequencingPlan": "WGS_1_0_Temp",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiBasecall_v1",
+                        "errorLog": "Error Log for 117473"
+                    },
+                    {
+                        "code": "199795",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "ERROR: Basecall task (OsiBasecall_v1) metric BIC-50 not present in metrics",
+                        "flowcellId": "19400534",
+                        "inputDocId": "124904841789975760",
+                        "jobId": "118",
+                        "location": "SEQ_2.B4",
+                        "scanSetId": "34",
+                        "sequencingPlan": "JC_2_DNB_POS",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiBasecall_v1",
+                        "errorLog": "Error Log for 199795"
+                    },
+                    {
+                        "code": "105572",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: 2pt fine theta: registered point near bottom of flowcell has a Y offset of -234.34 um.  This exceeds the max allowable Y offset magnitude of 230.40 um",
+                        "flowcellId": "19400534",
+                        "inputDocId": "176608507381752130",
+                        "jobId": "357",
+                        "location": "SEQ_3.B2",
+                        "scanSetId": "44",
+                        "sequencingPlan": "WGSv0.0.68",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiImage_v1",
+                        "errorLog": "Error Log for 105572"
+                    },
+                    {
+                        "code": "191119",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: 2pt fine theta: registered point near bottom of flowcell has a Y offset of -234.34 um.  This exceeds the max allowable Y offset magnitude of 230.40 um",
+                        "flowcellId": "19400534",
+                        "inputDocId": "184235379123128960",
+                        "jobId": "376",
+                        "location": "SEQ_2.B4",
+                        "scanSetId": "24",
+                        "sequencingPlan": "WGS_1_0_Temp",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiImage_v1",
+                        "errorLog": "Error Log for 191119"
+                    },
+                    {
+                        "code": "124743",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "ERROR: Basecall task (OsiBasecall_v1) metric BIC-50 not present in metrics",
+                        "flowcellId": "19400534",
+                        "inputDocId": "189045969443395700",
+                        "jobId": "478",
+                        "location": "SEQ_2.B4",
+                        "scanSetId": "19",
+                        "sequencingPlan": "WGSv0.0.68",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiLiquidHandlerActions_v1",
+                        "errorLog": "Error Log for 124743"
+                    },
+                    {
+                        "code": "123062",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: Coarse theta failed",
+                        "flowcellId": "19400534",
+                        "inputDocId": "117112238262780020",
+                        "jobId": "121",
+                        "location": "SEQ_1.B3",
+                        "scanSetId": "52",
+                        "sequencingPlan": "JC_2_DNB_POS",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiImage_v1",
+                        "errorLog": "Error Log for 123062"
+                    },
+                    {
+                        "code": "190744",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "ERROR: Basecall task (OsiBasecall_v1) metric BIC-50 not present in metrics",
+                        "flowcellId": "19400534",
+                        "inputDocId": "180809381278231740",
+                        "jobId": "455",
+                        "location": "SEQ_2.B4",
+                        "scanSetId": "37",
+                        "sequencingPlan": "WGSv0.0.68",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiLiquidHandlerActions_v1",
+                        "errorLog": "Error Log for 190744"
+                    },
+                    {
+                        "code": "197901",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: XY Registration failed.  Check focus (check TL/HL stages and water bead).  Try to redo coarse/fine theta adjustment, then retry XY registration.",
+                        "flowcellId": "19400534",
+                        "inputDocId": "130862329131923620",
+                        "jobId": "208",
+                        "location": "SEQ_1.B3",
+                        "scanSetId": "19",
+                        "sequencingPlan": "WGSv0.0.68",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiBasecall_v1",
+                        "errorLog": "Error Log for 197901"
+                    },
+                    {
+                        "code": "142981",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: XY Registration failed.  Check focus (check TL/HL stages and water bead).  Try to redo coarse/fine theta adjustment, then retry XY registration.",
+                        "flowcellId": "19400534",
+                        "inputDocId": "120515817101113500",
+                        "jobId": "52",
+                        "location": "SEQ_2.B4",
+                        "scanSetId": "25",
+                        "sequencingPlan": "JC_2_DNB_POS",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiBasecall_v1",
+                        "errorLog": "Error Log for 142981"
+                    },
+                    {
+                        "code": "160084",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "ERROR: Basecall task (OsiBasecall_v1) metric BIC-50 not present in metrics",
+                        "flowcellId": "19400534",
+                        "inputDocId": "115163731854408980",
+                        "jobId": "425",
+                        "location": "SEQ_2.B4",
+                        "scanSetId": "37",
+                        "sequencingPlan": "WGSv0.0.68",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiBasecall_v1",
+                        "errorLog": "Error Log for 160084"
+                    },
+                    {
+                        "code": "147805",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "ERROR: Basecall task (OsiBasecall_v1) metric BIC-50 not present in metrics",
+                        "flowcellId": "19400534",
+                        "inputDocId": "193899277760647230",
+                        "jobId": "436",
+                        "location": "SEQ_2.B4",
+                        "scanSetId": "57",
+                        "sequencingPlan": "JC_2_DNB_POS",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiBasecall_v1",
+                        "errorLog": "Error Log for 147805"
+                    },
+                    {
+                        "code": "154046",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: XY Registration failed.  Check focus (check TL/HL stages and water bead).  Try to redo coarse/fine theta adjustment, then retry XY registration.",
+                        "flowcellId": "19400534",
+                        "inputDocId": "158829521667212260",
+                        "jobId": "9",
+                        "location": "SEQ_1.B3",
+                        "scanSetId": "37",
+                        "sequencingPlan": "WGSv0.0.68",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiBasecall_v1",
+                        "errorLog": "Error Log for 154046"
+                    },
+                    {
+                        "code": "187967",
+                        "collapsed": false,
+                        "dateReported": "2015-09-18 03:06 PM",
+                        "description": "Imager Error: XY Registration failed.  Check focus (check TL/HL stages and water bead).  Try to redo coarse/fine theta adjustment, then retry XY registration.",
+                        "flowcellId": "19400534",
+                        "inputDocId": "134582557692192500",
+                        "jobId": "195",
+                        "location": "SEQ_3.B2",
+                        "scanSetId": "52",
+                        "sequencingPlan": "WGS_1_0",
+                        "subTask": "Assembly Stage",
+                        "taskId": "OsiImage_v1",
+                        "errorLog": "Error Log for 187967"
+                    }
+                ],
+                "qcStatus": "Pass",
+                "location": {
+                    "current": "Loading",
+                    "status": [
+                        "ok",
+                        "warning",
+                        "ok",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "errorMessage": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                "projectName": "Master",
+                "accessionDate": "2015-09-18 03:06 PM",
+                "beginProcessDate": "2015-09-18 03:06 PM",
+                "operatorName": "Jane Smith",
+                "salesOrder": "1909722938",
+                "batchId": "12146",
+                "batchPlateId": "12435",
+                "pDnb": "1201577",
+                "pDnbId": "134895004",
+                "flowcellId": "19400534",
+                "sourcePlateId": "14073",
+                "projectId": "11420769",
+                "coverageRequested": "No",
+                "coverageCompleted": "No",
+                "coverageTarget": "",
+                "sampleQCStatus": "Pass",
+                "sampleAcceptanceDate": "2015-09-18 03:06 PM",
+                "pm": "",
+                "protected": "No",
+                "referenceBuild": "",
+                "tumorStatus": "",
+                "pathToDirectory": "",
+                "productVersion": "Revolocity 1.0",
+                "comments": [
+                    {
+                        "creationDate": "2015-09-18 03:06 PM",
+                        "user": "tAnderson",
+                        "comment": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    },
+                    {
+                        "creationDate": "2015-09-18 03:06 PM",
+                        "user": "mJones",
+                        "comment": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    },
+                    {
+                        "creationDate": "2015-09-18 03:06 PM",
+                        "user": "mJones",
+                        "comment": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    },
+                    {
+                        "creationDate": "2015-09-18 03:06 PM",
+                        "user": "tAnderson",
+                        "comment": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    },
+                    {
+                        "creationDate": "2015-09-18 03:06 PM",
+                        "user": "jSmith",
+                        "comment": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    },
+                    {
+                        "creationDate": "2015-09-18 03:06 PM",
+                        "user": "mJones",
+                        "comment": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    }
+                ],
+                "extraction": {
+                    "sampleId": "111123",
+                    "sequencingPlan": "WGS_1_0_Temp",
+                    "type": "gDNA",
+                    "status": "Paused",
+                    "qcStatus": "Pass",
+                    "location": "Loading",
+                    "projectName": "ProjectDelta",
+                    "accessionDate": "2015-09-18 03:06 PM",
+                    "beginProcessDate": "2015-09-18 03:06 PM",
+                    "operatorName": "Matthew Jones"
+                },
+                "libraryPrep": {
+                    "sampleId": "111123",
+                    "sequencingPlan": "JC_2_DNB_POS",
+                    "type": "gDNA",
+                    "status": "Paused",
+                    "qcStatus": "Fail",
+                    "location": "Loading",
+                    "projectName": "ProjectBeta",
+                    "accessionDate": "2015-09-18 03:06 PM",
+                    "beginProcessDate": "2015-09-18 03:06 PM",
+                    "operatorName": "Matthew Jones",
+                    "poolId": "13969600A37",
+                    "tagSet": "",
+                    "pooledPlateId": "1991362364",
+                    "libraryId": "1111767690",
+                    "startEndBatchPlate": [
+                        "12220",
+                        "10685"
+                    ],
+                    "concentrations": {
+                        "adA": "8.46",
+                        "dsCirc": "10.85",
+                        "cnt": "17.14",
+                        "adB": "3.44",
+                        "ssCirc": "13.99",
+                        "makeDnb": "4.97"
+                    }
+                },
+                "sequencing": {
+                    "sampleId": "111123",
+                    "samples": {
+                        "name": "GS01496-CLS_B01"
+                    },
+                    "jobs": [
+                        {
+                            "jobId": "17",
+                            "brdKits": [
+                            ],
+                            "lvdKits": [
+                            ],
+                            "sequencingPlan": "WGS_1_0",
+                            "cycles": [
+                                {
+                                    "dnbPosition": "A5P028",
+                                    "condition": "inProcess",
+                                    "scanSetId": 0,
+                                    "methodName": "A5P028_M001",
+                                    "position": "A5P028",
+                                    "runs": [
+                                        {
+                                            "runNo": "1",
+                                            "location": "SEQ_2.A1",
+                                            "operatorRequest": {
+                                                "name": "NAME_PLACEHOLDER"
+                                            },
+                                            "cycleNo": 0,
+                                            "step1": {
+                                                "taskId": "OsiLiquidHandlerActions_v1",
+                                                "startDate": "2015-08-14T20:56:56.401Z"
+                                            }
+                                        }
+                                    ],
+                                    "cycle": 0,
+                                    "completedRuns": 0,
+                                    "quality": "Unknown"
+                                },
+                                {
+                                    "dnbPosition": "A5P027",
+                                    "condition": "none",
+                                    "scanSetId": 1,
+                                    "methodName": "A5P027_M001",
+                                    "position": "A5P027",
+                                    "runs": [
+                                    ],
+                                    "cycle": 1,
+                                    "completedRuns": 0,
+                                    "quality": "Unknown"
+                                },
+                                {
+                                    "dnbPosition": "A5P026",
+                                    "condition": "none",
+                                    "scanSetId": 2,
+                                    "methodName": "A5P026_M001",
+                                    "position": "A5P026",
+                                    "runs": [
+                                    ],
+                                    "cycle": 2,
+                                    "completedRuns": 0,
+                                    "quality": "Unknown"
+                                },
+                                {
+                                    "dnbPosition": "A5P025",
+                                    "condition": "none",
+                                    "scanSetId": 3,
+                                    "methodName": "A5P025_M001",
+                                    "position": "A5P025",
+                                    "runs": [
+                                    ],
+                                    "cycle": 3,
+                                    "completedRuns": 0,
+                                    "quality": "Unknown"
+                                }
+                            ]
+                        }
+                    ],
+                    "checksum": "35470ba659b44c149ea7d054bed1640b",
+                    "sequencingPlan": "WGS_1_0",
+                    "type": "gDNA",
+                    "status": "Paused",
+                    "qcStatus": "Pass",
+                    "location": "Loading",
+                    "projectName": "Master",
+                    "accessionDate": "2015-09-18 03:06 PM",
+                    "beginProcessDate": "2015-09-18 03:06 PM",
+                    "operatorName": "Jane Smith",
+                    "flowcellId": "1123097",
+                    "cyclesCompleted": "47",
+                    "flowcellVersion": "FC51",
+                    "sequencingPlanId": "1111491"
+                },
+                "dataAnalysis": {
+                    "sampleId": "111123",
+                    "sequencingPlan": "JC_2_DNB_POS",
+                    "type": "gDNA",
+                    "status": "Running",
+                    "qcStatus": "Pass",
+                    "location": "Loading",
+                    "projectName": "ProjectAlpha",
+                    "accessionDate": "2015-09-18 03:06 PM",
+                    "beginProcessDate": "2015-09-18 03:06 PM",
+                    "operatorName": "John Doe",
+                    "assemblyId": "1134084",
+                    "assemblyStartDate": "2015-09-18 03:06 PM",
+                    "assemblyEndDate": "2015-09-18 03:06 PM",
+                    "libraryId": "1455035",
+                    "assemblyQCStatus": "Pass",
+                    "assemblyQCDate": "2015-09-18 03:06 PM",
+                    "failureReason": "Library Issue",
+                    "metrics": {
+                        "demux": {
+                            "demuxRates": 1503,
+                            "mappingRates": 1748
+                        }
+                    }
+                },
+                "stage": "Step 2 (dsCirc)",
+                "insertionPoint": "N/A",
+                "samplesInBatch": 12,
+                "batchCreationDate": "2015-09-18 03:06 PM",
+                "currentLibrarySubStep": 1,
+                "timeUntilCompletion": 65,
+                "totalCompletionTime": 137,
+                "quantGraphRuns": [
+                    {
+                        "label": "Quant Run 1",
+                        "value": 1
+                    },
+                    {
+                        "label": "Quant Run 2",
+                        "value": 2
+                    }
+                ]
+            }
+        ]
