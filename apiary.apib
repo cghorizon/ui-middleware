@@ -4051,15 +4051,21 @@ overrideSampleQC actions from action menu on sample query table.
             "success": "true"
         }
 
-## Search Samples [/horizon/admin/samplequery/search]
+## Search Samples [/horizon/admin/samplequery/search/{searchField}/{searchString}/{sortOptions}]
 
 search results for the samples admin
 
 ### Grid Contents [POST]
 
++ Parameters
+    + searchField: `foo` (required, String) - Field to search
+    + searchString: `1` (optional, String) - Search string used in the query
+    + sortOptions: '' (optional, String) - Sort options for the search
+
 + Request (application/json)
 
         {
+            "searchField": "foo",
             "searchString": "1"
         }
 
