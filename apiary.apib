@@ -4055,7 +4055,14 @@ overrideSampleQC actions from action menu on sample query table.
 
 search results for the samples admin
 
-### Grid Contents [POST]
+### Grid Contents [OPTIONS]
+
++ Response 200
+    + Headers
+    
+            Access-Control-Allow-Credentials: 'true'
+
+### Grid Contents [GET]
 
 + Parameters
     + searchField: `foo` (required, String) - Field to search
