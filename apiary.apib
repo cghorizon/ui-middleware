@@ -1287,7 +1287,7 @@ Dashlets are components of the dashboard with custom data attributes
         
 ## Destination Plate [/horizon/osp/iq/plate/destination/{plate_id}{?sequencingPlan}{?kit}{?layoutTemplate}]
 
-### View Destination Plate - Layout 1[GET]
+### View Destination Plate - L1.0.1[GET]
 
 + Parameters
     + sequencingPlan: `WGS2.0` (optional, String) - Unique ID of the Sample
@@ -1322,11 +1322,51 @@ Dashlets are components of the dashboard with custom data attributes
                 }
               ]
             }
-        
 + Response 200 (application/json)
 
         {
             "success": true
+        }   
+## Destination Plate - L2.0.1 [/horizon/osp/iq/plate/destination2/{plate_id}{?sequencingPlan}{?kit}{?layoutTemplate}]
+
+### View Destination Plate - L2.0.1[GET]
+
++ Parameters
+    + sequencingPlan: `WGS2.0` (optional, String) - Unique ID of the Sample
+    + kit: `Small_Kit` (optional, String) - Unique ID of the Sample
+    + layoutTemplate: `L1.0.1` (optional, String) - Unique ID of the Sample
+
+         {
+              "wells": [
+                {
+                  "sampleId": "9610-DNA_888",
+                  "wellLocation": "A1",
+                  "sourcePlateId": "control"
+                },
+                {
+                  "sampleId": "9610-DNA_888",
+                  "wellLocation": "B1",
+                  "sourcePlateId": "control"
+                },{
+                  "sampleId": "9610-DNA_888",
+                  "wellLocation": "C1",
+                  "sourcePlateId": "control"
+                },{
+                  "sampleId": "9610-DNA_888",
+                  "wellLocation": "C7",
+                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+                },{
+                  "sampleId": "9610-DNA_888",
+                  "wellLocation": "E4",
+                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+                }
+              ]
+            }
+
++ Response 200 (application/json)
+
+        {
+            "success": "true"
         }
         
 ## Create Batch [POST /horizon/osp/iq/createSampleBatch]
