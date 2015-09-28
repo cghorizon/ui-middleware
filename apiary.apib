@@ -1296,259 +1296,318 @@ Dashlets are components of the dashboard with custom data attributes
 
 + Response 200 (application/json)
 
-        {
-              "wells": [
-                {
-                  "sampleId": "control",
-                  "wellLocation": "A1",
-                  "sourcePlateId": "xxx"
-                },{
-                  "sampleId": "control",
-                  "wellLocation": "B1",
-                  "sourcePlateId": "xxx"
-                },{
-                  "sampleId": "control",
-                  "wellLocation": "C1",
-                  "sourcePlateId": "xxx"
-                },{
-                  "sampleId": "9610-DNA_888",
-                  "wellLocation": "D1",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9611-DNA_888",
-                  "wellLocation": "E1",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9612-DNA_888",
-                  "wellLocation": "F1",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9613-DNA_888",
-                  "wellLocation": "G1",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9614-DNA_888",
-                  "wellLocation": "H1",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9615-DNA_888",
-                  "wellLocation": "A2",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9616-DNA_888",
-                  "wellLocation": "B2",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9617-DNA_888",
-                  "wellLocation": "C2",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9618-DNA_888",
-                  "wellLocation": "D2",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9619-DNA_888",
-                  "wellLocation": "E2",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9620-DNA_888",
-                  "wellLocation": "F2",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9621-DNA_888",
-                  "wellLocation": "G2",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9622-DNA_888",
-                  "wellLocation": "H2",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9623-DNA_888",
-                  "wellLocation": "A3",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9624-DNA_888",
-                  "wellLocation": "B3",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9625-DNA_888",
-                  "wellLocation": "C3",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9626-DNA_888",
-                  "wellLocation": "D3",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9627-DNA_888",
-                  "wellLocation": "E3",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9628-DNA_888",
-                  "wellLocation": "F3",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9629-DNA_888",
-                  "wellLocation": "G3",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9630-DNA_888",
-                  "wellLocation": "H3",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9631-DNA_888",
-                  "wellLocation": "A4",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9632-DNA_888",
-                  "wellLocation": "B4",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9633-DNA_888",
-                  "wellLocation": "C4",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9634-DNA_888",
-                  "wellLocation": "D4",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9635-DNA_888",
-                  "wellLocation": "E4",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9636-DNA_888",
-                  "wellLocation": "F4",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "9637-DNA_888",
-                  "wellLocation": "G4",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
-                },{
-                  "sampleId": "260-DNA_777",
-                  "wellLocation": "H4",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "261-DNA_777",
-                  "wellLocation": "A5",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "262-DNA_777",
-                  "wellLocation": "B5",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "263-DNA_777",
-                  "wellLocation": "C5",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "264-DNA_777",
-                  "wellLocation": "D5",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "265-DNA_777",
-                  "wellLocation": "E5",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "266-DNA_777",
-                  "wellLocation": "F5",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "267-DNA_777",
-                  "wellLocation": "G5",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "268-DNA_777",
-                  "wellLocation": "H5",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "269-DNA_777",
-                  "wellLocation": "A6",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "270-DNA_777",
-                  "wellLocation": "B6",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "271-DNA_777",
-                  "wellLocation": "C6",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "272-DNA_777",
-                  "wellLocation": "D6",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "273-DNA_777",
-                  "wellLocation": "E6",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "274-DNA_777",
-                  "wellLocation": "F6",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "275-DNA_777",
-                  "wellLocation": "G6",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "276-DNA_777",
-                  "wellLocation": "H6",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "277-DNA_777",
-                  "wellLocation": "A7",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "278-DNA_777",
-                  "wellLocation": "B7",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "279-DNA_777",
-                  "wellLocation": "C7",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "280-DNA_777",
-                  "wellLocation": "D7",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "281-DNA_777",
-                  "wellLocation": "E7",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
-                },{
-                  "sampleId": "170-DNA_555",
-                  "wellLocation": "F7",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0003"
-                },{
-                  "sampleId": "171-DNA_555",
-                  "wellLocation": "G7",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0003"
-                },{
-                  "sampleId": "172-DNA_555",
-                  "wellLocation": "H7",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0003"
-                },{
-                  "sampleId": "90-DNA_222",
-                  "wellLocation": "A8",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0004"
-                },{
-                  "sampleId": "91-DNA_222",
-                  "wellLocation": "B8",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0004"
-                },{
-                  "sampleId": "92-DNA_222",
-                  "wellLocation": "C8",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0004"
-                },{
-                  "sampleId": "7890-DNA_1111111",
-                  "wellLocation": "D8",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0005"
-                },{
-                  "sampleId": "7891-DNA_1111111",
-                  "wellLocation": "E8",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0005"
-                },{
-                  "sampleId": "7893-DNA_1111111",
-                  "wellLocation": "F8",
-                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0005"
-                }
-              ]
+        [
+            {
+                "sampleId": "control",
+                "wellLocation": "A1",
+                "sourcePlateId": "xxx"
+            },
+            {
+                "sampleId": "control",
+                "wellLocation": "B1",
+                "sourcePlateId": "xxx"
+            },
+            {
+                "sampleId": "control",
+                "wellLocation": "C1",
+                "sourcePlateId": "xxx"
+            },
+            {
+                "sampleId": "9610-DNA_888",
+                "wellLocation": "D1",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9611-DNA_888",
+                "wellLocation": "E1",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9612-DNA_888",
+                "wellLocation": "F1",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9613-DNA_888",
+                "wellLocation": "G1",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9614-DNA_888",
+                "wellLocation": "H1",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9615-DNA_888",
+                "wellLocation": "A2",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9616-DNA_888",
+                "wellLocation": "B2",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9617-DNA_888",
+                "wellLocation": "C2",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9618-DNA_888",
+                "wellLocation": "D2",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9619-DNA_888",
+                "wellLocation": "E2",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9620-DNA_888",
+                "wellLocation": "F2",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9621-DNA_888",
+                "wellLocation": "G2",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9622-DNA_888",
+                "wellLocation": "H2",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9623-DNA_888",
+                "wellLocation": "A3",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9624-DNA_888",
+                "wellLocation": "B3",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9625-DNA_888",
+                "wellLocation": "C3",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9626-DNA_888",
+                "wellLocation": "D3",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9627-DNA_888",
+                "wellLocation": "E3",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9628-DNA_888",
+                "wellLocation": "F3",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9629-DNA_888",
+                "wellLocation": "G3",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9630-DNA_888",
+                "wellLocation": "H3",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9631-DNA_888",
+                "wellLocation": "A4",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9632-DNA_888",
+                "wellLocation": "B4",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9633-DNA_888",
+                "wellLocation": "C4",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9634-DNA_888",
+                "wellLocation": "D4",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9635-DNA_888",
+                "wellLocation": "E4",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9636-DNA_888",
+                "wellLocation": "F4",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "9637-DNA_888",
+                "wellLocation": "G4",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+            },
+            {
+                "sampleId": "260-DNA_777",
+                "wellLocation": "H4",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "261-DNA_777",
+                "wellLocation": "A5",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "262-DNA_777",
+                "wellLocation": "B5",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "263-DNA_777",
+                "wellLocation": "C5",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "264-DNA_777",
+                "wellLocation": "D5",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "265-DNA_777",
+                "wellLocation": "E5",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "266-DNA_777",
+                "wellLocation": "F5",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "267-DNA_777",
+                "wellLocation": "G5",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "268-DNA_777",
+                "wellLocation": "H5",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "269-DNA_777",
+                "wellLocation": "A6",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "270-DNA_777",
+                "wellLocation": "B6",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "271-DNA_777",
+                "wellLocation": "C6",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "272-DNA_777",
+                "wellLocation": "D6",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "273-DNA_777",
+                "wellLocation": "E6",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "274-DNA_777",
+                "wellLocation": "F6",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "275-DNA_777",
+                "wellLocation": "G6",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "276-DNA_777",
+                "wellLocation": "H6",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "277-DNA_777",
+                "wellLocation": "A7",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "278-DNA_777",
+                "wellLocation": "B7",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "279-DNA_777",
+                "wellLocation": "C7",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "280-DNA_777",
+                "wellLocation": "D7",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "281-DNA_777",
+                "wellLocation": "E7",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+            },
+            {
+                "sampleId": "170-DNA_555",
+                "wellLocation": "F7",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0003"
+            },
+            {
+                "sampleId": "171-DNA_555",
+                "wellLocation": "G7",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0003"
+            },
+            {
+                "sampleId": "172-DNA_555",
+                "wellLocation": "H7",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0003"
+            },
+            {
+                "sampleId": "90-DNA_222",
+                "wellLocation": "A8",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0004"
+            },
+            {
+                "sampleId": "91-DNA_222",
+                "wellLocation": "B8",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0004"
+            },
+            {
+                "sampleId": "92-DNA_222",
+                "wellLocation": "C8",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0004"
+            },
+            {
+                "sampleId": "7890-DNA_1111111",
+                "wellLocation": "D8",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0005"
+            },
+            {
+                "sampleId": "7891-DNA_1111111",
+                "wellLocation": "E8",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0005"
+            },
+            {
+                "sampleId": "7893-DNA_1111111",
+                "wellLocation": "F8",
+                "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0005"
             }
+        ]
 ### Submit Destination Plate[POST]
 
 + Parameters
