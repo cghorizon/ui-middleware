@@ -1322,6 +1322,41 @@ Dashlets are components of the dashboard with custom data attributes
                 }
               ]
             }
+### Submit Destination Plate[PUT]
+
++ Parameters
+    + sequencingPlan: `WGS2.0` (optional, String) - Unique ID of the Sample
+    + kit: `Small_Kit` (optional, String) - Unique ID of the Sample
+    + layoutTemplate: `L1.0.1` (optional, String) - Unique ID of the Sample
+
++ Response 200 (application/json)
+
+        {
+              "wells": [
+                {
+                  "sampleId": "9610-DNA_888",
+                  "wellLocation": "A1",
+                  "sourcePlateId": "control"
+                },
+                {
+                  "sampleId": "9610-DNA_888",
+                  "wellLocation": "B1",
+                  "sourcePlateId": "control"
+                },{
+                  "sampleId": "9610-DNA_888",
+                  "wellLocation": "C1",
+                  "sourcePlateId": "control"
+                },{
+                  "sampleId": "9610-DNA_888",
+                  "wellLocation": "D1",
+                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0001"
+                },{
+                  "sampleId": "9610-DNA_888",
+                  "wellLocation": "D4",
+                  "sourcePlateId": "xx-96W_BioRad_PCR-xx-MV-xxxxxx-0002"
+                }
+              ]
+            }
 + Response 200 (application/json)
 
         {
