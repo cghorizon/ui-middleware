@@ -7076,3 +7076,102 @@ search results for the samples admin
                     ]
                 }
             ]
+            
+## Group USER ADMINISTRATION
+
+## Users [/horizon/users]
+
+Users of the system
+
+### View Users [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "userName": "jwatson",
+                "firstName": "James",
+                "lastName": "Watson",
+                "title": "Geneticist",
+                "organization": "Complete Genomics",
+                "email": "jwatson@completegenomics.com",
+                "accountPrivileges": {
+                    "manageReports": false,
+                    "manageImports": false,
+                    "manageGroups": true,
+                    "manageFilters": false,
+                    "manageUsers": true,
+                    "overrideFieldSamples": false,
+                    "releaseReports": false
+                }
+            },
+            {
+                "userName": "bmcclintock",
+                "firstName": "Barbara",
+                "lastName": "McClintock",
+                "title": "Geneticist",
+                "organization": "Complete Genomics",
+                "email": "bmcclintock",
+                "accountPrivileges": {
+                    "manageReports": true,
+                    "manageImports": true,
+                    "manageGroups": false,
+                    "manageFilters": false,
+                    "manageUsers": false,
+                    "overrideFieldSamples": false,
+                    "releaseReports": true
+                }
+            },
+            {
+                "userName": "mcapecchi",
+                "firstName": "Mario",
+                "lastName": "Capecchi",
+                "title": "Geneticist",
+                "organization": "Complete Genomics",
+                "email": "mcapecchi@completegenomics.com",
+                "accountPrivileges": {
+                    "manageReports": false,
+                    "manageImports": false,
+                    "manageGroups": false,
+                    "manageFilters": false,
+                    "manageUsers": false,
+                    "overrideFieldSamples": false,
+                    "releaseReports": false
+                }
+            },
+            {
+                "userName": "cventer",
+                "firstName": "Craig",
+                "lastName": "Venter",
+                "title": "Geneticist",
+                "organization": "Complete Genomics",
+                "email": "cventer@completegenomics.com",
+                "accountPrivileges": {
+                    "manageReports": true,
+                    "manageImports": true,
+                    "manageGroups": true,
+                    "manageFilters": true,
+                    "manageUsers": true,
+                    "overrideFieldSamples": true,
+                    "releaseReports": true
+                }
+            },
+            {
+                "userName": "tdobzhansky",
+                "firstName": "Theodosius",
+                "lastName": "Dobzhansky",
+                "title": "Geneticist",
+                "organization": "Complete Genomics",
+                "email": "tdobzhansky@completegenomics.com",
+                "accountPrivileges": {
+                    "manageReports": true,
+                    "manageImports": false,
+                    "manageGroups": true,
+                    "manageFilters": false,
+                    "manageUsers": true,
+                    "overrideFieldSamples": false,
+                    "releaseReports": true
+                }
+            }
+            
+        ]
