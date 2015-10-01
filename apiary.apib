@@ -1297,6 +1297,7 @@ Dashlets are components of the dashboard with custom data attributes
 + Response 200 (application/json)
 
         {       
+            "taskId": "CGI.OHS.INRESOURCE",
             "_id": "SampeBatch_APITest",
             "partNumber": "xx-SampleBatch-xx",
             "revision": "1.0",
@@ -1565,53 +1566,61 @@ Dashlets are components of the dashboard with custom data attributes
                 }
               ]
             }
-### Submit Destination Plate[POST]
-
-+ Parameters
-    + sequencingPlan: `WGS2.0` (optional, String) - Unique ID of the Sample
-    + kit: `Small_Kit` (optional, String) - Unique ID of the Sample
-    + layoutTemplate: `L1.0.1` (optional, String) - Unique ID of the Sample
-
-+ Response 200 (application/json)
-
-        {
-            "_id": "SampeBatch_APITest",
-            "partNumber": "xx-SampleBatch-xx",
-            "revision": "1.0",
-            "resourceIdType": "SN",
-            "expirationDate": "",
-            "vendorAssignedId": "",
-            "quantity": 1,
-            "UOM": "unit",
-            "description": "Omega Sample Batch",
-            "sequencingPlan": "WGS1.3",
-            "status": "Planned",
-            "samplesInBatch": 26,
-            "operator": "Mccormick",
-            "priority": 2,
-            "batchStatus": "",
-            "destinationPlate": "xx-SamplePlate111",
-            "wells": [
-                {
-                  "sampleId": "",
-                  "wellLocation": "A1",
-                  "sourcePlateId": "control"
-                },{
-                  "sampleId": "",
-                  "wellLocation": "A2",
-                  "sourcePlateId": "control"
-                },{
-                  "sampleId": "",
-                  "wellLocation": "A3",
-                  "sourcePlateId": "control"
-                }
-              ]
-            }
 + Response 200 (application/json)
 
         {
             "success": true
-        }   
+        }  
+## Create Batch [POST /horizon/osp/iq/createSampleBatch]
+{
+  "taskDescription": {
+    "taskId": "CGI.OHS.INRESOURCE"
+  },
++ Request (application/json)
+
+        {
+          "_id": "SampeBatch_APITest",
+          "partNumber": "xx-SampleBatch-xx",
+          "revision": "1.0",
+          "resourceIdType": "SN",
+          "expirationDate": "",
+          "vendorAssignedId": "",
+          "quantity": 1,
+          "UOM": "unit",
+          "description": "Omega Sample Batch",
+          "sequencingPlan": "WGS1.3",
+          "status": "Planned",
+          "samplesInBatch": 26,
+          "operator": "Mccormick",
+          "priority": 2,
+          "metadata": {
+            "batchStatus": "",
+            "destinationPlate": "xx-SamplePlate111",
+            "samples": [
+              {
+                "sampleId": "xx-SalivaSample-xx-MV-xxxxxx-1001",
+                "sourcePlateId": "xx-SamplePlate-xx-SB",
+                "positions": [
+                  "E0"
+                ]
+              },
+              {
+                "sampleId": "xx-SalivaSample-xx-MV-xxxxxx-1002",
+                "sourcePlateId": "xx-SamplePlate-xx-SB",
+                "positions": [
+                  "A06"
+                ]
+              }
+            ]
+          }
+        }
+        }
+
++ Response 200 (application/json)
+
+        {
+            "success": "true"
+        }
 ## Destination Plate - L2.0.1 [/horizon/osp/iq/plate/destination2/{plate_id}{?sequencingPlan}{?kit}{?layoutTemplate}]
 
 ### View Destination Plate - L2.0.1[GET]
@@ -1624,6 +1633,7 @@ Dashlets are components of the dashboard with custom data attributes
 + Response 200 (application/json)
 
         {
+            "taskId": "CGI.OHS.INRESOURCE",
             "_id": "SampeBatch_APITest",
             "partNumber": "xx-SampleBatch-xx",
             "revision": "1.0",
@@ -1895,60 +1905,6 @@ Dashlets are components of the dashboard with custom data attributes
         {
             "success": "true"
         }
-        
-## Create Batch [POST /horizon/osp/iq/createSampleBatch]
-{
-  "taskDescription": {
-    "taskId": "CGI.OHS.INRESOURCE"
-  },
-+ Request (application/json)
-
-        {
-          "_id": "SampeBatch_APITest",
-          "partNumber": "xx-SampleBatch-xx",
-          "revision": "1.0",
-          "resourceIdType": "SN",
-          "expirationDate": "",
-          "vendorAssignedId": "",
-          "quantity": 1,
-          "UOM": "unit",
-          "description": "Omega Sample Batch",
-          "sequencingPlan": "WGS1.3",
-          "status": "Planned",
-          "samplesInBatch": 26,
-          "operator": "Mccormick",
-          "priority": 2,
-          "metadata": {
-            "batchStatus": "",
-            "destinationPlate": "xx-SamplePlate111",
-            "samples": [
-              {
-                "sampleId": "xx-SalivaSample-xx-MV-xxxxxx-1001",
-                "sourcePlateId": "xx-SamplePlate-xx-SB",
-                "positions": [
-                  "E0"
-                ]
-              },
-              {
-                "sampleId": "xx-SalivaSample-xx-MV-xxxxxx-1002",
-                "sourcePlateId": "xx-SamplePlate-xx-SB",
-                "positions": [
-                  "A06"
-                ]
-              }
-            ]
-          }
-        }
-        }
-
-+ Response 200 (application/json)
-
-        {
-            "success": "true"
-        }
-            
-        
-                
 ## Group OSP Planning 
 
 ## Batches [/horizon/osp/planning/batchPlateTable{?page}]
