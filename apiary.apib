@@ -4413,7 +4413,156 @@ Dashlets are components of the dashboard with custom data attributes
                 "dnbCreationDate":"2015-09-16 12:30 PM"
             }
         ]
-        
+## Group OLD Loading
+
+## Dashlets [/horizon/old/dashlet]
+
+Dashlets are components of the dashboard with custom data attributes
+
+### View Dashlets [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "title": "Input Queue",
+                "dnbs": {
+                    "cnt": 11,
+                    "title": "Input Queue",
+                    "planned": 7,
+                    "notPlanned": 4,
+                    "completed": 0
+                },
+                "isProgressBar": true
+            },
+            {
+                "id": "resources",
+                "cnt": 15,
+                "title": "Resources"
+            }
+            {
+                "title": "In Process",
+                "plates": {
+                    "cnt": 0,
+                    "title": "In Process"
+                }
+            },
+            {
+                "title": "Output Queue",
+                "pDnbs": {
+                    "cnt": 0,
+                    "title": "Output Queue"
+                }
+            }
+        ]
+
+## Input Queue [/horizon/old/iq]
+
+### Grid Contents [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "dnbId":"18017120",
+                "dnbPlateId":"11414",
+                "sequencingPlan":"WGS_1_0_Temp",
+                "priority":"",
+                "status":"planned",
+                "project":"",
+                "dnbCreationDate":"2015-09-16 12:30 PM"
+            },
+            {
+                "dnbId":"17420176",
+                "dnbPlateId":"14683",
+                "sequencingPlan":"WGSv0.0.68",
+                "priority":"",
+                "status":"requested",
+                "project":"",
+                "dnbCreationDate":"2015-09-16 12:30 PM"
+            },
+            {
+                "dnbId":"16169385",
+                "dnbPlateId":"14841",
+                "sequencingPlan":"WGS_1_0_Temp",
+                "priority":"",
+                "status":"planned",
+                "project":"",
+                "dnbCreationDate":"2015-09-16 12:30 PM"
+            },
+            {
+                "dnbId":"19642435",
+                "dnbPlateId":"11480",
+                "sequencingPlan":"WGSv0.0.68",
+                "priority":"",
+                "status":"requested",
+                "project":"",
+                "dnbCreationDate":"2015-09-16 12:30 PM"
+            },
+            {
+                "dnbId":"19150163",
+                "dnbPlateId":"18363",
+                "sequencingPlan":"WGSv0.0.68",
+                "priority":"",
+                "status":"planned",
+                "project":"",
+                "dnbCreationDate":"2015-09-16 12:30 PM"
+            },
+            {
+                "dnbId":"15951513",
+                "dnbPlateId":"14048",
+                "sequencingPlan":"WGS_1_0_Temp",
+                "priority":"",
+                "status":"planned",
+                "project":"",
+                "dnbCreationDate":"2015-09-16 12:30 PM"
+            },
+            {
+                "dnbId":"17819514",
+                "dnbPlateId":"14256",
+                "sequencingPlan":"WGS_1_0_Temp",
+                "priority":"",
+                "status":"planned",
+                "project":"",
+                "dnbCreationDate":"2015-09-16 12:30 PM"
+            },
+            {
+                "dnbId":"10044540",
+                "dnbPlateId":"11265",
+                "sequencingPlan":"WGSv0.0.68",
+                "priority":"",
+                "status":"planned",
+                "project":"",
+                "dnbCreationDate":"2015-09-16 12:30 PM"
+            },
+            {
+                "dnbId":"17857715",
+                "dnbPlateId":"14519",
+                "sequencingPlan":"JC_2_DNB_POS",
+                "priority":"",
+                "status":"requested",
+                "project":"",
+                "dnbCreationDate":"2015-09-16 12:30 PM"
+            },
+            {
+                "dnbId":"17095743",
+                "dnbPlateId":"16071",
+                "sequencingPlan":"WGSv0.0.68",
+                "priority":"",
+                "status":"planned",
+                "project":"",
+                "dnbCreationDate":"2015-09-16 12:30 PM"
+            },
+            {
+                "dnbId":"13226274",
+                "dnbPlateId":"17916",
+                "sequencingPlan":"WGSv0.0.68",
+                "priority":"",
+                "status":"requested",
+                "project":"",
+                "dnbCreationDate":"2015-09-16 12:30 PM"
+            }
+        ]        
 ## Group Admin Samples
 
 ## Action [/horizon/admin/samplequery/action]
