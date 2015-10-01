@@ -1572,48 +1572,51 @@ Dashlets are components of the dashboard with custom data attributes
             "success": true
         }  
 ## Create Batch [POST /horizon/osp/iq/createSampleBatch]
-{
-  "taskDescription": {
-    "taskId": "CGI.OHS.INRESOURCE"
-  },
+
 + Request (application/json)
 
         {
-          "_id": "SampeBatch_APITest",
-          "partNumber": "xx-SampleBatch-xx",
-          "revision": "1.0",
-          "resourceIdType": "SN",
-          "expirationDate": "",
-          "vendorAssignedId": "",
-          "quantity": 1,
-          "UOM": "unit",
-          "description": "Omega Sample Batch",
-          "sequencingPlan": "WGS1.3",
-          "status": "Planned",
-          "samplesInBatch": 26,
-          "operator": "Mccormick",
-          "priority": 2,
-          "metadata": {
-            "batchStatus": "",
-            "destinationPlate": "xx-SamplePlate111",
-            "samples": [
-              {
-                "sampleId": "xx-SalivaSample-xx-MV-xxxxxx-1001",
-                "sourcePlateId": "xx-SamplePlate-xx-SB",
-                "positions": [
-                  "E0"
-                ]
-              },
-              {
-                "sampleId": "xx-SalivaSample-xx-MV-xxxxxx-1002",
-                "sourcePlateId": "xx-SamplePlate-xx-SB",
-                "positions": [
-                  "A06"
+          "taskDescription": {
+            "taskId": "CGI.OHS.INRESOURCE"
+          },
+          "requests": [
+            {
+              "_id": "SampeBatch_APITest11",
+              "partNumber": "xx-SampleBatch-xx",
+              "revision": "1.0",
+              "resourceIdType": "SN",
+              "expirationDate": "",
+              "vendorAssignedId": "",
+              "quantity": 1,
+              "UOM": "unit",
+              "description": "Omega Sample Batch",
+              "sequencingPlan": "WGS1.3",
+              "status": "Planned",
+              "samplesInBatch": 26,
+              "operator": "Mccormick",
+              "priority": 2,
+              "metadata": {
+                "batchStatus": "",
+                "destinationPlate": "xx-SamplePlate111",
+                "samples": [
+                  {
+                    "sampleId": "xx-SalivaSample-xx-MV-xxxxxx-1001",
+                    "sourcePlateId": "xx-SamplePlate-xx-SB",
+                    "positions": [
+                      "E0"
+                    ]
+                  },
+                  {
+                    "sampleId": "xx-SalivaSample-xx-MV-xxxxxx-1002",
+                    "sourcePlateId": "xx-SamplePlate-xx-SB",
+                    "positions": [
+                      "A06"
+                    ]
+                  }
                 ]
               }
+            }
             ]
-          }
-        }
         }
 
 + Response 200 (application/json)
