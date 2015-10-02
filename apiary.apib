@@ -7183,7 +7183,7 @@ search results for the samples admin
             
 ## Group USER ADMINISTRATION
 
-## Users [/horizon/users/{userId}]
+## Users [/horizon/users]
 
 Users of the system
 
@@ -7193,9 +7193,6 @@ Users of the system
     + Headers
     
             Access-Control-Allow-Credentials: true
-
-+ Parameters
-    + userId: 1 (optional, number) - ID of the user in the form of an integer
 
 ### View Users [GET]
 
@@ -7294,3 +7291,44 @@ Users of the system
                 }
                 
             ]
+
+## User [/horizon/users/{userId}]
+
+User of the system
+
+### View User [OPTIONS]
+
++ Response 200
+    + Headers
+    
+            Access-Control-Allow-Credentials: true
+
++ Parameters
+    + userId: 1 (required, number) - ID of the user in the form of an integer
+
+### View Users [GET]
+
++ Response 200 (application/json)
+    + Headers
+    
+            Access-Control-Allow-Credentials: true
+
+    + Body
+
+            {
+                "userName": "jwatson",
+                "firstName": "James",
+                "lastName": "Watson",
+                "title": "Geneticist",
+                "organization": "Complete Genomics",
+                "email": "jwatson@completegenomics.com",
+                "roles": {
+                    "manageReports": false,
+                    "manageImports": false,
+                    "manageGroups": true,
+                    "manageFilters": false,
+                    "manageUsers": true,
+                    "overrideFieldSamples": false,
+                    "releaseReports": false
+                }
+            }
