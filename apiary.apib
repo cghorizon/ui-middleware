@@ -4491,14 +4491,22 @@ Dashlets are components of the dashboard with custom data attributes
                 "queueDate":"2015-10-15 12:30 PM"
             }
         ]  
-## Input Queue - Details Drawer [/horizon/old/iq/details]
+## Input Queue - Details Drawer [/horizon/old/iq/details/{pDnbPlateId}/]
 ### pDnb Plate Details [GET]
 
++ Parameters
+    + pDnbPlateId: `163207821` (optional, String) - Unique ID of the pDnb Plate
+    
 + Response 200 (application/json)
 
         
         {
-            "87910":[
+            "pDnbPlateId": "163207821",
+            "poolsLeft": 3,
+            "status":"Planned",
+            "priority": 1,
+            "queueDate":"2015-09-16 12:30 PM",
+            "pDnbList": [
                 {
                     "pDnbId":"4-87910",
                     "priority":4
@@ -4539,50 +4547,7 @@ Dashlets are components of the dashboard with custom data attributes
                     "pDnbId":"1-87910",
                     "priority":1
                 }
-            ],
-            "87911":[
-                {
-                    "pDnbId":"2-87911",
-                    "priority":2
-                },
-                {
-                    "pDnbId":"1-87911",
-                    "priority":1
-                },
-                {
-                    "pDnbId":"3-87911",
-                    "priority":3
-                }
-            ],
-            "87912":[
-                {
-                    "pDnbId":"2-87912",
-                    "priority":2
-                },
-                {
-                    "pDnbId":"1-87912",
-                    "priority":1
-                },
-                {
-                    "pDnbId":"3-87912",
-                    "priority":3
-                },
-                {
-                    "pDnbId":"4-87912",
-                    "priority":4
-                }
-            ],
-            "87913":[
-                {
-                    "pDnbId":"2-87913",
-                    "priority":2
-                },
-                {
-                    "pDnbId":"1-87913",
-                    "priority":1
-                }
             ]
-            
         } 
 
 ## Group Admin Samples
