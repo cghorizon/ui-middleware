@@ -7356,3 +7356,50 @@ User of the system
                     "email": "john.doe@fakecompany.com"
                 }
             }
+            
+## User Roles [/horizon/users/roles]
+
+User roles in the system
+
+### View User Roles [OPTIONS]
+
++ Response 200
+    + Headers
+    
+            Access-Control-Allow-Credentials: true
+
+### View User Roles [GET]
+
++ Response 200 (application/json)
+    + Headers
+    
+            Access-Control-Allow-Credentials: true
+
+    + Body
+
+            {
+                "manageReports" : {
+                    "title": "Manage Reports",
+                    "description": "Allows a user to manage reports",
+                },
+                "manageImports" : {
+                    "title": "Manage Imports",
+                    "description": "Allows a user to manage imports",
+                },
+                "manageGroups" : {
+                    "title": "Manage Groups",
+                    "description": "Allows a user to manage groups",
+                },
+                "manageFilters" : {
+                    "title": "Manage Filters",
+                    "description": "Allows a user to manage filters",
+                },
+                "manageUsers" : {
+                    "title": "Manage Users",
+                    "description": "Allows a user to manage users",
+                },
+                "overrideFieldSamples" : {
+                    "title": "Override Field Samples",
+                    "description": "Allows a user to override field samples ",
+                }
+            }
