@@ -4620,7 +4620,6 @@ Dashlets are components of the dashboard with custom data attributes
                         "wellLocation": "C1",
                         "status":"Planned",
                         "estimatedCompletion":"2015-10-15 12:30 PM"
-                        
                     },
                     {
                         "pDnbId":"7-87910",
@@ -4694,6 +4693,30 @@ Dashlets are components of the dashboard with custom data attributes
                         "status":"Idle",
                         "estimatedCompletion":"2015-10-12 12:30 PM"
                     }
+                ]
+        } 
+## In Process - Details Drawer [/horizon/old/inp/details/{pDnbId}/]
+### pDnb Pool Details [GET]
+
++ Parameters
+    + pDnbId: '163207821' (optional, String) - Unique ID of the pDnb pool
+    
++ Response 200 (application/json)
+
+        
+        {
+            "pDnbId":"4-87910",
+            "samplesInPool": 
+                [
+                    {
+                        "sampleId":"123235"
+                    },
+                    {
+                        "sampleId":"975"
+                    },
+                    {
+                        "sampleId":"52111233"
+                    },
                 ]
         } 
 ## Group Admin Samples
