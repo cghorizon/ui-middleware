@@ -909,25 +909,6 @@ Dashlets are components of the dashboard with custom data attributes
               }
             ]
 
-## Sample [/horizon/osp/iq/sample/{id}]
-
-### View a Sample [GET]
-
-+ Parameters
-    + id: `G10000-DNA_489` (optional, String) - Unique ID of the Sample
-    
-+ Response 200 (application/json)
-
-        {
-                "sourcePlateId": "55db8ae082c01f92b297e3e2",
-                "project": "Project",
-                "sequencingPlan": "WGS2.0",
-                "id": "G10000-DNA_489",
-                "priority": 3,
-                "accessionDate": "2014-11-25T03:38:07 +08:00",
-                "status": "Not Available",
-                "sampleId": "10000-DNA_394"
-        }
 
 ## Source Plates [/horizon/osp/iq/plates/{?sequencingPlan}{?kit}{?layoutTemplate}]
 
@@ -2834,7 +2815,9 @@ Dashlets are components of the dashboard with custom data attributes
                         }
         }
         
-## Pick List [/horizon/osp/planning/picklist]
+## Pick List [/horizon/osp/planning/picklist/{resourceId}]
++ Parameters
+    + resourceId: `SampeBatch_APITest20` (String) - Unique ID of the Batch
 
 
 ### View Pick List [GET]
@@ -2904,70 +2887,13 @@ Dashlets are components of the dashboard with custom data attributes
                 ]
             }
             
-### Update Pick List [PUT]
 
-+ Request (application/json)
-
-        {
-            "resources": [
-                            {
-                                "resource": "50 ul Filtered Tips",
-                                "barcode": "",
-                                "quantity": 5,
-                                "itemDescription": "",
-                                "confirmation": true
-                            },
-                            {
-                                "resource": "300 ul Filtered Tips",
-                                "barcode": "",
-                                "quantity": 2,
-                                "itemDescription": "",
-                                "confirmation": false
-                            },
-                            {
-                                "resource": "Empty Deep Well Trough",
-                                "barcode": "",
-                                "quantity": 1,
-                                "itemDescription": "",
-                                "confirmation": true
-                            },
-                            {
-                                "resource": "Empty 384-well Reader Plate",
-                                "barcode": "",
-                                "quantity": 1,
-                                "itemDescription": "",
-                                "confirmation": false
-                            },
-                            {
-                                "resource": "Empty 0.8 mL Dilution Plate",
-                                "barcode": "",
-                                "quantity": 1,
-                                "itemDescription": "",
-                                "confirmation": false
-                            },
-                            {
-                                "resource": "Pico Quant Reagent Plate",
-                                "barcode": "",
-                                "quantity": 1,
-                                "itemDescription": "",
-                                "confirmation": false
-                            },
-                            {
-                                "resource": "Sample Plate",
-                                "barcode": "",
-                                "quantity": 1,
-                                "itemDescription": "",
-                                "confirmation": true
-                            },
-                            {
-                                "resource": "1X TE Bulk",
-                                "barcode": "",
-                                "quantity": 1,
-                                "itemDescription": "",
-                                "confirmation": false
-                            }
-                        ]
-        }
+## Create Pick List [/horizon/osp/planning/createPickList/{resourceId}]
++ Parameters
+    + resourceId: `SampeBatch_APITest20` (String) - Unique ID of the Batch
+       
+### Create Pick List [POST]       
+    
 
 + Response 200 (application/json)
 
