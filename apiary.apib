@@ -4383,6 +4383,8 @@ Dashlets are components of the dashboard with custom data attributes
 
 ## Input Queue [/horizon/old/iq]
 
+Displays pDNB Plates in the data table, where you can get the details of each pDNB Plate. Each pDNB plate can have up to 10 pDnb pools.
+ 
 ### Grid Contents [GET]
 
 + Response 200 (application/json)
@@ -4687,8 +4689,7 @@ Dashlets are components of the dashboard with custom data attributes
                     }
                 ]
         } 
-## In Process - Details Drawer [/horizon/old/inp/details/{pDnbId}/]
-### pDnb Pool Details [GET]
+## Details Drawer [GET /horizon/old/inp/details/{pDnbId}/]
 
 + Parameters
     + pDnbId: '163207821' (optional, String) - Unique ID of the pDnb pool
