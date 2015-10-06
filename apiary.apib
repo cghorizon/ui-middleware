@@ -2888,12 +2888,25 @@ Dashlets are components of the dashboard with custom data attributes
             }
             
 
-## Create Pick List [/horizon/osp/planning/createPickList/{resourceId}]
-+ Parameters
-    + resourceId: `SampeBatch_APITest20` (String) - Unique ID of the Batch
-       
+## Create Pick List [/horizon/resource/planning]
+
 ### Create Pick List [POST]       
-    
++ Request (application/json)
+
+         {
+            "taskDescription":{
+                "taskId":"CGI.OHS.RESOURCEPLANNING"
+            },
+            "requests":[
+            {
+              "processId":"osp_g_dna_to_dnb_simple_wf_v1", // hardcoded
+              "resourceId":batch_id
+            }
+            ]
+          
+          
+          
+        }
 
 + Response 200 (application/json)
 
