@@ -4730,6 +4730,46 @@ Displays pDNB Plates in the data table, where you can get the details of each pD
                     }
                 ],
         } 
+        
+## Output Queue [/horizon/old/oq]
+
+Displays the pDNB pools in a data table
+
+### Grid Contents [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "pDnbId":"4-87910",
+                "flowcellId":"12345",
+                "flowcellType":"V10_XYZ",
+                "sequencingPlan":"WES 1.0",
+                "status":"Completed",
+                "priority":1,
+                "completionDate":"2015-10-15 12:30 PM"
+            },
+            {
+                "pDnbId":"7-87910",
+                "flowcellId":"89019",
+                "flowcellType":"V10_XYZ",
+                "sequencingPlan":"WES 1.0",
+                "status":"Error",
+                "priority":2,
+                "completionDate":"2015-10-15 12:30 PM"
+            },
+            {
+                "pDnbId":"6-87910",
+                "flowcellId":"19283",
+                "flowcellType":"V10_XYZ",
+                "sequencingPlan":"WES 1.0",
+                "status":"Aborted",
+                "priority":3,
+                "completionDate":"2015-10-15 12:30 PM"
+            }
+            
+        ] 
+        
 ## Group Admin Samples
 
 ## Action [/horizon/admin/samplequery/action]
