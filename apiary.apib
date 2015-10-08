@@ -4517,9 +4517,9 @@ Displays the pDNB pools in a data table
 
 + Response 200 (application/json)
 
-        [
-            {
-                "pDnbPlateId": "87910",
+        {
+            "87910": {
+                "pDnbPlateId": "",
                 "status": "Processing",
                 "priority": 1,
                 "pools" : 
@@ -4606,8 +4606,8 @@ Displays the pDNB pools in a data table
                         }
                     ]
             },
-            {
-                "pDnbPlateId": "87911",
+            "87911":{
+                "pDnbPlateId": "",
                 "status": "Pending",
                 "priority": 2,
                 "pools" : 
@@ -4638,8 +4638,8 @@ Displays the pDNB pools in a data table
                         }
                     ]
             },
-            {
-                "pDnbPlateId": "87912",
+            "87912":{
+                "pDnbPlateId": "",
                 "status": "Pending",
                 "priority": 3,
                 "pools" : 
@@ -4652,9 +4652,9 @@ Displays the pDNB pools in a data table
                             "status":"Planned",
                             "estimatedCompletion":"2015-10-15 12:30 PM"
                         }
-                    ]
+                    
             } 
-        ]    
+        }    
 ## Details Drawer [GET /horizon/old/inp/details/{pDnbId}/]
 
 + Parameters
