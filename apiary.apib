@@ -2878,16 +2878,32 @@ Dashlets are components of the dashboard with custom data attributes
             "success": "true"
         }
         
-## Workflow [/horizon/osp/planning/workflow]
+## OSP JOB [/horizon/jobs]
 
-### Create Workflow [POST]
+### Create OSP Job [POST]
 
 + Request (application/json)
 
         {
-            "batchId": "123456",
-            "stage": "Step 6 (ssCirc)",
-            "totalTimeToComplete": 120
+            "taskDescription": {
+            "taskId": "CGI.OHS.CREATEJOB"
+         },
+          "requests": [
+            {
+                "jobName" : "QuantTest1",
+                "jobType" : "DEV",
+                "processInfo": 
+                {
+                    "processId": "osp_g_dna_to_dnb_simple_wf_v1"
+                },
+                "properties": [
+                 {
+                    "id": "resourceId",
+                     "value": "batch_id"
+                }
+                    ]
+             }
+            ]
         }
 
 + Response 200 (application/json)
