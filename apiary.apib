@@ -4523,7 +4523,7 @@ Displays the pDNB pools in a data table
 
 + Response 200 (application/json)
 
-        [
+        
             {
                 "pDnbPlateId": "87910",
                 "status": "Processing",
@@ -4611,56 +4611,8 @@ Displays the pDNB pools in a data table
                             "estimatedCompletion":"2015-10-12 12:30 PM"
                         }
                     ]
-            },
-            {
-                "pDnbPlateId": "87911",
-                "status": "Pending",
-                "priority": 2,
-                "pools" : 
-                    [
-                        {
-                            "pDnbId": "1-87911",
-                            "fcBarcode":"5235345",
-                            "sequencePlan":"WES 1.0",
-                            "wellLocation": "C1",
-                            "status":"Planned",
-                            "estimatedCompletion":"2015-10-15 12:30 PM"
-                        },
-                        {
-                            "pDnbId": "2-87911",
-                            "fcBarcode":"5235345",
-                            "sequencePlan":"WES 1.0",
-                            "wellLocation": "C1",
-                            "status":"Planned",
-                            "estimatedCompletion":"2015-10-15 12:30 PM"
-                        },
-                        {
-                            "pDnbId": "3-87911",
-                            "fcBarcode":"5235345",
-                            "sequencePlan":"WES 1.0",
-                            "wellLocation": "C1",
-                            "status":"Planned",
-                            "estimatedCompletion":"2015-10-15 12:30 PM"
-                        }
-                    ]
-            },
-            {
-                "pDnbPlateId": "87912",
-                "status": "Pending",
-                "priority": 3,
-                "pools" : 
-                    [
-                        {
-                            "pDnbId": "1-87912",
-                            "fcBarcode":"5235345",
-                            "sequencePlan":"WES 1.0",
-                            "wellLocation": "C1",
-                            "status":"Planned",
-                            "estimatedCompletion":"2015-10-15 12:30 PM"
-                        }
-                    ]
-            } 
-        ]    
+            }
+            
 ## Details Drawer [GET /horizon/old/inp/details/{pDnbId}/]
 
 + Parameters
