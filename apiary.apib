@@ -4427,125 +4427,75 @@ Displays pDNB Plates in the data table, where you can get the details of each pD
 + Response 200 (application/json)
 
         
-        [
-            {
+        {
             "pDnbPlateId": "163207821",
             "poolsLeft": 3,
             "status":"Planned",
             "priority": 1,
             "queueDate":"2015-09-16 12:30 PM",
             "pDnbList": [
-                    {
-                        "pDnbId":"4-87910",
-                        "priority":4,
-                        "samplesInPool": 
-                            ["123235", "975","52111233"]
-                    },
-                    {
-                        "pDnbId":"7-87910",
-                        "priority":5,
-                        "samplesInPool": 
-                            ["97211"]
-                    },
-                    {
-                        "pDnbId":"87910",
-                        "priority":7,
-                        "samplesInPool": 
-                            ["55283"]
-                    },
-                    {
-                        "pDnbId":"6-87910",
-                        "priority":6,
-                        "samplesInPool": 
-                            ["4473"]
-                    },
-                    {
-                        "pDnbId":"10-87910",
-                        "priority":10,
-                        "samplesInPool": 
-                            ["2253"]
-                    },
-                    {
-                        "pDnbId":"8-87910",
-                        "priority":8,
-                        "samplesInPool": 
-                            ["983111"]
-                    },
-                    {
-                        "pDnbId":"9-87910",
-                        "priority":9,
-                        "samplesInPool": 
-                            ["1638"]
-                    },
-                    {
-                        "pDnbId":"2-87910",
-                        "priority":2,
-                        "samplesInPool": 
-                            ["0018"]
-                    },
-                    {
-                        "pDnbId":"3-87910",
-                        "priority":3,
-                        "samplesInPool": 
-                            ["9823","13300303"]
-                    },
-                    {
-                        "pDnbId":"1-87910",
-                        "priority":1,
-                        "samplesInPool": 
-                            ["654"]
-                    }
-                ]
-            },
-            {
-                "pDnbPlateId": "87911",
-                "status": "Pending",
-                "priority": 2,
-                "pools" : 
-                    [
-                        {
-                            "pDnbId": "1-87911",
-                            "fcBarcode":"5235345",
-                            "sequencePlan":"WES 1.0",
-                            "wellLocation": "C1",
-                            "status":"Planned",
-                            "estimatedCompletion":"2015-10-15 12:30 PM"
-                        },
-                        {
-                            "pDnbId": "2-87911",
-                            "fcBarcode":"5235345",
-                            "sequencePlan":"WES 1.0",
-                            "wellLocation": "C1",
-                            "status":"Planned",
-                            "estimatedCompletion":"2015-10-15 12:30 PM"
-                        },
-                        {
-                            "pDnbId": "3-87911",
-                            "fcBarcode":"5235345",
-                            "sequencePlan":"WES 1.0",
-                            "wellLocation": "C1",
-                            "status":"Planned",
-                            "estimatedCompletion":"2015-10-15 12:30 PM"
-                        }
-                    ]
-            },
-            {
-                "pDnbPlateId": "87912",
-                "status": "Pending",
-                "priority": 3,
-                "pools" : 
-                    [
-                        {
-                            "pDnbId": "1-87912",
-                            "fcBarcode":"5235345",
-                            "sequencePlan":"WES 1.0",
-                            "wellLocation": "C1",
-                            "status":"Planned",
-                            "estimatedCompletion":"2015-10-15 12:30 PM"
-                        }
-                    ]
-            } 
-        ]
+                {
+                    "pDnbId":"4-87910",
+                    "priority":4,
+                    "samplesInPool": 
+                        ["123235", "975","52111233"]
+                },
+                {
+                    "pDnbId":"7-87910",
+                    "priority":5,
+                    "samplesInPool": 
+                        ["97211"]
+                },
+                {
+                    "pDnbId":"87910",
+                    "priority":7,
+                    "samplesInPool": 
+                        ["55283"]
+                },
+                {
+                    "pDnbId":"6-87910",
+                    "priority":6,
+                    "samplesInPool": 
+                        ["4473"]
+                },
+                {
+                    "pDnbId":"10-87910",
+                    "priority":10,
+                    "samplesInPool": 
+                        ["2253"]
+                },
+                {
+                    "pDnbId":"8-87910",
+                    "priority":8,
+                    "samplesInPool": 
+                        ["983111"]
+                },
+                {
+                    "pDnbId":"9-87910",
+                    "priority":9,
+                    "samplesInPool": 
+                        ["1638"]
+                },
+                {
+                    "pDnbId":"2-87910",
+                    "priority":2,
+                    "samplesInPool": 
+                        ["0018"]
+                },
+                {
+                    "pDnbId":"3-87910",
+                    "priority":3,
+                    "samplesInPool": 
+                        ["9823","13300303"]
+                },
+                {
+                    "pDnbId":"1-87910",
+                    "priority":1,
+                    "samplesInPool": 
+                        ["654"]
+                }
+            ]
+        } 
 ## Process Pools [POST]
 
 + Response 200 (application/json)
@@ -4573,7 +4523,7 @@ Displays the pDNB pools in a data table
 
 + Response 200 (application/json)
 
-        
+        [
             {
                 "pDnbPlateId": "87910",
                 "status": "Processing",
@@ -4661,8 +4611,56 @@ Displays the pDNB pools in a data table
                             "estimatedCompletion":"2015-10-12 12:30 PM"
                         }
                     ]
-            }
-            
+            },
+            {
+                "pDnbPlateId": "87911",
+                "status": "Pending",
+                "priority": 2,
+                "pools" : 
+                    [
+                        {
+                            "pDnbId": "1-87911",
+                            "fcBarcode":"5235345",
+                            "sequencePlan":"WES 1.0",
+                            "wellLocation": "C1",
+                            "status":"Planned",
+                            "estimatedCompletion":"2015-10-15 12:30 PM"
+                        },
+                        {
+                            "pDnbId": "2-87911",
+                            "fcBarcode":"5235345",
+                            "sequencePlan":"WES 1.0",
+                            "wellLocation": "C1",
+                            "status":"Planned",
+                            "estimatedCompletion":"2015-10-15 12:30 PM"
+                        },
+                        {
+                            "pDnbId": "3-87911",
+                            "fcBarcode":"5235345",
+                            "sequencePlan":"WES 1.0",
+                            "wellLocation": "C1",
+                            "status":"Planned",
+                            "estimatedCompletion":"2015-10-15 12:30 PM"
+                        }
+                    ]
+            },
+            {
+                "pDnbPlateId": "87912",
+                "status": "Pending",
+                "priority": 3,
+                "pools" : 
+                    [
+                        {
+                            "pDnbId": "1-87912",
+                            "fcBarcode":"5235345",
+                            "sequencePlan":"WES 1.0",
+                            "wellLocation": "C1",
+                            "status":"Planned",
+                            "estimatedCompletion":"2015-10-15 12:30 PM"
+                        }
+                    ]
+            } 
+        ]    
 ## Details Drawer [GET /horizon/old/inp/details/{pDnbId}/]
 
 + Parameters
