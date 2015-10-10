@@ -4530,149 +4530,91 @@ Displays the pDNB pools in a data table
 + Response 200 (application/json)
 
         
-        [
-            {
-                "pDnbPlateId":"87910",
-                "status": "In Process",
-                "priority":1,
-                "pools":[
-                    {
-                        "pDnbId":"4-87910",
-                        "fcBarcode":"5235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "C1",
-                        "status":"Planned",
-                        "estimatedCompletion":"2015-10-15 12:30 PM"
-                    },
-                    {
-                        "pDnbId":"7-87910",
-                        "fcBarcode":"6235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "D1",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-15 12:00 PM"
-                    },
-                    {
-                        "pDnbId":"87910",
-                        "fcBarcode":"7235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "E1",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-09-15 12:30 PM"
-                    },
-                    {
-                        "pDnbId":"6-87910",
-                        "fcBarcode":"8235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "F1",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-11-15 10:00 PM"
-                    },
-                    {
-                        "pDnbId":"10-87910",
-                        "fcBarcode":"9235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "G1",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-16 12:30 PM"
-                    },
-                    {
-                        "pDnbId":"8-87910",
-                        "fcBarcode":"1235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "H1",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-17 12:30 PM"
-                    },
-                    {
-                        "pDnbId":"9-87910",
-                        "fcBarcode":"2235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "A2",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-18 12:30 PM"
-                    },
-                    {
-                        "pDnbId":"2-87910",
-                        "fcBarcode":"777235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "B2",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-19 12:30 PM"
-                    },
-                    {
-                        "pDnbId":"3-87910",
-                        "fcBarcode":"888235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "C2",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-20 12:30 PM"
-                    },
-                    {
-                        "pDnbId":"1-87910",
-                        "fcBarcode":"999235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "D2",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-12 12:30 PM"
-                    }
-                ]
-            },
-            {
-                "pDnbPlateId":"87912",
-                "status": "Pending",
-                "priority":3,
-                "pools":[
-                    {
-                        "pDnbId":"1-87911",
-                        "fcBarcode":"5235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "C1",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-15 12:30 PM"
-                    },
-                    {
-                        "pDnbId":"2-87911",
-                        "fcBarcode":"6235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "D1",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-15 12:00 PM"
-                    }
-                ]
-            },
-            {
-                "pDnbPlateId":"87911",
-                "status": "Pending",
-                "priority":2,
-                "pools":[
-                    {
-                        "pDnbId":"1-87911",
-                        "fcBarcode":"5235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "C1",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-15 12:30 PM"
-                    },
-                    {
-                        "pDnbId":"2-87911",
-                        "fcBarcode":"6235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "D1",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-15 12:00 PM"
-                    },
-                    {
-                        "pDnbId":"3-87911",
-                        "fcBarcode":"6235345",
-                        "sequencePlan":"WES 1.0",
-                        "wellLocation": "D1",
-                        "status":"Idle",
-                        "estimatedCompletion":"2015-10-15 12:00 PM"
-                    }
-                ]
-            }
-        ]
+        {
+            "pDnbPlateId":"87910",
+            "pools":[
+                {
+                    "pDnbId":"4-87910",
+                    "fcBarcode":"5235345",
+                    "sequencePlan":"WES 1.0",
+                    "wellLocation": "C1",
+                    "status":"Planned",
+                    "estimatedCompletion":"2015-10-15 12:30 PM"
+                },
+                {
+                    "pDnbId":"7-87910",
+                    "fcBarcode":"6235345",
+                    "sequencePlan":"WES 1.0",
+                    "wellLocation": "D1",
+                    "status":"Idle",
+                    "estimatedCompletion":"2015-10-15 12:00 PM"
+                },
+                {
+                    "pDnbId":"87910",
+                    "fcBarcode":"7235345",
+                    "sequencePlan":"WES 1.0",
+                    "wellLocation": "E1",
+                    "status":"Idle",
+                    "estimatedCompletion":"2015-09-15 12:30 PM"
+                },
+                {
+                    "pDnbId":"6-87910",
+                    "fcBarcode":"8235345",
+                    "sequencePlan":"WES 1.0",
+                    "wellLocation": "F1",
+                    "status":"Idle",
+                    "estimatedCompletion":"2015-11-15 10:00 PM"
+                },
+                {
+                    "pDnbId":"10-87910",
+                    "fcBarcode":"9235345",
+                    "sequencePlan":"WES 1.0",
+                    "wellLocation": "G1",
+                    "status":"Idle",
+                    "estimatedCompletion":"2015-10-16 12:30 PM"
+                },
+                {
+                    "pDnbId":"8-87910",
+                    "fcBarcode":"1235345",
+                    "sequencePlan":"WES 1.0",
+                    "wellLocation": "H1",
+                    "status":"Idle",
+                    "estimatedCompletion":"2015-10-17 12:30 PM"
+                },
+                {
+                    "pDnbId":"9-87910",
+                    "fcBarcode":"2235345",
+                    "sequencePlan":"WES 1.0",
+                    "wellLocation": "A2",
+                    "status":"Idle",
+                    "estimatedCompletion":"2015-10-18 12:30 PM"
+                },
+                {
+                    "pDnbId":"2-87910",
+                    "fcBarcode":"777235345",
+                    "sequencePlan":"WES 1.0",
+                    "wellLocation": "B2",
+                    "status":"Idle",
+                    "estimatedCompletion":"2015-10-19 12:30 PM"
+                },
+                {
+                    "pDnbId":"3-87910",
+                    "fcBarcode":"888235345",
+                    "sequencePlan":"WES 1.0",
+                    "wellLocation": "C2",
+                    "status":"Idle",
+                    "estimatedCompletion":"2015-10-20 12:30 PM"
+                },
+                {
+                    "pDnbId":"1-87910",
+                    "fcBarcode":"999235345",
+                    "sequencePlan":"WES 1.0",
+                    "wellLocation": "D2",
+                    "status":"Idle",
+                    "estimatedCompletion":"2015-10-12 12:30 PM"
+                }
+            ]
+        }
          
 ## Details Drawer [GET /horizon/old/inp/details/{pDnbId}/]
 
