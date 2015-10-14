@@ -7382,32 +7382,6 @@ Users of the system
                     }
                 },
                 {
-                    "userId": "4",
-                    "username": "mcapecchi",
-                    "firstName": "Mario",
-                    "lastName": "Capecchi",
-                    "title": "Geneticist",
-                    "organization": "Complete Genomics",
-                    "email": "mcapecchi@completegenomics.com",
-                    "accountType": "user",
-                    "status": "archived",
-                    "roles": {
-                        "manageReports": false,
-                        "manageImports": false,
-                        "manageGroups": false,
-                        "manageFilters": false,
-                        "manageUsers": false,
-                        "overrideFieldSamples": false,
-                        "releaseReports": false
-                    },
-                    "administrator": {
-                        "firstName": "John",
-                        "lastName": "Doe",
-                        "organization": "Fake Company",
-                        "email": "john.doe@fakecompany.com"
-                    }
-                },
-                {
                     "userId": "5",
                     "username": "cventer",
                     "firstName": "Craig",
@@ -7525,6 +7499,54 @@ Creates a new user
                     "email": "john.doe@fakecompany.com"
                 }
             }
+
+## Archived Users [/horizon/users/archived]
+
+Archived Users of the system
+
+### View Users [OPTIONS]
+
++ Response 200
+    + Headers
+    
+            Access-Control-Allow-Credentials: true
+
+### View Users [GET]
+
++ Response 200 (application/json)
+    + Headers
+    
+            Access-Control-Allow-Credentials: true
+
+    + Body
+
+            {
+                    "userId": "4",
+                    "username": "mcapecchi",
+                    "firstName": "Mario",
+                    "lastName": "Capecchi",
+                    "title": "Geneticist",
+                    "organization": "Complete Genomics",
+                    "email": "mcapecchi@completegenomics.com",
+                    "accountType": "user",
+                    "status": "archived",
+                    "roles": {
+                        "manageReports": false,
+                        "manageImports": false,
+                        "manageGroups": false,
+                        "manageFilters": false,
+                        "manageUsers": false,
+                        "overrideFieldSamples": false,
+                        "releaseReports": false
+                    },
+                    "administrator": {
+                        "firstName": "John",
+                        "lastName": "Doe",
+                        "organization": "Fake Company",
+                        "email": "john.doe@fakecompany.com"
+                    }
+            }
+
 
 ## User [/horizon/users/{userId}]
 
