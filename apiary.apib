@@ -7462,6 +7462,70 @@ Users of the system
                 
             ]
 
+### Create a New User [POST]
+
+Creates a new user
+
++ Request (application/json)
+
+        {
+            "username": "wbateson",
+            "firstName": "William",
+            "lastName": "Bateson",
+            "title": "Geneticist",
+            "organization": "Complete Genomics",
+            "email": "wbateson@completegenomics.com",
+            "accountType": "admin",
+            "status": "active",
+            "roles": {
+                "manageReports": true,
+                "manageImports": false,
+                "manageGroups": true,
+                "manageFilters": false,
+                "manageUsers": true,
+                "overrideFieldSamples": false,
+                "releaseReports": true
+            },
+            "administrator": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "organization": "Fake Company",
+                "email": "john.doe@fakecompany.com"
+            }
+        }
+
++ Response 201 (application/json)
+
+    + Body
+    
+            {
+                "userId": "7",
+                "created": "2015-09-11T08:40:51.620Z",
+                "username": "wbateson",
+                "firstName": "William",
+                "lastName": "Bateson",
+                "title": "Geneticist",
+                "organization": "Complete Genomics",
+                "email": "wbateson@completegenomics.com",
+                "accountType": "admin",
+                "status": "active",
+                "roles": {
+                    "manageReports": true,
+                    "manageImports": false,
+                    "manageGroups": true,
+                    "manageFilters": false,
+                    "manageUsers": true,
+                    "overrideFieldSamples": false,
+                    "releaseReports": true
+                },
+                "administrator": {
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "organization": "Fake Company",
+                    "email": "john.doe@fakecompany.com"
+                }
+            }
+
 ## User [/horizon/users/{userId}]
 
 User of the system
@@ -7511,7 +7575,71 @@ User of the system
                     "email": "john.doe@fakecompany.com"
                 }
             }
-            
+
+### Update a New User [POST]
+
+Update a new user
+
++ Request (application/json)
+
+        {
+            "username": "wbateson",
+            "firstName": "William",
+            "lastName": "Bateson",
+            "title": "Geneticist/Biologist",
+            "organization": "Complete Genomics",
+            "email": "wbateson@completegenomics.com",
+            "accountType": "admin",
+            "status": "active",
+            "roles": {
+                "manageReports": true,
+                "manageImports": false,
+                "manageGroups": true,
+                "manageFilters": false,
+                "manageUsers": true,
+                "overrideFieldSamples": false,
+                "releaseReports": true
+            },
+            "administrator": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "organization": "Fake Company",
+                "email": "john.doe@fakecompany.com"
+            }
+        }
+
++ Response 201 (application/json)
+
+    + Body
+    
+            {
+                "userId": "7",
+                "created": "2015-09-11T08:40:51.620Z",
+                "username": "wbateson",
+                "firstName": "William",
+                "lastName": "Bateson",
+                "title": "Geneticist/Biologist",
+                "organization": "Complete Genomics",
+                "email": "wbateson@completegenomics.com",
+                "accountType": "admin",
+                "status": "active",
+                "roles": {
+                    "manageReports": true,
+                    "manageImports": false,
+                    "manageGroups": true,
+                    "manageFilters": false,
+                    "manageUsers": true,
+                    "overrideFieldSamples": false,
+                    "releaseReports": true
+                },
+                "administrator": {
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "organization": "Fake Company",
+                    "email": "john.doe@fakecompany.com"
+                }
+            }
+
 ## User Roles [/horizon/roles]
 
 User roles in the system
