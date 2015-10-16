@@ -7543,7 +7543,7 @@ User of the system
                 }
             }
 
-### Update a New User [PUT]
+### Update a User [PUT]
 
 Update an existing user
 
@@ -7578,6 +7578,76 @@ Update an existing user
         }
 
 + Response 201 (application/json)
+
+    + Headers
+    
+            Access-Control-Allow-Credentials: true
+
+    + Body
+    
+            {
+                "userId": "7",
+                "created": "2015-09-11T08:40:51.620Z",
+                "username": "wbateson",
+                "firstName": "William",
+                "lastName": "Bateson",
+                "title": "Geneticist/Biologist",
+                "organization": "Complete Genomics",
+                "email": "wbateson@completegenomics.com",
+                "accountType": "admin",
+                "status": "active",
+                "roles": {
+                    "manageReports": true,
+                    "manageImports": false,
+                    "manageGroups": true,
+                    "manageFilters": false,
+                    "manageUsers": true,
+                    "overrideFieldSamples": false,
+                    "releaseReports": true
+                },
+                "administrator": {
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "organization": "Fake Company",
+                    "email": "john.doe@fakecompany.com"
+                }
+            }
+            
+### Add a New User [POST]
+
+Add a new user
+
++ Request (application/json)
+
+        {
+            "username": "wbateson",
+            "firstName": "William",
+            "lastName": "Bateson",
+            "title": "Geneticist/Biologist",
+            "organization": "Complete Genomics",
+            "email": "wbateson@completegenomics.com",
+            "accountType": "admin",
+            "status": "active",
+            "currentPassword": "xyz12345",
+            "password": "abcd12345",
+            "roles": {
+                "manageReports": true,
+                "manageImports": false,
+                "manageGroups": true,
+                "manageFilters": false,
+                "manageUsers": true,
+                "overrideFieldSamples": false,
+                "releaseReports": true
+            },
+            "administrator": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "organization": "Fake Company",
+                "email": "john.doe@fakecompany.com"
+            }
+        }
+
++ Response 200 (application/json)
 
     + Headers
     
